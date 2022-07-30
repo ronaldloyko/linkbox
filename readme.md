@@ -1,26 +1,15 @@
-<p style="text-align: center;">
+<p align="center">
   <img src="resources/presentation.png" style="width: 90%">
 </p>
 
-<p style="text-align: center; display: none;">
-  TODO: Publish on stores
+<p align="center">
   <a href="#">
-    <img alt="Google Play button" src="resources/google-play.png" style="width: 200px">
+    <img alt="Google Play button" src="resources/google-play.png" width="200">
   </a>
   <a href="#">
-    <img alt="F-Droid button" src="resources/f-droid.png" style="width: 200px;">
+    <img alt="F-Droid button" src="resources/f-droid.png" width="200">
   </a>
 </p>
-
-<div style="text-align: center;">
-
-# Linkbox
-
-### Link Manager For Android
-
-</div>
-
-## Introduction
 
 Linkbox is a **free and open source** application for Android to **manage all your links**.
 
@@ -58,17 +47,17 @@ Refer to the [changelog](changelog.md) for release notes.
 
 Any kind of contribution is **welcome**.
 
-If you encounter **bugs** or have **ideas** to improve Linkbox, please open an [issue](https://github.com/ronaldloyko/linkbox/issues).
+If you encounter any **bugs** or have **ideas** to improve Linkbox, please open an [issue](https://github.com/ronaldloyko/linkbox/issues).
 
 Before contributing, please consult the [contribution guide](contributing.md) to get started.
 
 ### Translations
 
-TODO: Insert weblate image
+[![Translation status](https://hosted.weblate.org/widgets/linkbox/-/open-graph.png)](https://hosted.weblate.org/engage/linkbox/)
 
 ### Donations
 
-If you like my applications and find them helpful and would like to **donate**, you can do so [here](https://ronald.loyko.me/donate).
+If you would like to donate, you can do so [**here**](https://ronald.loyko.me/donate).
 
 ## License
 
