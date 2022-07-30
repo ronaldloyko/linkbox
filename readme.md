@@ -11,7 +11,7 @@
   </a>
 </p>
 
-Linkbox is a **free and open source** application for Android to **manage all your links**.
+<p align="center">Linkbox is a <strong>free and open source</strong> application for Android to <strong>manage all your links</strong>.</p>
 
 ## Features
 
