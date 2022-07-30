@@ -1,0 +1,6 @@
+{
+	"appId": "me.loyko.linkbox",
+	"appName": "Linkbox",
+	"webDir": "build",
+	"bundledWebRuntime": false
+}

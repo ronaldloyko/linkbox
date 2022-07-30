@@ -1,0 +1,202 @@
+{
+  "translation": {
+    "meta": {
+      "code": "en",
+      "name": "English"
+    },
+    "header": {
+      "title": "Links",
+      "menu": {
+        "search": "Search",
+        "settings": "Settings"
+      }
+    },
+    "overlays": {
+      "alerts": {
+        "deleteLinkConfirmation": {
+          "message": "Do you really want to delete {{name}}?",
+          "cancel": "Cancel",
+          "delete": "Delete",
+          "toast": {
+            "message": "Link {{name}} deleted"
+          }
+        },
+        "deleteFolderConfirmation": {
+          "message": "Do you really want to delete {{name}} and its links?",
+          "cancel": "$t(overlays.alerts.deleteLinkConfirmation.cancel)",
+          "delete": "$t(overlays.alerts.deleteLinkConfirmation.delete)",
+          "toast": {
+            "message": "Folder {{name}} deleted"
+          }
+        }
+      },
+      "modals": {
+        "saveLink": {
+          "title": {
+            "create": "Create Link",
+            "edit": "Edit Link"
+          },
+          "cancel": "$t(overlays.alerts.deleteFolderConfirmation.cancel)",
+          "save": {
+            "create": "Create",
+            "update": "Update"
+          },
+          "name": {
+            "label": "Name",
+            "placeholder": "Wikipedia"
+          },
+          "url": {
+            "label": "URL",
+            "placeholder": "wikipedia.com"
+          },
+          "folder": {
+            "label": "Folder"
+          },
+          "toast": {
+            "message": {
+              "created": "Link {{name}} created",
+              "updated": "Link {{name}} updated"
+            }
+          }
+        },
+        "saveFolder": {
+          "title": {
+            "create": "Create Folder",
+            "edit": "Edit Folder"
+          },
+          "cancel": "$t(overlays.modals.saveLink.cancel)",
+          "save": {
+            "create": "$t(overlays.modals.saveLink.save.create)",
+            "update": "$t(overlays.modals.saveLink.save.update)"
+          },
+          "name": {
+            "label": "$t(overlays.modals.saveLink.name.label)",
+            "placeholder": "News Sources"
+          },
+          "toast": {
+            "message": {
+              "created": "Folder {{name}} created",
+              "updated": "Folder {{name}} updated"
+            }
+          }
+        },
+        "search": {
+          "title": "Search",
+          "cancel": "$t(overlays.modals.saveFolder.cancel)",
+          "placeholder": "Search For Links...",
+          "heading": "No result"
+        },
+        "settings": {
+          "title": "Settings",
+          "close": "Close",
+          "interface": {
+            "label": "Interface",
+            "language": "Language",
+            "theme": {
+              "label": "Theme",
+              "system": "Automatic",
+              "light": "Light",
+              "dark": "Dark"
+            },
+            "linkSorting": {
+              "label": "Link Sorting",
+              "default": "Oldest First",
+              "reversed": "Newest First",
+              "alphabetically": "Alphabetically"
+            },
+            "showAvatar": "Show Avatars"
+          },
+          "data": {
+            "label": "Data",
+            "import": {
+              "label": "Import",
+              "confirmationAlert": {
+                "message": "All settings and links will be overwritten. Continue anyway?",
+                "abort": "Abort",
+                "proceed": "Proceed"
+              },
+              "finalAlert": {
+                "message": {
+                  "successful": "Import successful",
+                  "invalidFile": "Invalid file",
+                  "invalidContent": "Invalid file content",
+                  "unknownError": "Unknown error"
+                },
+                "close": "OK"
+              }
+            },
+            "export": {
+              "label": "Export",
+              "alert": {
+                "message": "Links and settings saved to the download folder as {{path}}",
+                "close": "$t(overlays.modals.settings.data.import.finalAlert.close)"
+              }
+            }
+          },
+          "miscellaneous": {
+            "label": "Miscellaneous",
+            "sourceCode": "Source Code",
+            "donate": "Donate"
+          }
+        },
+        "introduction": {
+          "skip": "Skip",
+          "continue": "Continue",
+          "start": "Let's Go",
+          "first": {
+            "imageDescription": "Application and logo",
+            "heading": "Welcome to Linkbox.",
+            "paragraph": "Manage all your links easily. Offline and secure."
+          },
+          "second": {
+            "imageDescription": "Floating action button",
+            "heading": "Add your links.",
+            "paragraph": "Tap on the floating plus button to add a folder or link."
+          },
+          "third": {
+            "imageDescription": "Tabs",
+            "heading": "Organize your links in folders.",
+            "paragraph": "Folders are shown as tabs."
+          },
+          "fourth": {
+            "imageDescription": "Action menu",
+            "heading": "Edit and share your links.",
+            "paragraph": "Long press on a tab or a link to show the options."
+          },
+          "fifth": {
+            "imageDescription": "Check mark",
+            "heading": "You are ready.",
+            "paragraph": "Have fun with Linkbox."
+          }
+        }
+      },
+      "sheets": {
+        "linkActions": {
+          "share": {
+            "label": "Share",
+            "title": "Share Link"
+          },
+          "edit": "Edit",
+          "delete": "$t(overlays.alerts.deleteFolderConfirmation.delete)",
+          "cancel": "$t(overlays.modals.search.cancel)"
+        },
+        "folderActions": {
+          "edit": "$t(overlays.sheets.linkActions.edit)",
+          "delete": "$t(overlays.sheets.linkActions.delete)",
+          "cancel": "$t(overlays.sheets.linkActions.cancel)"
+        }
+      }
+    },
+    "content": {
+      "links": {
+        "emptyState": {
+          "heading": "No links"
+        }
+      }
+    },
+    "validation": {
+      "emptyError": "Can not be empty",
+      "invalidUrlError": "Must be a valid URL"
+    }
+  }
+}
