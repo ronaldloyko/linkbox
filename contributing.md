@@ -89,4 +89,4 @@ You can either contribute translations using the **web-based interface** Weblate
 
 #### Via Weblate
 
-TODO
+1. Click [here](https://hosted.weblate.org/engage/linkbox) and follow the instructions
