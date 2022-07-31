@@ -46,10 +46,6 @@ Before contributing, please consult the [contribution guide](contributing.md) to
 
 [![Translation status](https://hosted.weblate.org/widgets/linkbox/-/open-graph.png)](https://hosted.weblate.org/engage/linkbox/)
 
-### Donations
-
-If you would like to donate, you can do so [**here**](https://ronald.loyko.me/donate).
-
 ## License
 
 [MIT](license.md)
