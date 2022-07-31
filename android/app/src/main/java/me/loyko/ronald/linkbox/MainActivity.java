@@ -1,4 +1,4 @@
-package me.loyko.starter;
+package me.loyko.ronald.linkbox;
 
 import com.getcapacitor.BridgeActivity;
 

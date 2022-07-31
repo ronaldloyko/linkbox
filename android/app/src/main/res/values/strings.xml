@@ -2,6 +2,6 @@
 <resources>
     <string name="app_name">Linkbox</string>
     <string name="title_activity_main">Linkbox</string>
-    <string name="package_name">me.loyko.linkbox</string>
-    <string name="custom_url_scheme">me.loyko.linkbox</string>
+    <string name="package_name">me.loyko.ronald.linkbox</string>
+    <string name="custom_url_scheme">me.loyko.ronald.linkbox</string>
 </resources>
