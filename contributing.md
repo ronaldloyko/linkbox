@@ -12,21 +12,21 @@ For translations, we use the hosted **Weblate** service.
 
 ## Technologies
 
-- [**Ionic Framework**](https://ionicframework.com) provides the **UI components** to get the native look and feel. It also comes with a handy CLI tool to automate many tasks.
-- [**Capacitor**](https://capacitorjs.com) is used to **bridge** our web application with the operating system. It provides **plug-ins** to talk to **native APIs** (such as storage, file system etc.). Capacitor also takes care of "converting" our web application into a native one by creating the necessary native project files to build the final application package.
-- [**React**](https://reactjs.org) is the **view library** used to build and structure our user interface as reactive **components**.
-- [**TypeScript**](https://www.typescriptlang.org) is the **programming language** that we use in the project and is a superset of JavaScript.
-- [**Redux**](https://redux.js.org) is the **state management library** for our user interface. We use Redux in combination with React in order to centralize our application's state.
-- [**i18next**](https://www.i18next.com) provides the **internationalization** (_i18n_) infrastructure for our application. We use it to **translate** our application to different languages.
+- [**Ionic Framework**](https://ionicframework.com) provides the **UI components** to get the native look and feel. It also comes with a handy CLI tool to automate many tasks
+- [**Capacitor**](https://capacitorjs.com) is used to **bridge** our web application with the operating system. It provides **plug-ins** to talk to **native APIs** (such as storage, file system etc.). Capacitor also takes care of "converting" our web application into a native one by creating the necessary native project files to build the final application package
+- [**React**](https://reactjs.org) is the **view library** used to build and structure our user interface as reactive **components**
+- [**TypeScript**](https://www.typescriptlang.org) is the **programming language** that we use in the project and is a superset of JavaScript
+- [**Redux**](https://redux.js.org) is the **state management library** for our user interface. We use Redux in combination with React in order to centralize our application's state
+- [**i18next**](https://www.i18next.com) provides the **internationalization** (_i18n_) infrastructure for our application. We use it to **translate** our application to different languages
 
 ## Standards
 
-- [**Semantic Versioning**](https://semver.org) defines how we **version** our application.
-- [**Conventional Commits**](https://www.conventionalcommits.org) is the ruleset to define our **commit messages**.
-- [**Keep A Changelog**](https://keepachangelog.com) is the guideline used to define the structure of our **changelog** file.
-- [**Conventional Comments**](https://conventionalcomments.org) facilitates communication by **standardizing comments** in our project.
-- [**GitHub Flow**](https://githubflow.github.io) defines our source code **contribution workflow**.
-- [**Prettier**](https://prettier.io) is used to **format** our code.
+- [**Semantic Versioning**](https://semver.org) defines how we **version** our application
+- [**Conventional Commits**](https://www.conventionalcommits.org) is the ruleset to define our **commit messages**
+- [**Keep A Changelog**](https://keepachangelog.com) is the guideline used to define the structure of our **changelog** file
+- [**Conventional Comments**](https://conventionalcomments.org) facilitates communication by **standardizing comments** in our project
+- [**GitHub Flow**](https://githubflow.github.io) defines our source code **contribution workflow**
+- [**Prettier**](https://prettier.io) is used to **format** our code
 
 ## Structure
 
@@ -34,7 +34,7 @@ For translations, we use the hosted **Weblate** service.
 
 - `android` contains **native files** for our project and can be opened in Android Studio to create the application package. We usually don't have to touch this folder manually since Capacitor handles it
 - `public` contains **static assets** like images and also the main HTML file for our application
-- `resources` contains **general resources** like artwork images
+- `resources` contains **general resources** like artwork images for documentation and building purposes. These resources are _not_ directly used by the application itself
 - `src` contains the **source code** of our application and is the place where you will most likely work
   - `components` contains our **UI components**
   - `data` contains every **related with (persisted) data**. If you are using the same value (which is _not_ state) more than once across several components, you may want to declare it as a **constant**. Here we also find the storage adapter, which is responsible for interacting with the operating system's **storage** and **file system**
@@ -78,7 +78,7 @@ For translations, we use the hosted **Weblate** service.
 
 ### Translating
 
-You can either contribute translations using the **web-based interface** Weblate or by creating and modifying the **JSON file** of the specific language.
+You can either contribute translations using the **Weblate** (preferred) or by creating and modifying the **JSON file** of the specific language.
 
 #### Via JSON File
 
@@ -89,4 +89,4 @@ You can either contribute translations using the **web-based interface** Weblate
 
 #### Via Weblate
 
-1. Click [here](https://hosted.weblate.org/engage/linkbox) and follow the instructions
+Follow the instructions on the [Weblate](https://hosted.weblate.org/engage/linkbox) page.
