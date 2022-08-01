@@ -2,6 +2,15 @@
   <img src="resources/presentation.png" style="width: 90%">
 </p>
 
+<p align="center">
+  <a href="#">
+    <img alt="Google Play button" src="resources/google-play.png" width="200">
+  </a>
+  <a href="#">
+    <img alt="F-Droid button" src="resources/f-droid.png" width="200">
+  </a>
+</p>
+
 <p align="center">Linkbox is a <strong>free and open source</strong> application for Android to <strong>manage all your links</strong>.</p>
 
 ## Features
