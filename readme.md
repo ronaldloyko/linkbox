@@ -9,9 +9,12 @@
   <a href="https://f-droid.org/en/packages/me.loyko.ronald.linkbox">
     <img alt="F-Droid button" src="resources/f-droid.png" width="200">
   </a>
+  <a href="https://github.com/ronaldloyko/linkbox/releases/latest">
+    <img alt="GitHub button" src="resources/github.png" width="200">
+  </a>
 </p>
 
-<p align="center">Linkbox is a <strong>free and open source</strong> application for Android to <strong>manage all your links</strong>.</p>
+<p align="center">Linkbox is a <strong>free and open source link manager</strong> for Android.</p>
 
 ## Features
 
