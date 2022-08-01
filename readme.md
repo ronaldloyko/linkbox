@@ -3,10 +3,10 @@
 </p>
 
 <p align="center">
-  <a href="#">
+  <a href="https://play.google.com/store/apps/details?id=me.loyko.ronald.linkbox">
     <img alt="Google Play button" src="resources/google-play.png" width="200">
   </a>
-  <a href="#">
+  <a href="https://f-droid.org/en/packages/me.loyko.ronald.linkbox">
     <img alt="F-Droid button" src="resources/f-droid.png" width="200">
   </a>
 </p>
