@@ -1,0 +1,202 @@
+{
+  "translation": {
+    "overlays": {
+      "modals": {
+        "saveLink": {
+          "name": {
+            "placeholder": "Wikipedia",
+            "label": "Nome"
+          },
+          "title": {
+            "create": "Criar Link",
+            "edit": "Editar Link"
+          },
+          "save": {
+            "create": "Criar",
+            "update": "Atualizar"
+          },
+          "url": {
+            "label": "Endereço",
+            "placeholder": "wikipedia.com"
+          },
+          "cancel": "$t(overlays.alerts.deleteFolderConfirmation.cancel)",
+          "folder": {
+            "label": "Pasta"
+          },
+          "toast": {
+            "message": {
+              "created": "Link {{name}} criado",
+              "updated": "Link {{name}} atualizado"
+            }
+          }
+        },
+        "saveFolder": {
+          "save": {
+            "update": "$t(overlays.modals.saveLink.save.update)",
+            "create": "$t(overlays.modals.saveLink.save.create)"
+          },
+          "name": {
+            "label": "$t(overlays.modals.saveLink.name.label)",
+            "placeholder": "Novas Fontes"
+          },
+          "toast": {
+            "message": {
+              "created": "Pasta {{name}} criada",
+              "updated": "Pasta {{name}} atualizada"
+            }
+          },
+          "title": {
+            "edit": "Editar Pasta",
+            "create": "Criar Pasta"
+          },
+          "cancel": "$t(overlays.modals.saveLink.cancel)"
+        },
+        "search": {
+          "title": "Busca",
+          "heading": "Sem resultado",
+          "cancel": "$t(overlays.modals.saveFolder.cancel)",
+          "placeholder": "Busca por Links…"
+        },
+        "settings": {
+          "title": "Configurações",
+          "close": "Fechar",
+          "interface": {
+            "label": "Interface",
+            "theme": {
+              "label": "Tema",
+              "system": "Automático",
+              "light": "Claro",
+              "dark": "Escuro"
+            },
+            "linkSorting": {
+              "label": "Ordenar Links",
+              "default": "Mais antigos",
+              "reversed": "Mais recentes",
+              "alphabetically": "Ordem alfabética"
+            },
+            "showAvatar": "Exibir Avatares",
+            "language": "Idioma"
+          },
+          "data": {
+            "label": "Dados",
+            "import": {
+              "label": "Importar",
+              "confirmationAlert": {
+                "message": "Todas as configurações serão substituídas. Continuar mesmo assim?",
+                "abort": "Cancelar",
+                "proceed": "Prosseguir"
+              },
+              "finalAlert": {
+                "message": {
+                  "successful": "Importação bem sucedida",
+                  "invalidContent": "Conteúdo do arquivo inválido",
+                  "unknownError": "Erro desconhecido",
+                  "invalidFile": "Arquivo inválido"
+                },
+                "close": "OK"
+              }
+            },
+            "export": {
+              "alert": {
+                "message": "Links e configurações salvos na pasta de download como {{path}}",
+                "close": "$t(overlays.modals.settings.data.import.finalAlert.close)"
+              },
+              "label": "Exportar"
+            }
+          },
+          "miscellaneous": {
+            "label": "Diversos",
+            "sourceCode": "Código Fonte",
+            "donate": "Doar"
+          }
+        },
+        "introduction": {
+          "skip": "Pular",
+          "start": "Vamos lá",
+          "first": {
+            "heading": "Bem-vindo ao Linkbox.",
+            "paragraph": "Gerencie todos os seus links facilmente. Offline e seguro.",
+            "imageDescription": "Aplicativo e logotipo"
+          },
+          "second": {
+            "imageDescription": "Botão de ação flutuante",
+            "heading": "Adicione seus links.",
+            "paragraph": "Clique no botão flutuante “+” para adicionar uma pasta ou um link."
+          },
+          "third": {
+            "imageDescription": "Abas",
+            "paragraph": "Pastas são exibidas como abas.",
+            "heading": "Organize seus links em pastas."
+          },
+          "fourth": {
+            "imageDescription": "Menu de ação",
+            "heading": "Edite e compartilhe seus links.",
+            "paragraph": "Pressione e segure uma aba ou um link para mostrar as opções."
+          },
+          "fifth": {
+            "heading": "Tudo pronto.",
+            "paragraph": "Divirta-se com o Linkbox.",
+            "imageDescription": "Marca de verificação"
+          },
+          "continue": "Continuar"
+        }
+      },
+      "alerts": {
+        "deleteLinkConfirmation": {
+          "toast": {
+            "message": "Link {{name}} excluído"
+          },
+          "message": "Você realmente deseja excluir {{name}}?",
+          "cancel": "Cancelar",
+          "delete": "Excluir"
+        },
+        "deleteFolderConfirmation": {
+          "message": "Você realmente deseja excluir {{name}} e seus links?",
+          "toast": {
+            "message": "Pasta {{name}} excluída"
+          },
+          "cancel": "$t(overlays.alerts.deleteLinkConfirmation.cancel)",
+          "delete": "$t(overlays.alerts.deleteLinkConfirmation.delete)"
+        }
+      },
+      "sheets": {
+        "linkActions": {
+          "share": {
+            "label": "Compartilhar",
+            "title": "Compartilhar Link"
+          },
+          "delete": "$t(overlays.alerts.deleteFolderConfirmation.delete)",
+          "edit": "Editar",
+          "cancel": "$t(overlays.modals.search.cancel)"
+        },
+        "folderActions": {
+          "delete": "$t(overlays.sheets.linkActions.delete)",
+          "cancel": "$t(overlays.sheets.linkActions.cancel)",
+          "edit": "$t(overlays.sheets.linkActions.edit)"
+        }
+      }
+    },
+    "meta": {
+      "name": "Português (Brasil)",
+      "code": "pt-BR"
+    },
+    "header": {
+      "title": "Links",
+      "menu": {
+        "settings": "Configurações",
+        "search": "Busca"
+      }
+    },
+    "content": {
+      "links": {
+        "emptyState": {
+          "heading": "Sem Links"
+        }
+      }
+    },
+    "validation": {
+      "emptyError": "Não pode ser vazio",
+      "invalidUrlError": "O endereço precisa ser válido"
+    }
+  }
+}

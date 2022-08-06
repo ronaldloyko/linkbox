@@ -4,8 +4,19 @@ import { DEFAULT_LANGUAGE } from "./data/constants";
 
 import german from "./locales/de.json";
 import english from "./locales/en.json";
+import arabic from "./locales/ar.json";
+import spanish from "./locales/es.json";
+import norwegianBokmal from "./locales/nb_NO.json";
+import brazilianPortuguese from "./locales/pt_BR.json";
 
-const usedLanguages = [english, german];
+const usedLanguages = [
+  english,
+  german,
+  arabic,
+  spanish,
+  norwegianBokmal,
+  brazilianPortuguese,
+];
 
 export const languages = usedLanguages.map((language) => ({
   code: language.translation.meta.code,

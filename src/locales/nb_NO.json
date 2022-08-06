@@ -1,0 +1,202 @@
+{
+  "translation": {
+    "meta": {
+      "code": "nb-NO",
+      "name": "Norsk bokmål"
+    },
+    "overlays": {
+      "modals": {
+        "search": {
+          "title": "Søk",
+          "cancel": "$t(overlays.modals.saveFolder.cancel)",
+          "placeholder": "Søk etter lenker …",
+          "heading": "Resultatløst"
+        },
+        "settings": {
+          "close": "Lukk",
+          "title": "Innstillinger",
+          "interface": {
+            "label": "Grensesnitt",
+            "language": "Språk",
+            "theme": {
+              "label": "Drakt",
+              "system": "Automatisk",
+              "light": "Lys",
+              "dark": "Mørk"
+            },
+            "linkSorting": {
+              "alphabetically": "Alfabetisk",
+              "label": "Lenkesortering",
+              "default": "Eldste først",
+              "reversed": "Nyeste først"
+            },
+            "showAvatar": "Vis avatarer"
+          },
+          "data": {
+            "label": "Data",
+            "import": {
+              "label": "Importer",
+              "confirmationAlert": {
+                "abort": "Avbryt",
+                "proceed": "Fortsett",
+                "message": "Fortsett og overskriv alle innstillinger og lenker?"
+              },
+              "finalAlert": {
+                "message": {
+                  "successful": "Importert",
+                  "invalidFile": "Ugyldig fil",
+                  "invalidContent": "Ugyldig filinnhold",
+                  "unknownError": "Ukjent feil"
+                },
+                "close": "OK"
+              }
+            },
+            "export": {
+              "label": "Eksporter",
+              "alert": {
+                "message": "Lenker og innstillinger lagret til nedlastingsmappen som {{path}}",
+                "close": "$t(overlays.modals.settings.data.import.finalAlert.close)"
+              }
+            }
+          },
+          "miscellaneous": {
+            "label": "Ymse",
+            "sourceCode": "Kildekode",
+            "donate": "Doner"
+          }
+        },
+        "introduction": {
+          "skip": "Hopp over",
+          "continue": "Fortsett",
+          "start": "Begynn",
+          "first": {
+            "imageDescription": "Program og logo",
+            "heading": "Velkommen til Linkbox.",
+            "paragraph": "Håndter alle lenkene dine. Frakoblet og sikkert."
+          },
+          "second": {
+            "imageDescription": "Flytende handlingsknapp",
+            "heading": "Legg til lenkene dine.",
+            "paragraph": "Trykk på den flytende pluss-knappen for å legge til en mappe eller lenke."
+          },
+          "third": {
+            "imageDescription": "Faner",
+            "heading": "Organiser lenkene dine i mapper.",
+            "paragraph": "Mapper vises som faner."
+          },
+          "fourth": {
+            "imageDescription": "Handlingsmeny",
+            "heading": "Rediger og del lenke dine.",
+            "paragraph": "Lang-trykk på en fane eller lenke for å vise alternativene."
+          },
+          "fifth": {
+            "imageDescription": "Hake",
+            "heading": "Du er klar.",
+            "paragraph": "Nyt Linkbox."
+          }
+        },
+        "saveLink": {
+          "title": {
+            "create": "Opprett lenke",
+            "edit": "Rediger lenke"
+          },
+          "cancel": "$t(overlays.alerts.deleteFolderConfirmation.cancel)",
+          "save": {
+            "create": "Opprett",
+            "update": "Oppdater"
+          },
+          "name": {
+            "label": "Navn",
+            "placeholder": "Wikipedia"
+          },
+          "url": {
+            "label": "Nettadresse",
+            "placeholder": "wikipedia.com"
+          },
+          "folder": {
+            "label": "Mappe"
+          },
+          "toast": {
+            "message": {
+              "created": "Opprettet lenken «{{name}}»",
+              "updated": "Oppdaterte lenken «{{name}}»"
+            }
+          }
+        },
+        "saveFolder": {
+          "title": {
+            "create": "Opprett mappe",
+            "edit": "Rediger mappe"
+          },
+          "cancel": "$t(overlays.modals.saveLink.cancel)",
+          "save": {
+            "create": "$t(overlays.modals.saveLink.save.create)",
+            "update": "$t(overlays.modals.saveLink.save.update)"
+          },
+          "name": {
+            "label": "$t(overlays.modals.saveLink.name.label)",
+            "placeholder": "Nyhetskilder"
+          },
+          "toast": {
+            "message": {
+              "created": "Opprettet mappen «{{name}}»",
+              "updated": "Oppdaterte mappen «{{name}}»"
+            }
+          }
+        }
+      },
+      "sheets": {
+        "linkActions": {
+          "edit": "Rediger",
+          "share": {
+            "label": "Del",
+            "title": "Del lenke"
+          },
+          "delete": "$t(overlays.alerts.deleteFolderConfirmation.delete)",
+          "cancel": "$t(overlays.modals.search.cancel)"
+        },
+        "folderActions": {
+          "edit": "$t(overlays.sheets.linkActions.edit)",
+          "delete": "$t(overlays.sheets.linkActions.delete)",
+          "cancel": "$t(overlays.sheets.linkActions.cancel)"
+        }
+      },
+      "alerts": {
+        "deleteLinkConfirmation": {
+          "message": "Vil du slette {{name}}?",
+          "cancel": "Avbryt",
+          "delete": "Slett",
+          "toast": {
+            "message": "Slettet lenken «{{name}}»"
+          }
+        },
+        "deleteFolderConfirmation": {
+          "message": "Slett {{name}} og tilhørende lenker?",
+          "cancel": "$t(overlays.alerts.deleteLinkConfirmation.cancel)",
+          "delete": "$t(overlays.alerts.deleteLinkConfirmation.delete)",
+          "toast": {
+            "message": "Slettet mappen «{{name}}»"
+          }
+        }
+      }
+    },
+    "header": {
+      "title": "Lenker",
+      "menu": {
+        "search": "Søk",
+        "settings": "Innstillinger"
+      }
+    },
+    "content": {
+      "links": {
+        "emptyState": {
+          "heading": "Ingen lenker"
+        }
+      }
+    },
+    "validation": {
+      "emptyError": "Kan ikke være tom",
+      "invalidUrlError": "Må være en gyldig nettadresse"
+    }
+  }
+}

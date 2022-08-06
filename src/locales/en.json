@@ -83,7 +83,7 @@
         "search": {
           "title": "Search",
           "cancel": "$t(overlays.modals.saveFolder.cancel)",
-          "placeholder": "Search For Links...",
+          "placeholder": "Search For Links…",
           "heading": "No result"
         },
         "settings": {

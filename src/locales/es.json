@@ -1,0 +1,202 @@
+{
+  "translation": {
+    "meta": {
+      "code": "es",
+      "name": "Español"
+    },
+    "header": {
+      "title": "Enlaces",
+      "menu": {
+        "settings": "Ajustes",
+        "search": "Buscar"
+      }
+    },
+    "overlays": {
+      "alerts": {
+        "deleteLinkConfirmation": {
+          "cancel": "Cancelar",
+          "delete": "Borrar",
+          "message": "Estás seguro de que quieres borrar {{name}}?",
+          "toast": {
+            "message": "Enlace {{name}} ha sido borrado"
+          }
+        },
+        "deleteFolderConfirmation": {
+          "cancel": "$t(overlays.alerts.deleteLinkConfirmation.cancel)",
+          "delete": "$t(overlays.alerts.deleteLinkConfirmation.delete)",
+          "toast": {
+            "message": "Carpeta {{name}} ha sido borrada"
+          },
+          "message": "Estás seguro de que quieres borrar {{name}} con todos sus enlaces?"
+        }
+      },
+      "modals": {
+        "saveLink": {
+          "save": {
+            "create": "Crear",
+            "update": "Guardar"
+          },
+          "name": {
+            "label": "Nombre",
+            "placeholder": "Wikipedia"
+          },
+          "url": {
+            "label": "URL",
+            "placeholder": "wikipedia.com"
+          },
+          "title": {
+            "create": "Crear enlace",
+            "edit": "Editar enlace"
+          },
+          "cancel": "$t(overlays.alerts.deleteFolderConfirmation.cancel)",
+          "folder": {
+            "label": "Carpeta"
+          },
+          "toast": {
+            "message": {
+              "created": "Enlace {{name}} ha sido creado",
+              "updated": "Enlace {{name}} ha sido actualizado"
+            }
+          }
+        },
+        "saveFolder": {
+          "title": {
+            "create": "Crear carpeta",
+            "edit": "Editar carpeta"
+          },
+          "cancel": "$t(overlays.modals.saveLink.cancel)",
+          "save": {
+            "update": "$t(overlays.modals.saveLink.save.update)",
+            "create": "$t(overlays.modals.saveLink.save.create)"
+          },
+          "name": {
+            "label": "$t(overlays.modals.saveLink.name.label)",
+            "placeholder": "Noticieros"
+          },
+          "toast": {
+            "message": {
+              "created": "Carpeta {{name}} ha sido creada",
+              "updated": "Carpeta {{name}} ha sido actualizada"
+            }
+          }
+        },
+        "search": {
+          "heading": "No hay resultado",
+          "title": "Buscar",
+          "cancel": "$t(overlays.modals.saveFolder.cancel)",
+          "placeholder": "Buscar enlaces…"
+        },
+        "settings": {
+          "interface": {
+            "theme": {
+              "system": "Automático",
+              "label": "Tema",
+              "light": "Claro",
+              "dark": "Oscuro"
+            },
+            "showAvatar": "Mostrar avatares",
+            "label": "Interfaz",
+            "language": "Idioma",
+            "linkSorting": {
+              "reversed": "Los más nuevos primero",
+              "label": "Orden de los enlaces",
+              "default": "Los más antiguos primero",
+              "alphabetically": "Por orden alfabético"
+            }
+          },
+          "data": {
+            "label": "Datos",
+            "import": {
+              "label": "Importar",
+              "confirmationAlert": {
+                "abort": "Cancelar",
+                "message": "Todos los ajustes y enlaces serán reemplazados. Continuar de todos modos?",
+                "proceed": "Continuar"
+              },
+              "finalAlert": {
+                "close": "OK",
+                "message": {
+                  "successful": "La importación ha sido exitosa",
+                  "invalidFile": "Archivo inválido",
+                  "invalidContent": "Contenido de archivo no válido",
+                  "unknownError": "Error desconocido"
+                }
+              }
+            },
+            "export": {
+              "label": "Exportar",
+              "alert": {
+                "message": "Los enlaces y la configuración han sido guardados en la carpeta de descargas como {{path}}",
+                "close": "$t(overlays.modals.settings.data.import.finalAlert.close)"
+              }
+            }
+          },
+          "miscellaneous": {
+            "label": "Otros",
+            "sourceCode": "Código fuente",
+            "donate": "Donar"
+          },
+          "title": "Ajustes",
+          "close": "Cerrar"
+        },
+        "introduction": {
+          "first": {
+            "heading": "Bienvenido a Linkbox.",
+            "paragraph": "Gestiona fácilmente todos tus enlaces. Seguro y sin necesidad de internet.",
+            "imageDescription": "Aplicación y logotipo"
+          },
+          "fourth": {
+            "imageDescription": "Menú de acción",
+            "paragraph": "Pulse de forma prolongada sobre una pestaña o un enlace para mostrar las opciones.",
+            "heading": "Edita y comparte tus enlaces."
+          },
+          "fifth": {
+            "paragraph": "Disfruta con Linkbox.",
+            "imageDescription": "Marca de verificación",
+            "heading": "Estás listo."
+          },
+          "skip": "Omitir",
+          "continue": "Continuar",
+          "start": "Empezar",
+          "second": {
+            "heading": "Añade tus enlaces.",
+            "imageDescription": "Botón de acción flotante",
+            "paragraph": "Toca el botón flotante para añadir una carpeta o un enlace."
+          },
+          "third": {
+            "imageDescription": "Pestañas",
+            "heading": "Organiza tus enlaces en carpetas.",
+            "paragraph": "Las carpetas aparecen como pestañas."
+          }
+        }
+      },
+      "sheets": {
+        "folderActions": {
+          "edit": "$t(overlays.sheets.linkActions.edit)",
+          "delete": "$t(overlays.sheets.linkActions.delete)",
+          "cancel": "$t(overlays.sheets.linkActions.cancel)"
+        },
+        "linkActions": {
+          "share": {
+            "label": "Compartir",
+            "title": "Compartir enlace"
+          },
+          "delete": "$t(overlays.alerts.deleteFolderConfirmation.delete)",
+          "cancel": "$t(overlays.modals.search.cancel)",
+          "edit": "Editar"
+        }
+      }
+    },
+    "validation": {
+      "invalidUrlError": "Debe ser una URL válida",
+      "emptyError": "No puede quedar vacío"
+    },
+    "content": {
+      "links": {
+        "emptyState": {
+          "heading": "No hay enlaces"
+        }
+      }
+    }
+  }
+}

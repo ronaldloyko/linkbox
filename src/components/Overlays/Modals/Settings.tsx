@@ -204,61 +204,63 @@ export default (function Settings() {
               {t(`${TRANSLATION_PREFIX}.interface.label`)}
             </IonLabel>
           </IonListHeader>
-          <IonItem>
-            <IonIcon slot="start" icon={languageIcon} />
-            <IonLabel position="stacked">
-              {t(`${TRANSLATION_PREFIX}.interface.language`)}
-            </IonLabel>
-            <IonSelect
-              interface="popover"
-              value={language}
-              onIonChange={onLanguageChange}
-            >
-              {languages.map(({ code, name }) => (
-                <IonSelectOption key={code} value={code}>
-                  {name}
-                </IonSelectOption>
-              ))}
-            </IonSelect>
-          </IonItem>
-          <IonItem>
-            <IonIcon slot="start" icon={contrast} />
-            <IonLabel position="stacked">
-              {t(`${TRANSLATION_PREFIX}.interface.theme.label`)}
-            </IonLabel>
-            {showOptions && (
-              <IonSelect
-                interface="popover"
-                value={theme}
-                onIonChange={onThemeChange}
-              >
-                {Object.values(Theme).map((value) => (
-                  <IonSelectOption key={value} value={value}>
-                    {t(`${TRANSLATION_PREFIX}.interface.theme.${value}`)}
-                  </IonSelectOption>
-                ))}
-              </IonSelect>
-            )}
-          </IonItem>
-          <IonItem>
-            <IonIcon slot="start" icon={swapVertical} />
-            <IonLabel position="stacked">
-              {t(`${TRANSLATION_PREFIX}.interface.linkSorting.label`)}
-            </IonLabel>
-            {showOptions && (
-              <IonSelect
-                interface="popover"
-                value={linkSorting}
-                onIonChange={onLinkSortingChange}
-              >
-                {Object.values(LinkSorting).map((value) => (
-                  <IonSelectOption key={value} value={value}>
-                    {t(`${TRANSLATION_PREFIX}.interface.linkSorting.${value}`)}
-                  </IonSelectOption>
-                ))}
-              </IonSelect>
-            )}
-          </IonItem>
+          {showOptions && (
+            <>
+              <IonItem>
+                <IonIcon slot="start" icon={languageIcon} />
+                <IonLabel position="stacked">
+                  {t(`${TRANSLATION_PREFIX}.interface.language`)}
+                </IonLabel>
+                <IonSelect
+                  interface="popover"
+                  value={language}
+                  onIonChange={onLanguageChange}
+                >
+                  {languages.map(({ code, name }) => (
+                    <IonSelectOption key={code} value={code}>
+                      {name}
+                    </IonSelectOption>
+                  ))}
+                </IonSelect>
+              </IonItem>
+              <IonItem>
+                <IonIcon slot="start" icon={contrast} />
+                <IonLabel position="stacked">
+                  {t(`${TRANSLATION_PREFIX}.interface.theme.label`)}
+                </IonLabel>
+                <IonSelect
+                  interface="popover"
+                  value={theme}
+                  onIonChange={onThemeChange}
+                >
+                  {Object.values(Theme).map((value) => (
+                    <IonSelectOption key={value} value={value}>
+                      {t(`${TRANSLATION_PREFIX}.interface.theme.${value}`)}
+                    </IonSelectOption>
+                  ))}
+                </IonSelect>
+              </IonItem>
+              <IonItem>
+                <IonIcon slot="start" icon={swapVertical} />
+                <IonLabel position="stacked">
+                  {t(`${TRANSLATION_PREFIX}.interface.linkSorting.label`)}
+                </IonLabel>
+                <IonSelect
+                  interface="popover"
+                  value={linkSorting}
+                  onIonChange={onLinkSortingChange}
+                >
+                  {Object.values(LinkSorting).map((value) => (
+                    <IonSelectOption key={value} value={value}>
+                      {t(
+                        `${TRANSLATION_PREFIX}.interface.linkSorting.${value}`
+                      )}
+                    </IonSelectOption>
+                  ))}
+                </IonSelect>
+              </IonItem>
+            </>
+          )}
           <IonItem>
             <IonIcon slot="start" icon={image} />
             <IonLabel>

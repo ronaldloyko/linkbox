@@ -2,7 +2,7 @@
   "translation": {
     "meta": {
       "code": "de",
-      "name": "Deutsch (German)"
+      "name": "Deutsch"
     },
     "header": {
       "title": "Links",
@@ -83,7 +83,7 @@
         "search": {
           "title": "Suche",
           "cancel": "$t(overlays.modals.saveFolder.cancel)",
-          "placeholder": "Links suchen...",
+          "placeholder": "Links suchen…",
           "heading": "Kein Ergebnis"
         },
         "settings": {

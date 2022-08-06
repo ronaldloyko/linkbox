@@ -1,0 +1,202 @@
+{
+  "translation": {
+    "meta": {
+      "code": "ar",
+      "name": "العربية"
+    },
+    "overlays": {
+      "alerts": {
+        "deleteLinkConfirmation": {
+          "cancel": "إلغاء",
+          "delete": "حذف",
+          "message": "هل تريد بالفعل حذف {{name}}؟",
+          "toast": {
+            "message": "تم حذف {{name}}"
+          }
+        },
+        "deleteFolderConfirmation": {
+          "toast": {
+            "message": "تم حذف {{name}}"
+          },
+          "cancel": "$t(overlays.alerts.deleteLinkConfirmation.cancel)",
+          "message": "هل تريد حقا حذف {{name}} وكل الروابط الخاصة به؟",
+          "delete": "$t(overlays.alerts.deleteLinkConfirmation.delete)"
+        }
+      },
+      "modals": {
+        "saveLink": {
+          "title": {
+            "create": "إنشاء رابط",
+            "edit": "تعديل رابط"
+          },
+          "cancel": "$t(overlays.alerts.deleteFolderConfirmation.cancel)",
+          "save": {
+            "update": "تعديل",
+            "create": "إنشاء"
+          },
+          "name": {
+            "label": "الإسم",
+            "placeholder": "ويكيبيديا"
+          },
+          "url": {
+            "placeholder": "wikipedia.com",
+            "label": "الرابط"
+          },
+          "folder": {
+            "label": "المجلد"
+          },
+          "toast": {
+            "message": {
+              "created": "تم إنشاء الرابط {{name}}",
+              "updated": "تم تعديل الرابط {{name}}"
+            }
+          }
+        },
+        "saveFolder": {
+          "cancel": "$t(overlays.modals.saveLink.cancel)",
+          "save": {
+            "create": "$t(overlays.modals.saveLink.save.create)",
+            "update": "$t(overlays.modals.saveLink.save.update)"
+          },
+          "name": {
+            "label": "$t(overlays.modals.saveLink.name.label)",
+            "placeholder": "مصادر الأخبار"
+          },
+          "toast": {
+            "message": {
+              "created": "تم إنشاء المجلد {{name}}",
+              "updated": "تم تعديل المجلد {{name}}"
+            }
+          },
+          "title": {
+            "create": "إنشاء مجلد",
+            "edit": "تعديل مجلد"
+          }
+        },
+        "search": {
+          "title": "بحث",
+          "placeholder": "البحث عن روابط…",
+          "cancel": "$t(overlays.modals.saveFolder.cancel)",
+          "heading": "لا نتائج"
+        },
+        "settings": {
+          "close": "إغلاق",
+          "interface": {
+            "label": "الواجهة",
+            "theme": {
+              "label": "تصميم الواجهة",
+              "system": "تلقائي",
+              "light": "فاتح",
+              "dark": "داكن"
+            },
+            "linkSorting": {
+              "label": "ترتيب الروابط",
+              "default": "الأقدم أولا",
+              "alphabetically": "أبجديا",
+              "reversed": "الأحدث أولا"
+            },
+            "showAvatar": "عرض صورة المستخدم",
+            "language": "اللغة"
+          },
+          "data": {
+            "label": "البيانات",
+            "import": {
+              "label": "استيراد",
+              "finalAlert": {
+                "message": {
+                  "invalidFile": "ملف غير صالح",
+                  "unknownError": "خطأ غير معروف",
+                  "successful": "تم الاستيراد بنجاح",
+                  "invalidContent": "خطأ غير معروف"
+                },
+                "close": "متابعة"
+              },
+              "confirmationAlert": {
+                "message": "سيتم تعديل جميع الإعدادات والروابط. هل تريد الاستمرار على أي حال؟",
+                "abort": "إلغاء",
+                "proceed": "متابعة"
+              }
+            },
+            "export": {
+              "label": "تصدير",
+              "alert": {
+                "message": "تم حفظ الروابط والإعدادات في مجلد التحميلات تحت اسم {{path}}",
+                "close": "$t(overlays.modals.settings.data.import.finalAlert.close)"
+              }
+            }
+          },
+          "miscellaneous": {
+            "label": "متفرقات",
+            "sourceCode": "المصدر البرمجي",
+            "donate": "التبرع"
+          },
+          "title": "الإعدادات"
+        },
+        "introduction": {
+          "skip": "تخطي",
+          "continue": "متابعة",
+          "start": "هيا بنا",
+          "second": {
+            "heading": "إضافة روابطك.",
+            "imageDescription": "زر إجراء عائم",
+            "paragraph": "قم بالضغط على الزر لإضافة مجلدات أو روابط جديدة."
+          },
+          "first": {
+            "paragraph": "إدارة كل روابطك بسهولة. بلا إنترنت وبكل أمان.",
+            "imageDescription": "التطبيق والشعار",
+            "heading": "مرحبا بك في Linkbox."
+          },
+          "third": {
+            "imageDescription": "علامات التبويب",
+            "paragraph": "تظهر المجلدات كعلامات تبويب.",
+            "heading": "تنظيم روابطك في مجلدات."
+          },
+          "fourth": {
+            "heading": "تعديل ومشاركة روابطك.",
+            "paragraph": "ضغطة طويلة علامة تبويب أو رابط لإظهار الخيارات.",
+            "imageDescription": "قائمة الإجراءات"
+          },
+          "fifth": {
+            "imageDescription": "علامة الاختيار",
+            "paragraph": "استمتع مع Linkbox.",
+            "heading": "أنت الآن جاهز."
+          }
+        }
+      },
+      "sheets": {
+        "linkActions": {
+          "share": {
+            "label": "مشاركة",
+            "title": "مشاركة رابط"
+          },
+          "edit": "تعديل",
+          "delete": "$t(overlays.alerts.deleteFolderConfirmation.delete)",
+          "cancel": "$t(overlays.modals.search.cancel)"
+        },
+        "folderActions": {
+          "edit": "$t(overlays.sheets.linkActions.edit)",
+          "delete": "$t(overlays.sheets.linkActions.delete)",
+          "cancel": "$t(overlays.sheets.linkActions.cancel)"
+        }
+      }
+    },
+    "content": {
+      "links": {
+        "emptyState": {
+          "heading": "لا روابط"
+        }
+      }
+    },
+    "validation": {
+      "emptyError": "لا يمكن أن يُترك فارغا",
+      "invalidUrlError": "يجب أن يكون الرابط صالحا"
+    },
+    "header": {
+      "title": "روابط",
+      "menu": {
+        "settings": "الإعدادات",
+        "search": "بحث"
+      }
+    }
+  }
+}
