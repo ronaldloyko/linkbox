@@ -75,7 +75,105 @@
         },
         "search": {
           "title": "Пошук",
-          "cancel": "$t(overlays.modals.saveFolder.cancel)"
+          "cancel": "$t(overlays.modals.saveFolder.cancel)",
+          "heading": "Без результатів",
+          "placeholder": "Пошук посилань…"
+        },
+        "settings": {
+          "interface": {
+            "theme": {
+              "system": "Автоматична",
+              "light": "Світла",
+              "dark": "Темна",
+              "label": "Тема"
+            },
+            "linkSorting": {
+              "label": "Сортування посилань",
+              "default": "Спочатку старіші",
+              "reversed": "Спочатку новіші",
+              "alphabetically": "За алфавітом"
+            },
+            "showAvatar": "Показувати аватари",
+            "language": "Мова",
+            "label": "Інтерфейс"
+          },
+          "data": {
+            "label": "Дата",
+            "import": {
+              "label": "Імпортувати",
+              "confirmationAlert": {
+                "message": "Усі налаштування і посилання буде перезаписано. Продовжити в будь-якому випадку?",
+                "abort": "Перервати",
+                "proceed": "Продовжити"
+              },
+              "finalAlert": {
+                "message": {
+                  "successful": "Імпортовано успішно",
+                  "invalidFile": "Неправильний файл",
+                  "unknownError": "Невідома помилка",
+                  "invalidContent": "Неправильний вміст файлу"
+                },
+                "close": "Гаразд"
+              }
+            },
+            "export": {
+              "alert": {
+                "message": "Посилання і налаштування збережено в теку завантаження як {{path}}",
+                "close": "$t(overlays.modals.settings.data.import.finalAlert.close)"
+              },
+              "label": "Експортувати"
+            }
+          },
+          "miscellaneous": {
+            "sourceCode": "Вихідний код",
+            "donate": "Пожертви",
+            "label": "Різне"
+          },
+          "close": "Закрити"
+        },
+        "introduction": {
+          "skip": "Пропустити",
+          "continue": "Продовжити",
+          "start": "Поїхали",
+          "first": {
+            "imageDescription": "Програма і логотип",
+            "heading": "Вітаємо у Linkbox.",
+            "paragraph": "Легко керуйте всіма своїми посиланнями. Безпечно і поза мережею."
+          },
+          "second": {
+            "imageDescription": "Плавуча кнопка дії",
+            "heading": "Додавайте свої посилання."
+          },
+          "third": {
+            "imageDescription": "Вкладки",
+            "heading": "Упорядковуйте свої посилання в теки.",
+            "paragraph": "Теки відображаються як вкладки."
+          },
+          "fourth": {
+            "paragraph": "Довге натискання на вкладці або посиланні показує параметри.",
+            "heading": "Змінюйте і поширюйте свої посилання.",
+            "imageDescription": "Меню дії"
+          },
+          "fifth": {
+            "heading": "Ви готові.",
+            "paragraph": "Отримуйте задоволення від Linkbox."
+          }
+        }
+      },
+      "sheets": {
+        "linkActions": {
+          "share": {
+            "label": "Поширити",
+            "title": "Поширити посилання"
+          },
+          "edit": "Змінити",
+          "delete": "$t(overlays.alerts.deleteFolderConfirmation.delete)",
+          "cancel": "$t(overlays.modals.search.cancel)"
+        },
+        "folderActions": {
+          "edit": "$t(overlays.sheets.linkActions.edit)",
+          "delete": "$t(overlays.sheets.linkActions.delete)",
+          "cancel": "$t(overlays.sheets.linkActions.cancel)"
         }
       }
     },
