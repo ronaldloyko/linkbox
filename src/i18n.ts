@@ -8,6 +8,7 @@ import arabic from "./locales/ar.json";
 import spanish from "./locales/es.json";
 import norwegianBokmal from "./locales/nb_NO.json";
 import brazilianPortuguese from "./locales/pt_BR.json";
+import ukrainian from "./locales/uk.json";
 
 const usedLanguages = [
   english,
@@ -16,6 +17,7 @@ const usedLanguages = [
   spanish,
   norwegianBokmal,
   brazilianPortuguese,
+  ukrainian,
 ];
 
 export const languages = usedLanguages.map((language) => ({
