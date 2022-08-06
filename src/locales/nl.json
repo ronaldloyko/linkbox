@@ -7,6 +7,15 @@
             "paragraph": "Veel plezier met Linkbox.",
             "heading": "Je bent er klaar voor."
           }
+        },
+        "settings": {
+          "data": {
+            "import": {
+              "finalAlert": {
+                "close": "OK"
+              }
+            }
+          }
         }
       },
       "sheets": {
