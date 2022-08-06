@@ -5,6 +5,7 @@ const config: CapacitorConfig = {
   appName: "Linkbox",
   webDir: "build",
   bundledWebRuntime: false,
+  backgroundColor: "#000000"
 };
 
 export default config;
