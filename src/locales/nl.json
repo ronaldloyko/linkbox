@@ -1,0 +1,34 @@
+{
+  "translation": {
+    "overlays": {
+      "modals": {
+        "introduction": {
+          "fifth": {
+            "paragraph": "Veel plezier met Linkbox.",
+            "heading": "Je bent er klaar voor."
+          }
+        }
+      },
+      "sheets": {
+        "linkActions": {
+          "edit": "Bewerken",
+          "share": {
+            "title": "Link delen",
+            "label": "Delen"
+          }
+        }
+      }
+    },
+    "validation": {
+      "invalidUrlError": "Moet een geldige URL zijn",
+      "emptyError": "Kan niet leeg zijn"
+    },
+    "content": {
+      "links": {
+        "emptyState": {
+          "heading": "Geen links"
+        }
+      }
+    }
+  }
+}

@@ -5,7 +5,10 @@ import { useTranslation } from "react-i18next";
 import Content from "./components/Content";
 import Header from "./components/Header";
 import Overlays from "./components/Overlays";
-import { EVENT_NAME_BACK_BUTTON, EVENT_NAME_CHANGE } from "./data/constants";
+import {
+  EVENT_NAME_BACK_BUTTON,
+  EVENT_NAME_CHANGE,
+} from "./data/constants";
 import { useDispatch, useSelector } from "./store";
 import { loadDataFromStorage } from "./store/thunks";
 import { Theme } from "./store/ui";
