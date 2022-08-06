@@ -11,7 +11,7 @@ import {
   type SelectChangeEventDetail,
 } from "@ionic/react";
 import "@ionic/react/css/ionic-swiper.css";
-import { useState, type FC } from "react";
+import { useEffect, useState, type FC } from "react";
 import { useTranslation } from "react-i18next";
 import { Pagination } from "swiper";
 import "swiper/css/pagination";
@@ -28,7 +28,7 @@ export default (function Introduction() {
   const language = useSelector((state) => state.ui.language);
   const imageFolderPath = "/assets/introduction";
   const [swiper, setSwiper] = useState<SwiperClass>();
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const { setLanguage, toggleFirstRun } = useAction();
 
   const continueText = t(`${TRANSLATION_PREFIX}.continue`);
@@ -67,6 +67,15 @@ export default (function Introduction() {
   function onLanguageChange(event: CustomEvent<SelectChangeEventDetail>) {
     dispatch(setLanguage(event.detail.value as Language));
   }
+
+  useEffect(() => {
+    if (!swiper) {
+      return;
+    }
+
+    swiper.rtlTranslate = i18n.dir() === "rtl";
+    swiper.update();
+  }, [swiper, i18n.dir()]);
 
   return (
     <IonModal isOpen={open} backdropDismiss={false}>
