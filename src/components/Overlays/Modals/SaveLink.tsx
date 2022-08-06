@@ -39,6 +39,8 @@ export default (function SaveLink() {
   const links = useSelector((state) => state.items.links);
   const currentFolder = useSelector((state) => state.ui.currentFolder);
   const selectedLink = useSelector((state) => state.ui.selectedLink);
+  const prefilledName = useSelector((state) => state.ui.prefilledName);
+  const prefilledUrl = useSelector((state) => state.ui.prefilledUrl);
   const linkBeingEdited = useMemo(
     () => links.find(({ id }) => id === selectedLink),
     [selectedLink, links]
@@ -48,8 +50,14 @@ export default (function SaveLink() {
   const nameInputElement = useRef<HTMLIonInputElement>(null);
   const isValidationPassed = useValidation();
   const { t } = useTranslation();
-  const { addLink, editLink, toggleSaveLinkModal, setSelectedLink } =
-    useAction();
+  const {
+    addLink,
+    editLink,
+    toggleSaveLinkModal,
+    setSelectedLink,
+    prefillName,
+    prefillUrl,
+  } = useAction();
   const [name, setName] = useState(EMPTY_TEXT);
   const [url, setUrl] = useState(EMPTY_TEXT);
   const [folder, setFolder] = useState(DEFAULT_FOLDER_ID);
@@ -74,6 +82,8 @@ export default (function SaveLink() {
   function onCancel() {
     dispatch(toggleSaveLinkModal(false));
     dispatch(setSelectedLink(UNSELECTED_ITEM));
+    dispatch(prefillName(EMPTY_TEXT));
+    dispatch(prefillUrl(EMPTY_TEXT));
   }
 
   function clearErrorMessages() {
@@ -119,8 +129,8 @@ export default (function SaveLink() {
   }
 
   function onBeforeShow() {
-    setName(isEditing ? linkBeingEdited.name : EMPTY_TEXT);
-    setUrl(isEditing ? linkBeingEdited.url : EMPTY_TEXT);
+    setName(isEditing ? linkBeingEdited.name : prefilledName);
+    setUrl(isEditing ? linkBeingEdited.url : prefilledUrl);
     setFolder(isEditing ? linkBeingEdited.folder! : currentFolder);
     clearErrorMessages();
   }

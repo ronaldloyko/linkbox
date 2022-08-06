@@ -21,3 +21,4 @@ export const STORAGE_DATA_KEY = "data";
 export const APPLICATION_NAME = "Linkbox";
 export const VERSION = "1.0.0";
 export const BACKUP_MIME_TYPE = "application/json";
+export const SHARING_MIME_TYPE = "text/plain";

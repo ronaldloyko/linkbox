@@ -1,6 +1,10 @@
 import { createSlice, type PayloadAction } from "@reduxjs/toolkit";
-import { DEFAULT_FOLDER_ID, DEFAULT_LANGUAGE } from "../data/constants";
-import type { Id } from "./items";
+import {
+  DEFAULT_FOLDER_ID,
+  DEFAULT_LANGUAGE,
+  EMPTY_TEXT,
+} from "../data/constants";
+import type { Id, Name, Url } from "./items";
 import { loadDataFromStorage } from "./thunks";
 
 export enum LinkSorting {
@@ -35,6 +39,8 @@ export default createSlice({
     theme: Theme.System,
     showAvatar: true,
     firstRun: false,
+    prefilledName: EMPTY_TEXT,
+    prefilledUrl: EMPTY_TEXT,
   } as State,
   reducers: {
     toggleMenu(state, { payload }: PayloadAction<OptionalToggleParameter>) {
@@ -117,6 +123,12 @@ export default createSlice({
     toggleFirstRun(state, { payload }: PayloadAction<OptionalToggleParameter>) {
       state.firstRun = payload ?? !state.firstRun;
     },
+    prefillName(state, { payload }: PayloadAction<Name>) {
+      state.prefilledName = payload;
+    },
+    prefillUrl(state, { payload }: PayloadAction<Url>) {
+      state.prefilledUrl = payload;
+    },
   },
   extraReducers(builder) {
     builder.addCase(loadDataFromStorage.fulfilled, (state, { payload }) => {
@@ -153,6 +165,8 @@ interface State {
   theme: Theme;
   showAvatar: AvatarVisibility;
   firstRun: FirstRunFlag;
+  prefilledName: Name;
+  prefilledUrl: Url;
 }
 
 type OverlayVisibility = boolean;

@@ -1,12 +1,17 @@
 import { App } from "@capacitor/app";
 import { IonApp, IonPage, type BackButtonEvent } from "@ionic/react";
+import { WebIntent, type Intent } from "@awesome-cordova-plugins/web-intent";
 import { useEffect, type FC } from "react";
 import { useTranslation } from "react-i18next";
 import Content from "./components/Content";
 import Header from "./components/Header";
 import Overlays from "./components/Overlays";
-import { EVENT_NAME_BACK_BUTTON, EVENT_NAME_CHANGE } from "./data/constants";
-import { useDispatch, useSelector } from "./store";
+import {
+  EVENT_NAME_BACK_BUTTON,
+  EVENT_NAME_CHANGE,
+  SHARING_MIME_TYPE,
+} from "./data/constants";
+import { useAction, useDispatch, useSelector } from "./store";
 import { loadDataFromStorage } from "./store/thunks";
 import { Theme } from "./store/ui";
 
@@ -14,6 +19,7 @@ export default (function MainPage() {
   const dispatch = useDispatch();
   const language = useSelector((state) => state.ui.language);
   const theme = useSelector((state) => state.ui.theme);
+  const { prefillName, prefillUrl, toggleSaveLinkModal } = useAction();
   const { i18n } = useTranslation();
 
   useEffect(() => {
@@ -67,6 +73,30 @@ export default (function MainPage() {
       document.removeEventListener<any>(EVENT_NAME_BACK_BUTTON, onBackButton);
     };
   }, []);
+
+  useEffect(() => {
+    const intentSubscription = WebIntent.onIntent().subscribe(handleIntent);
+
+    function handleIntent(intent: Intent) {
+      if (
+        intent.action !== WebIntent.ACTION_SEND ||
+        intent.type !== SHARING_MIME_TYPE
+      ) {
+        return;
+      }
+
+      const { [WebIntent.EXTRA_SUBJECT]: name, [WebIntent.EXTRA_TEXT]: url } =
+        intent.extras as { [key: string]: string };
+
+      dispatch(prefillName(name));
+      dispatch(prefillUrl(url));
+      dispatch(toggleSaveLinkModal(true));
+    }
+
+    return () => {
+      intentSubscription.unsubscribe();
+    };
+  }, [dispatch, prefillName, prefillUrl, toggleSaveLinkModal]);
 
   return (
     <IonApp>
