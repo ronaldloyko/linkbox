@@ -15,7 +15,7 @@
           }
         },
         "deleteFolderConfirmation": {
-          "message": "Ви справді хочете видалити {{name}} та його посилання?",
+          "message": "Ви справді хочете видалити {{name}} та її посилання?",
           "cancel": "$t(overlays.alerts.deleteLinkConfirmation.cancel)",
           "delete": "$t(overlays.alerts.deleteLinkConfirmation.delete)",
           "toast": {
@@ -129,7 +129,8 @@
             "donate": "Пожертви",
             "label": "Різне"
           },
-          "close": "Закрити"
+          "close": "Закрити",
+          "title": "Налаштування"
         },
         "introduction": {
           "skip": "Пропустити",
@@ -142,7 +143,8 @@
           },
           "second": {
             "imageDescription": "Плавуча кнопка дії",
-            "heading": "Додавайте свої посилання."
+            "heading": "Додавайте свої посилання.",
+            "paragraph": "Торкніться плавучої кнопки плюс, щоб додати теку або посилання."
           },
           "third": {
             "imageDescription": "Вкладки",
@@ -156,7 +158,8 @@
           },
           "fifth": {
             "heading": "Ви готові.",
-            "paragraph": "Отримуйте задоволення від Linkbox."
+            "paragraph": "Отримуйте задоволення від Linkbox.",
+            "imageDescription": "Галочка"
           }
         }
       },
@@ -180,8 +183,20 @@
     "header": {
       "title": "Посилання",
       "menu": {
-        "search": "Пошук"
+        "search": "Пошук",
+        "settings": "Налаштування"
       }
+    },
+    "content": {
+      "links": {
+        "emptyState": {
+          "heading": "Посилання відсутні"
+        }
+      }
+    },
+    "validation": {
+      "emptyError": "Не може бути порожнім",
+      "invalidUrlError": "Повинна бути правильна URL-адреса"
     }
   }
 }
