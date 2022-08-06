@@ -60,6 +60,8 @@ export default (function Introduction() {
     },
   ];
 
+  const languageDirection = i18n.dir();
+
   function onSwiperInitialization(swiper: SwiperClass) {
     setSwiper(swiper);
   }
@@ -73,9 +75,9 @@ export default (function Introduction() {
       return;
     }
 
-    swiper.rtlTranslate = i18n.dir() === "rtl";
+    swiper.rtlTranslate = languageDirection === "rtl";
     swiper.update();
-  }, [swiper, i18n.dir()]);
+  }, [swiper, languageDirection]);
 
   return (
     <IonModal isOpen={open} backdropDismiss={false}>
