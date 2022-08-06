@@ -1,1 +1,89 @@
-{}
+{
+  "translation": {
+    "meta": {
+      "code": "uk",
+      "name": "Українська"
+    },
+    "overlays": {
+      "alerts": {
+        "deleteLinkConfirmation": {
+          "cancel": "Скасувати",
+          "message": "Ви справді хочете видалити {{name}}?",
+          "delete": "Видалити",
+          "toast": {
+            "message": "Посилання {{name}} видалено"
+          }
+        },
+        "deleteFolderConfirmation": {
+          "message": "Ви справді хочете видалити {{name}} та його посилання?",
+          "cancel": "$t(overlays.alerts.deleteLinkConfirmation.cancel)",
+          "delete": "$t(overlays.alerts.deleteLinkConfirmation.delete)",
+          "toast": {
+            "message": "Теку {{name}} видалено"
+          }
+        }
+      },
+      "modals": {
+        "saveLink": {
+          "save": {
+            "update": "Оновити",
+            "create": "Створити"
+          },
+          "url": {
+            "label": "URL-адреса",
+            "placeholder": "uk.wikipedia.org"
+          },
+          "folder": {
+            "label": "Тека"
+          },
+          "toast": {
+            "message": {
+              "created": "Посилання {{name}} створено",
+              "updated": "Посилання {{name}} оновлено"
+            }
+          },
+          "name": {
+            "label": "Назва",
+            "placeholder": "Вікіпедія"
+          },
+          "title": {
+            "edit": "Змінити посилання",
+            "create": "Створити посилання"
+          },
+          "cancel": "$t(overlays.alerts.deleteFolderConfirmation.cancel)"
+        },
+        "saveFolder": {
+          "title": {
+            "create": "Створити теку",
+            "edit": "Змінити теку"
+          },
+          "cancel": "$t(overlays.modals.saveLink.cancel)",
+          "save": {
+            "create": "$t(overlays.modals.saveLink.save.create)",
+            "update": "$t(overlays.modals.saveLink.save.update)"
+          },
+          "name": {
+            "label": "$t(overlays.modals.saveLink.name.label)",
+            "placeholder": "Джерела новин"
+          },
+          "toast": {
+            "message": {
+              "created": "Теку {{name}} створено",
+              "updated": "Теку {{name}} оновлено"
+            }
+          }
+        },
+        "search": {
+          "title": "Пошук",
+          "cancel": "$t(overlays.modals.saveFolder.cancel)"
+        }
+      }
+    },
+    "header": {
+      "title": "Посилання",
+      "menu": {
+        "search": "Пошук"
+      }
+    }
+  }
+}
