@@ -20,6 +20,7 @@
 ### Changed
 
 - Improved design and media assets
+- Changed primary accent color to match Linkbox brand
 
 ## [1.0.0] - 2022-07-31
 
