@@ -10,6 +10,7 @@
 - Brazilian Portugese translation by [Alexandre Ataides](https://github.com/aleataides)
 - Ukrainian translation by [Andrij Mizyk](https://andmizyks.bearblog.dev)
 - Spanish translation by [Ronald Loyko](https://ronald.ooo)
+- Simplified Chinese translation by [Eric](https://hosted.weblate.org/user/alchemillatruth)
 - Ability to create links by sharing to Linkbox
 
 ### Fixed
