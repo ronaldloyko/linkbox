@@ -1,1 +1,202 @@
-{}
+{
+  "translation": {
+    "overlays": {
+      "modals": {
+        "settings": {
+          "interface": {
+            "language": "语言",
+            "theme": {
+              "label": "主题",
+              "light": "浅色",
+              "system": "自动",
+              "dark": "深色"
+            },
+            "linkSorting": {
+              "label": "链接排序",
+              "default": "最旧在前",
+              "reversed": "最新在前",
+              "alphabetically": "按字母顺序"
+            },
+            "showAvatar": "显示头像",
+            "label": "界面"
+          },
+          "data": {
+            "label": "数据",
+            "import": {
+              "label": "导入",
+              "confirmationAlert": {
+                "message": "所有设置和链接将被覆盖。 仍要继续？",
+                "abort": "中断",
+                "proceed": "继续"
+              },
+              "finalAlert": {
+                "message": {
+                  "successful": "导入成功",
+                  "invalidFile": "无效文件",
+                  "invalidContent": "无效文件内容",
+                  "unknownError": "未知错误"
+                },
+                "close": "好"
+              }
+            },
+            "export": {
+              "alert": {
+                "message": "链接和设置作为 {{path}} 被保存至“download”文件夹",
+                "close": "$t(overlays.modals.settings.data.import.finalAlert.close)"
+              },
+              "label": "导出"
+            }
+          },
+          "miscellaneous": {
+            "label": "杂项",
+            "sourceCode": "源代码",
+            "donate": "捐赠"
+          },
+          "title": "设置",
+          "close": "关闭"
+        },
+        "introduction": {
+          "skip": "跳过",
+          "continue": "继续",
+          "start": "开始吧",
+          "first": {
+            "imageDescription": "应用和图标",
+            "heading": "欢迎来到 Linkbox。",
+            "paragraph": "轻松管理所有链接。 离线且安全。"
+          },
+          "second": {
+            "imageDescription": "悬浮操作按钮",
+            "heading": "添加链接。",
+            "paragraph": "轻按浮动加号按钮添加文件夹或链接。"
+          },
+          "third": {
+            "imageDescription": "标签页",
+            "heading": "在文件夹中组织链接。",
+            "paragraph": "文件夹显示为标签页。"
+          },
+          "fourth": {
+            "imageDescription": "操作菜单",
+            "heading": "编辑并分享链接。",
+            "paragraph": "长按标签页或链接以显示选项。"
+          },
+          "fifth": {
+            "imageDescription": "复选标记",
+            "heading": "已就绪。",
+            "paragraph": "用得开心。"
+          }
+        },
+        "saveLink": {
+          "save": {
+            "update": "更新",
+            "create": "创建"
+          },
+          "name": {
+            "label": "名称",
+            "placeholder": "维基百科"
+          },
+          "url": {
+            "label": "URL",
+            "placeholder": "wikipedia.com"
+          },
+          "folder": {
+            "label": "文件夹"
+          },
+          "toast": {
+            "message": {
+              "created": "已创建 {{name}} 链接",
+              "updated": "已更新 {{name}} 链接"
+            }
+          },
+          "title": {
+            "edit": "编辑链接",
+            "create": "创建链接"
+          },
+          "cancel": "$t(overlays.alerts.deleteFolderConfirmation.cancel)"
+        },
+        "saveFolder": {
+          "title": {
+            "create": "创建文件夹",
+            "edit": "编辑文件夹"
+          },
+          "cancel": "$t(overlays.modals.saveLink.cancel)",
+          "save": {
+            "create": "$t(overlays.modals.saveLink.save.create)",
+            "update": "$t(overlays.modals.saveLink.save.update)"
+          },
+          "name": {
+            "label": "$t(overlays.modals.saveLink.name.label)",
+            "placeholder": "新来源"
+          },
+          "toast": {
+            "message": {
+              "created": "已创建 {{name}} 文件夹",
+              "updated": "已更新 {{name}} 文件夹"
+            }
+          }
+        },
+        "search": {
+          "title": "搜索",
+          "cancel": "$t(overlays.modals.saveFolder.cancel)",
+          "placeholder": "搜索链接…",
+          "heading": "无结果"
+        }
+      },
+      "sheets": {
+        "linkActions": {
+          "share": {
+            "label": "分享",
+            "title": "分享链接"
+          },
+          "edit": "编辑",
+          "delete": "$t(overlays.alerts.deleteFolderConfirmation.delete)",
+          "cancel": "$t(overlays.modals.search.cancel)"
+        },
+        "folderActions": {
+          "delete": "$t(overlays.sheets.linkActions.delete)",
+          "cancel": "$t(overlays.sheets.linkActions.cancel)",
+          "edit": "$t(overlays.sheets.linkActions.edit)"
+        }
+      },
+      "alerts": {
+        "deleteLinkConfirmation": {
+          "message": "你真想删除 {{name}} 吗？",
+          "cancel": "取消",
+          "delete": "删除",
+          "toast": {
+            "message": "已删除 {{name}} 链接"
+          }
+        },
+        "deleteFolderConfirmation": {
+          "message": "你真想删除 {{name}} 及其链接吗？",
+          "cancel": "$t(overlays.alerts.deleteLinkConfirmation.cancel)",
+          "toast": {
+            "message": "已删除 {{name}} 文件夹"
+          },
+          "delete": "$t(overlays.alerts.deleteLinkConfirmation.delete)"
+        }
+      }
+    },
+    "content": {
+      "links": {
+        "emptyState": {
+          "heading": "无链接"
+        }
+      }
+    },
+    "validation": {
+      "emptyError": "不能为空",
+      "invalidUrlError": "必须为有效 URL"
+    },
+    "header": {
+      "title": "链接",
+      "menu": {
+        "settings": "设置",
+        "search": "搜索"
+      }
+    },
+    "meta": {
+      "code": "英语",
+      "name": "英语"
+    }
+  }
+}
