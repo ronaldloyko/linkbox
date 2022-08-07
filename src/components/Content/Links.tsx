@@ -1,5 +1,6 @@
 import { IonContent, IonList } from "@ionic/react";
 import { useEffect, useMemo, useState, type FC } from "react";
+import { useTranslation } from "react-i18next";
 import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
 import { useAction, useDispatch, useSelector } from "../../store";
 import { LinkSorting } from "../../store/ui";
@@ -12,8 +13,11 @@ export default (function Links() {
   const folders = useSelector((state) => state.items.folders);
   const currentFolder = useSelector((state) => state.ui.currentFolder);
   const linkSorting = useSelector((state) => state.ui.linkSorting);
+  const { i18n } = useTranslation();
   const { setCurrentFolder } = useAction();
   const [swiper, setSwiper] = useState<SwiperClass>();
+
+  const languageDirection = i18n.dir();
 
   const groupedLinks = useMemo(
     () =>
@@ -55,6 +59,15 @@ export default (function Links() {
   useEffect(() => {
     swiper?.slideTo(folders.findIndex(({ id }) => id === currentFolder));
   }, [currentFolder, swiper, folders]);
+
+  useEffect(() => {
+    if (!swiper) {
+      return;
+    }
+
+    swiper.rtlTranslate = languageDirection === "rtl";
+    swiper.update();
+  }, [swiper, languageDirection]);
 
   return (
     <Swiper
