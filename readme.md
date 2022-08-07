@@ -3,24 +3,22 @@
 </p>
 
 <p align="center">
-  <a href="https://f-droid.org/en/packages/me.loyko.ronald.linkbox">
-    <img alt="F-Droid button" src="resources/f-droid.png" width="200">
-  </a>
-  <a href="https://github.com/ronaldloyko/linkbox/releases/latest">
-    <img alt="GitHub button" src="resources/github.png" width="200">
+  <a href="https://f-droid.org/packages/me.loyko.ronald.linkbox">
+    <img alt="F-Droid button" src="https://fdroid.gitlab.io/artwork/badge/get-it-on.png" width="250">
   </a>
 </p>
 
-<p align="center">Linkbox is a <strong>free and open source link manager</strong> for Android.</p>
+<p align="center">Linkbox lets you <strong>manage your links easily.</strong></p>
 
 ## Features
 
-- Organize links using **folders**
+- Organizing links using **tabs**
 - **No internet** connection required
 - **No ads** and **no tracking**
 - True black theme as **dark mode**
 - Easy **import and export** of all data and settings using simple JSON files
-- Link **sharing**
+- Adding **new links** easily by sharing them with Linkbox (e.g. from Firefox or Chrome)
+- **Sharing** links to contacts
 
 ## Screenshots
 

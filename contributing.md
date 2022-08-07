@@ -34,7 +34,6 @@ For translations, we use the hosted **Weblate** service.
 
 - `android` contains **native files** for our project and can be opened in Android Studio to create the application package. We usually don't have to touch this folder manually since Capacitor handles it
 - `public` contains **static assets** like images and also the main HTML file for our application
-- `resources` contains **general resources** like artwork images for documentation and building purposes. These resources are _not_ directly used by the application itself
 - `metadata` contains Fastlane **meta data** about this application and is used to submit details to F-Droid and Play Store
 - `src` contains the **source code** of our application and is the place where you will most likely work
   - `components` contains our **UI components**
@@ -79,7 +78,7 @@ For translations, we use the hosted **Weblate** service.
 
 ### Translating
 
-You can either contribute translations using the **Weblate** (preferred) or by creating and modifying the **JSON file** of the specific language.
+You can either contribute translations using the **Weblate web interface** (preferred) or by creating and modifying the **JSON file** of the specific language.
 
 #### Via JSON File
 
