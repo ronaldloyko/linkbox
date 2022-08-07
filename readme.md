@@ -25,13 +25,13 @@
 ## Screenshots
 
 <a href="metadata/android/en-US/images/phoneScreenshots/1.png">
-  <img alt="Links" src="metadata/android/en-US/images/phoneScreenshots/1.png" style="width: 200px">
+  <img alt="Links" src="metadata/android/en-US/images/phoneScreenshots/1.png" style="width: 250px">
 </a>
 <a href="metadata/android/en-US/images/phoneScreenshots/2.png">
-  <img alt="Folders with links" src="metadata/android/en-US/images/phoneScreenshots/2.png" style="width: 200px">
+  <img alt="Folders with links" src="metadata/android/en-US/images/phoneScreenshots/2.png" style="width: 250px">
 </a>
 <a href="metadata/android/en-US/images/phoneScreenshots/3.png">
-  <img alt="Folders with links and dark mode active" src="metadata/android/en-US/images/phoneScreenshots/3.png" style="width: 200px">
+  <img alt="Folders with links and dark mode active" src="metadata/android/en-US/images/phoneScreenshots/3.png" style="width: 250px">
 </a>
 
 ## Changelog
