@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="resources/presentation.png">
+  <img src="metadata/android/en-US/images/featureGraphic.png">
 </p>
 
 <p align="center">
@@ -24,17 +24,14 @@
 
 ## Screenshots
 
-<a href="resources/screenshot_links.png">
-  <img alt="Links" src="resources/screenshot_links.png" style="width: 200px">
+<a href="metadata/android/en-US/images/phoneScreenshots/1.png">
+  <img alt="Links" src="metadata/android/en-US/images/phoneScreenshots/1.png" style="width: 200px">
 </a>
-<a href="resources/screenshot_folders.png">
-  <img alt="Folders with links" src="resources/screenshot_folders.png" style="width: 200px">
+<a href="metadata/android/en-US/images/phoneScreenshots/2.png">
+  <img alt="Folders with links" src="metadata/android/en-US/images/phoneScreenshots/2.png" style="width: 200px">
 </a>
-<a href="resources/screenshot_settings.png">
-  <img alt="Settings with dark mode activated" src="resources/screenshot_settings.png" style="width: 200px">
-</a>
-<a href="resources/screenshot_search.png">
-  <img alt="Search with dark mode activated" src="resources/screenshot_search.png" style="width: 200px">
+<a href="metadata/android/en-US/images/phoneScreenshots/3.png">
+  <img alt="Folders with links and dark mode active" src="metadata/android/en-US/images/phoneScreenshots/3.png" style="width: 200px">
 </a>
 
 ## Changelog
