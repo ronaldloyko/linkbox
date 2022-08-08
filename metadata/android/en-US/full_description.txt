@@ -1,14 +1,12 @@
-Linkbox is a free and open source link manager application for Android.
+Linkbox is a free and open source link manager for Android.
 
 Be it for your research or just to have all links in one place,
 Linkbox offers a simple interface to conveniently manage all your links.
 
 Features:
-- Organize links using folders
+- Organize links using tabs
 - Easily import and export all data and settings using simple JSON files
 - Share links with others
 - No internet connection required
 - No ads and no tracking
 - True black theme as dark mode
-
-Linkbox is free and open source software. Any contribution is very welcome.
