@@ -1,6 +1,6 @@
 # Changelog
 
-## [Unreleased]
+## [1.1.0] - 2022-08-09
 
 ### Added
 
@@ -28,5 +28,6 @@
 
 - Released the first version of this project
 
-[unreleased]: https://github.com/ronaldloyko/linkbox/compare/v1.0.0...HEAD
+[unreleased]: https://github.com/ronaldloyko/linkbox/compare/v1.1.0...HEAD
+[1.1.0]: https://github.com/ronaldloyko/linkbox/releases/tag/v1.1.0
 [1.0.0]: https://github.com/ronaldloyko/linkbox/releases/tag/v1.0.0

@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <a href="https://f-droid.org/packages/me.loyko.ronald.linkbox">
+  <a href="https://ronald.ooo/linkbox-fdroid">
     <img alt="F-Droid button" src="https://fdroid.gitlab.io/artwork/badge/get-it-on.png" width="250">
   </a>
 </p>
@@ -34,7 +34,7 @@
 
 ## Changelog
 
-Current version is **1.0.0**.
+Current version is **1.1.0**.
 
 Refer to the [changelog](changelog.md) for release notes.
 

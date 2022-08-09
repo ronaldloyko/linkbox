@@ -1,0 +1,4 @@
+- Changed primary accent color to match Linkbox brand
+- Implemented ability to create links by sharing to Linkbox
+- Fixed the flashbang effect when launching the application
+- Added Arabic, Brazilian Portugese, Chinese (Simplified), Norwegian Bokmål, Spanish and Ukrainian translations
