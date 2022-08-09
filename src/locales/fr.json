@@ -16,9 +16,9 @@
         "deleteLinkConfirmation": {
           "cancel": "Annulée",
           "delete": "Supprimé",
-          "message": "Voulez-vous vraiment supprimer {{name}}? ",
+          "message": "Voulez-vous vraiment supprimer {{name}} ?",
           "toast": {
-            "message": "{{name}} a été supprimé avec succès."
+            "message": "{{name}} a été supprimé avec succès"
           }
         },
         "deleteFolderConfirmation": {
@@ -26,7 +26,7 @@
             "message": "{{name}} a été supprimé"
           },
           "cancel": "$t(overlays.alerts.deleteLinkConfirmation.cancel)",
-          "message": "Voulez-vous vraiment supprimer {{name}} et tous ses liens?",
+          "message": "Voulez-vous vraiment supprimer {{name}} et tous ses liens ?",
           "delete": "$t(overlays.alerts.deleteLinkConfirmation.delete)"
         }
       },
@@ -119,7 +119,7 @@
                 "close": "OK"
               },
               "confirmationAlert": {
-                "message": "Tous les paramètres et liens seront modifiés. Voulez-vous continuer?",
+                "message": "Tous les paramètres et liens seront modifiés. Voulez-vous continuer ?",
                 "abort": "Annulation",
                 "proceed": "Continuer"
               }
