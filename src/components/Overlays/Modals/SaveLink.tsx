@@ -17,11 +17,12 @@ import {
 } from "@ionic/react";
 import { checkmark } from "ionicons/icons";
 import { nanoid } from "nanoid";
-import { useMemo, useRef, useState, type FC } from "react";
+import { useEffect, useMemo, useRef, useState, type FC } from "react";
 import { useTranslation } from "react-i18next";
 import {
   DEFAULT_FOLDER_ID,
   EMPTY_TEXT,
+  RERENDER_TIMEOUT,
   TOAST_DURATION,
   UNSELECTED_ITEM,
 } from "../../../data/constants";
@@ -66,6 +67,7 @@ export default (function SaveLink() {
   const [urlErrorMessage, setUrlErrorMessage, clearUrlErrorMessage] =
     useValidationErrors();
   const [presentToast] = useIonToast();
+  const [showInput, setShowInput] = useState(true);
 
   function onNameChange({ detail }: CustomEvent<InputChangeEventDetail>) {
     setName(detail.value as Name);
@@ -139,6 +141,18 @@ export default (function SaveLink() {
     nameInputElement.current?.setFocus();
   }
 
+  // XXX: Force input element rerendering due to a bug in Ionic that does not show the initial value sometimes.
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setShowInput(false);
+      setShowInput(true);
+    }, RERENDER_TIMEOUT);
+
+    return () => {
+      clearTimeout(timeout);
+    };
+  }, [folders]);
+
   return (
     <IonModal
       isOpen={open}
@@ -198,22 +212,24 @@ export default (function SaveLink() {
           />
           <ErrorLine message={urlErrorMessage} />
         </IonItem>
-        <IonItem>
-          <IonLabel position="stacked">
-            {t("overlays.modals.saveLink.folder.label")}
-          </IonLabel>
-          <IonSelect
-            interface="popover"
-            value={folder}
-            onIonChange={onFolderChange}
-          >
-            {folders.map(({ id, name }) => (
-              <IonSelectOption key={id} value={id}>
-                {name}
-              </IonSelectOption>
-            ))}
-          </IonSelect>
-        </IonItem>
+        {showInput && (
+          <IonItem>
+            <IonLabel position="stacked">
+              {t("overlays.modals.saveLink.folder.label")}
+            </IonLabel>
+            <IonSelect
+              interface="popover"
+              value={folder}
+              onIonChange={onFolderChange}
+            >
+              {folders.map(({ id, name }) => (
+                <IonSelectOption key={id} value={id}>
+                  {name}
+                </IonSelectOption>
+              ))}
+            </IonSelect>
+          </IonItem>
+        )}
       </IonContent>
     </IonModal>
   );

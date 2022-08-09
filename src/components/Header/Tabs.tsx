@@ -4,7 +4,7 @@ import {
   type SegmentChangeEventDetail,
 } from "@ionic/react";
 import { FC, useEffect } from "react";
-import { DEFAULT_FOLDER_ID } from "../../data/constants";
+import { DEFAULT_FOLDER_ID, RERENDER_TIMEOUT } from "../../data/constants";
 import { useAction, useDispatch, useSelector } from "../../store";
 import Tab from "./Tabs/Tab";
 
@@ -20,13 +20,17 @@ export default (function Tabs() {
   }
 
   useEffect(() => {
-    setTimeout(() => {
+    const timeout = setTimeout(() => {
       document.getElementById(currentFolder)?.scrollIntoView({
         behavior: "smooth",
         block: "center",
         inline: "center",
       });
-    }, SCROLL_TIMEOUT);
+    }, RERENDER_TIMEOUT);
+
+    return () => {
+      clearTimeout(timeout);
+    };
   }, [currentFolder]);
 
   return customFoldersExist ? (
@@ -39,5 +43,3 @@ export default (function Tabs() {
     </IonToolbar>
   ) : null;
 } as FC);
-
-const SCROLL_TIMEOUT = 200;
