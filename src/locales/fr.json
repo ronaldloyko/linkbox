@@ -1,0 +1,202 @@
+{
+  "translation": {
+    "meta": {
+      "code": "fr",
+      "name": "Français"
+    },
+    "header": {
+      "title": "Liens",
+      "menu": {
+        "search": "Recherche",
+        "settings": "Réglages"
+      }
+    },
+    "overlays": {
+      "alerts": {
+        "deleteLinkConfirmation": {
+          "cancel": "Annulée",
+          "delete": "Supprimé",
+          "message": "Voulez-vous vraiment supprimer {{name}}? ",
+          "toast": {
+            "message": "{{name}} a été supprimé avec succès."
+          }
+        },
+        "deleteFolderConfirmation": {
+          "toast": {
+            "message": "{{name}} a été supprimé"
+          },
+          "cancel": "$t(overlays.alerts.deleteLinkConfirmation.cancel)",
+          "message": "Voulez-vous vraiment supprimer {{name}} et tous ses liens?",
+          "delete": "$t(overlays.alerts.deleteLinkConfirmation.delete)"
+        }
+      },
+      "modals": {
+        "saveLink": {
+          "title": {
+            "create": "Créer un lien",
+            "edit": "Modifier le lien"
+          },
+          "cancel": "$t(overlays.alerts.deleteFolderConfirmation.cancel)",
+          "save": {
+            "update": "Modifier",
+            "create": "Créer"
+          },
+          "name": {
+            "label": "Nom",
+            "placeholder": "Wikipedia"
+          },
+          "url": {
+            "placeholder": "wikipedia.com",
+            "label": "Lien"
+          },
+          "folder": {
+            "label": "Dossier"
+          },
+          "toast": {
+            "message": {
+              "created": "Lien {{name}} créé",
+              "updated": "Lien {{name}} modifié"
+            }
+          }
+        },
+        "saveFolder": {
+          "cancel": "$t(overlays.modals.saveLink.cancel)",
+          "save": {
+            "create": "$t(overlays.modals.saveLink.save.create)",
+            "update": "$t(overlays.modals.saveLink.save.update)"
+          },
+          "name": {
+            "label": "$t(overlays.modals.saveLink.name.label)",
+            "placeholder": "Sites d'actualités"
+          },
+          "toast": {
+            "message": {
+              "created": "Dossier {{name}} créé",
+              "updated": "Dossier {{name}} modifié"
+            }
+          },
+          "title": {
+            "create": "Créer le dossier",
+            "edit": "Modifier le dossier"
+          }
+        },
+        "search": {
+          "title": "Chercher",
+          "placeholder": "Trouver des liens…",
+          "cancel": "$t(overlays.modals.saveFolder.cancel)",
+          "heading": "Aucun résultat trouvé"
+        },
+        "settings": {
+          "close": "Fermer",
+          "interface": {
+            "label": "Représentation",
+            "theme": {
+              "label": "Conception",
+              "system": "Automatique",
+              "light": "Lumineux",
+              "dark": "Foncé"
+            },
+            "linkSorting": {
+              "label": "Tri des liens",
+              "default": "Le plus ancien en premier",
+              "alphabetically": "Alphabétiquement",
+              "reversed": "Le plus récent d'abord"
+            },
+            "showAvatar": "Afficher les avatars",
+            "language": "Langue"
+          },
+          "data": {
+            "label": "Les données",
+            "import": {
+              "label": "Importer",
+              "finalAlert": {
+                "message": {
+                  "invalidFile": "Fichier non valide",
+                  "unknownError": "Erreur inconnue",
+                  "successful": "Importé avec succès",
+                  "invalidContent": "Contenu du fichier non valide"
+                },
+                "close": "OK"
+              },
+              "confirmationAlert": {
+                "message": "Tous les paramètres et liens seront modifiés. Voulez-vous continuer?",
+                "abort": "Annulation",
+                "proceed": "Continuer"
+              }
+            },
+            "export": {
+              "label": "Exporter",
+              "alert": {
+                "message": "Les liens et les paramètres sont enregistrés dans le dossier Téléchargements sous le nom {{path}}",
+                "close": "$t(overlays.modals.settings.data.import.finalAlert.close)"
+              }
+            }
+          },
+          "miscellaneous": {
+            "label": "Divers",
+            "sourceCode": "Code source",
+            "donate": "Faire un don"
+          },
+          "title": "Réglages"
+        },
+        "introduction": {
+          "skip": "Sauter",
+          "continue": "Continuer",
+          "start": "Commencer",
+          "second": {
+            "heading": "Ajoutez vos liens.",
+            "imageDescription": "Bouton volant",
+            "paragraph": "Cliquez sur le bouton pour ajouter un lien ou un dossier."
+          },
+          "first": {
+            "paragraph": "Gérez tous vos liens. Hors ligne et en toute sécurité.",
+            "imageDescription": "Application et Logo",
+            "heading": "Bienvenue sur Linkbox."
+          },
+          "third": {
+            "imageDescription": "Onglets",
+            "paragraph": "Les dossiers sont affichés sous forme d'onglets.",
+            "heading": "Organisez vos liens dans des dossiers."
+          },
+          "fourth": {
+            "heading": "Modifiez et partagez vos liens.",
+            "paragraph": "Appuyez longuement sur un lien ou un dossier pour voir les options.",
+            "imageDescription": "Liste d'action"
+          },
+          "fifth": {
+            "imageDescription": "Coche",
+            "paragraph": "Amusez-vous avec Linkbox.",
+            "heading": "Vous êtes maintenant prêt."
+          }
+        }
+      },
+      "sheets": {
+        "linkActions": {
+          "share": {
+            "label": "Partager",
+            "title": "Partager le lien"
+          },
+          "edit": "Modifier",
+          "delete": "$t(overlays.alerts.deleteFolderConfirmation.delete)",
+          "cancel": "$t(overlays.modals.search.cancel)"
+        },
+        "folderActions": {
+          "edit": "$t(overlays.sheets.linkActions.edit)",
+          "delete": "$t(overlays.sheets.linkActions.delete)",
+          "cancel": "$t(overlays.sheets.linkActions.cancel)"
+        }
+      }
+    },
+    "content": {
+      "links": {
+        "emptyState": {
+          "heading": "Pas de liens"
+        }
+      }
+    },
+    "validation": {
+      "emptyError": "Ne doit pas être vide",
+      "invalidUrlError": "Doit être une valide URL"
+    }
+  }
+}
