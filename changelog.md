@@ -1,5 +1,11 @@
 # Changelog
 
+## [Unreleased]
+
+### Added
+
+- French translation by [Amine Riad](https://github.com/Amine000Riad)
+
 ## [1.1.0] - 2022-08-09
 
 ### Added
