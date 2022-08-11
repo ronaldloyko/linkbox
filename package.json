@@ -30,6 +30,7 @@
     "@types/react-router": "^5.1.11",
     "@types/react-router-dom": "^5.1.7",
     "@types/styled-components": "^5.1.25",
+    "capacitor-plugin-safe-area": "^0.0.5",
     "com-darryncampbell-cordova-plugin-intent": "^2.2.0",
     "hammerjs": "^2.0.8",
     "i18next": "^21.8.14",

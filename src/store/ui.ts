@@ -41,6 +41,7 @@ export default createSlice({
     firstRun: false,
     prefilledName: EMPTY_TEXT,
     prefilledUrl: EMPTY_TEXT,
+    statusBarHeight: "0px",
   } as State,
   reducers: {
     toggleMenu(state, { payload }: PayloadAction<OptionalToggleParameter>) {
@@ -129,6 +130,9 @@ export default createSlice({
     prefillUrl(state, { payload }: PayloadAction<Url>) {
       state.prefilledUrl = payload;
     },
+    setStatusBarHeight(state, { payload }: PayloadAction<StatusBarHeight>) {
+      state.statusBarHeight = payload;
+    },
   },
   extraReducers(builder) {
     builder.addCase(loadDataFromStorage.fulfilled, (state, { payload }) => {
@@ -167,6 +171,7 @@ interface State {
   firstRun: FirstRunFlag;
   prefilledName: Name;
   prefilledUrl: Url;
+  statusBarHeight: StatusBarHeight;
 }
 
 type OverlayVisibility = boolean;
@@ -174,3 +179,5 @@ type OverlayVisibility = boolean;
 type OptionalToggleParameter = boolean | undefined;
 
 type SelectedItem = Id | null;
+
+type StatusBarHeight = string;

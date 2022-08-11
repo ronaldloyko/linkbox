@@ -8,13 +8,14 @@ import {
 import { ellipsisVertical } from "ionicons/icons";
 import { useState, type FC, type MouseEvent } from "react";
 import { useTranslation } from "react-i18next";
-import { useAction, useDispatch } from "../../store";
+import { useAction, useDispatch, useSelector } from "../../store";
 import Menu from "./Title/Menu";
 
 export default (function Title() {
   const dispatch = useDispatch();
   const { t } = useTranslation();
   const { toggleMenu } = useAction();
+  const statusBarHeight = useSelector((state) => state.ui.statusBarHeight);
   const [menuTriggerEvent, setMenuTriggerEvent] = useState<MouseEvent>();
 
   function onMenuClick(event: MouseEvent) {
@@ -22,7 +23,7 @@ export default (function Title() {
     dispatch(toggleMenu(true));
   }
   return (
-    <IonToolbar>
+    <IonToolbar style={{ paddingTop: statusBarHeight }}>
       <IonTitle>{t("header.title")}</IonTitle>
       <IonButtons slot="primary">
         <IonButton onClick={onMenuClick}>

@@ -60,6 +60,7 @@ export default (function Settings() {
   const language = useSelector((state) => state.ui.language);
   const theme = useSelector((state) => state.ui.theme);
   const showAvatar = useSelector((state) => state.ui.showAvatar);
+  const statusBarHeight = useSelector((state) => state.ui.statusBarHeight);
   const { t } = useTranslation();
   const {
     toggleSettingsModal,
@@ -187,7 +188,7 @@ export default (function Settings() {
 
   return (
     <IonModal isOpen={open} onIonModalDidDismiss={onCancel}>
-      <IonHeader>
+      <IonHeader style={{ paddingTop: statusBarHeight }}>
         <IonToolbar>
           <IonTitle>{t(`${TRANSLATION_PREFIX}.title`)}</IonTitle>
           <IonButtons slot="end">

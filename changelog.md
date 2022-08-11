@@ -5,6 +5,11 @@
 ### Added
 
 - French translation by [Amine Riad](https://github.com/Amine000Riad)
+- Status bar reflects selected theme
+
+### Fixed
+
+- Wrong theme applied when set to automatic
 
 ## [1.1.0] - 2022-08-09
 

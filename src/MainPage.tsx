@@ -1,7 +1,9 @@
-import { App } from "@capacitor/app";
-import { IonApp, IonPage, type BackButtonEvent } from "@ionic/react";
 import { WebIntent, type Intent } from "@awesome-cordova-plugins/web-intent";
-import { useEffect, type FC } from "react";
+import { App } from "@capacitor/app";
+import { StatusBar, Style } from "@capacitor/status-bar";
+import { IonApp, IonPage, type BackButtonEvent } from "@ionic/react";
+import { SafeArea } from "capacitor-plugin-safe-area";
+import { useEffect, useState, type FC } from "react";
 import { useTranslation } from "react-i18next";
 import Content from "./components/Content";
 import Header from "./components/Header";
@@ -19,8 +21,10 @@ export default (function MainPage() {
   const dispatch = useDispatch();
   const language = useSelector((state) => state.ui.language);
   const theme = useSelector((state) => state.ui.theme);
-  const { prefillName, prefillUrl, toggleSaveLinkModal } = useAction();
+  const { prefillName, prefillUrl, toggleSaveLinkModal, setStatusBarHeight } =
+    useAction();
   const { i18n } = useTranslation();
+  const [appliedTheme, setAppliedTheme] = useState<Theme>();
 
   useEffect(() => {
     dispatch(loadDataFromStorage());
@@ -32,33 +36,48 @@ export default (function MainPage() {
   }, [i18n, language]);
 
   useEffect(() => {
-    function toggle(themeClass: Theme, isActive: boolean) {
-      document.body.classList.toggle(themeClass, isActive);
+    if (theme !== Theme.System) {
+      applyTheme(theme === Theme.Dark);
+      return;
+    }
+
+    const prefersDarkTheme = window.matchMedia("(prefers-color-scheme: dark)");
+
+    function applyTheme(preferDark: boolean) {
+      setAppliedTheme(preferDark ? Theme.Dark : Theme.Light);
+    }
+
+    function onChange({ matches }: MediaQueryListEvent) {
+      applyTheme(matches);
+    }
+
+    applyTheme(prefersDarkTheme.matches);
+
+    prefersDarkTheme.addEventListener(EVENT_NAME_CHANGE, onChange);
+
+    return () => {
+      prefersDarkTheme.removeEventListener(EVENT_NAME_CHANGE, onChange);
+    };
+  }, [theme]);
+
+  useEffect(() => {
+    if (!appliedTheme) {
+      return;
+    }
+
+    function toggle(appliedThemeClass: Theme, active: boolean) {
+      StatusBar.setStyle({
+        style: appliedTheme!.toUpperCase() as Style,
+      });
+      document.body.classList.toggle(appliedThemeClass, active);
     }
 
     for (const availableTheme of Object.values(Theme)) {
       toggle(availableTheme, false);
     }
 
-    if (theme !== Theme.System) {
-      toggle(theme, true);
-      return;
-    }
-
-    const isPreferringDark = window.matchMedia("(prefers-color-scheme: dark)");
-
-    function onChange({ matches }: MediaQueryListEvent) {
-      toggle(Theme.Dark, matches);
-    }
-
-    toggle(Theme.Dark, isPreferringDark.matches);
-
-    isPreferringDark.addEventListener(EVENT_NAME_CHANGE, onChange);
-
-    return () => {
-      isPreferringDark.removeEventListener(EVENT_NAME_CHANGE, onChange);
-    };
-  }, [theme]);
+    toggle(appliedTheme, true);
+  }, [theme, appliedTheme]);
 
   useEffect(() => {
     function onBackButton(event: BackButtonEvent) {
@@ -97,6 +116,15 @@ export default (function MainPage() {
       intentSubscription.unsubscribe();
     };
   }, [dispatch, prefillName, prefillUrl, toggleSaveLinkModal]);
+
+  useEffect(() => {
+    StatusBar.setOverlaysWebView({ overlay: true });
+
+    (async () => {
+      const { insets } = await SafeArea.getSafeAreaInsets();
+      dispatch(setStatusBarHeight(insets.top.toFixed() + "px"));
+    })();
+  }, [setStatusBarHeight, dispatch]);
 
   return (
     <IonApp>

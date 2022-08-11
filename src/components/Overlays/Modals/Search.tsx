@@ -11,11 +11,7 @@ import {
 } from "@ionic/react";
 import { useMemo, useRef, useState, type FC } from "react";
 import { useTranslation } from "react-i18next";
-import {
-  BREAKPOINT_FULL_COVERED,
-  BREAKPOINT_UNCOVERED,
-  EMPTY_TEXT,
-} from "../../../data/constants";
+import { EMPTY_TEXT } from "../../../data/constants";
 import { useAction, useDispatch, useSelector } from "../../../store";
 import EmptyState from "./Search/EmptyState";
 import Links from "./Search/Links";
@@ -24,8 +20,7 @@ export default (function Search() {
   const dispatch = useDispatch();
   const open = useSelector((state) => state.ui.searchModalOpen);
   const links = useSelector((state) => state.items.links);
-  const initialBreakpoint = BREAKPOINT_FULL_COVERED;
-  const breakpoints = [BREAKPOINT_UNCOVERED, BREAKPOINT_FULL_COVERED];
+  const statusBarHeight = useSelector((state) => state.ui.statusBarHeight);
   const searchBarElement = useRef<HTMLIonSearchbarElement>(null);
   const { t } = useTranslation();
   const { toggleSearchModal } = useAction();
@@ -62,10 +57,8 @@ export default (function Search() {
       onIonModalDidDismiss={onCancel}
       onIonModalWillPresent={onBeforeShow}
       onIonModalDidPresent={onShow}
-      initialBreakpoint={initialBreakpoint}
-      breakpoints={breakpoints}
     >
-      <IonHeader>
+      <IonHeader style={{ paddingTop: statusBarHeight }}>
         <IonToolbar>
           <IonTitle>{t("overlays.modals.search.title")}</IonTitle>
           <IonButtons slot="end">

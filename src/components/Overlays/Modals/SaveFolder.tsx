@@ -32,6 +32,7 @@ export default (function SaveFolder() {
   const open = useSelector((state) => state.ui.saveFolderModalOpen);
   const folders = useSelector((state) => state.items.folders);
   const selectedFolder = useSelector((state) => state.ui.selectedFolder);
+  const statusBarHeight = useSelector((state) => state.ui.statusBarHeight);
   const folderBeingEdited = useMemo(
     () => folders.find(({ id }) => id === selectedFolder),
     [selectedFolder, folders]
@@ -96,7 +97,7 @@ export default (function SaveFolder() {
       onIonModalWillPresent={onBeforeShow}
       onIonModalDidPresent={onShow}
     >
-      <IonHeader>
+      <IonHeader style={{ paddingTop: statusBarHeight }}>
         <IonToolbar>
           <IonButtons slot="start">
             <IonButton onClick={onCancel}>

@@ -26,6 +26,7 @@ export default (function Introduction() {
   const dispatch = useDispatch();
   const open = useSelector((state) => state.ui.firstRun);
   const language = useSelector((state) => state.ui.language);
+  const statusBarHeight = useSelector((state) => state.ui.statusBarHeight);
   const imageFolderPath = "/assets/introduction";
   const [swiper, setSwiper] = useState<SwiperClass>();
   const { t, i18n } = useTranslation();
@@ -81,7 +82,7 @@ export default (function Introduction() {
 
   return (
     <IonModal isOpen={open} backdropDismiss={false}>
-      <IonHeader class="ion-no-border">
+      <IonHeader class="ion-no-border" style={{ paddingTop: statusBarHeight }}>
         <IonToolbar>
           <IonItem slot="start" lines="none">
             <IonSelect

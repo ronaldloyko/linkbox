@@ -42,6 +42,7 @@ export default (function SaveLink() {
   const selectedLink = useSelector((state) => state.ui.selectedLink);
   const prefilledName = useSelector((state) => state.ui.prefilledName);
   const prefilledUrl = useSelector((state) => state.ui.prefilledUrl);
+  const statusBarHeight = useSelector((state) => state.ui.statusBarHeight);
   const linkBeingEdited = useMemo(
     () => links.find(({ id }) => id === selectedLink),
     [selectedLink, links]
@@ -160,7 +161,7 @@ export default (function SaveLink() {
       onIonModalWillPresent={onBeforeShow}
       onIonModalDidPresent={onShow}
     >
-      <IonHeader>
+      <IonHeader style={{ paddingTop: statusBarHeight }}>
         <IonToolbar>
           <IonButtons slot="start">
             <IonButton onClick={onCancel}>
