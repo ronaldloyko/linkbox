@@ -49,6 +49,7 @@ Before contributing, please consult the [contribution guide](contributing.md) to
 ### Translations
 
 [![Translation status](https://hosted.weblate.org/widgets/linkbox/-/open-graph.png)](https://hosted.weblate.org/engage/linkbox/)
+[![Languages](https://hosted.weblate.org/widgets/linkbox/-/horizontal-auto.svg)](https://hosted.weblate.org/engage/linkbox/)
 
 ## License
 
