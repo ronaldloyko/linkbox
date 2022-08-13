@@ -14,6 +14,10 @@
 
 - Wrong theme applied when set to automatic
 
+### Changed
+
+- Languages are now sorted by their codes
+
 ## [1.1.0] - 2022-08-09
 
 ### Added
