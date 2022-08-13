@@ -11,6 +11,7 @@ import brazilianPortuguese from "./locales/pt_BR.json";
 import ukrainian from "./locales/uk.json";
 import simplifiedChinese from "./locales/zh_Hans.json";
 import french from "./locales/fr.json";
+import turkish from "./locales/tr.json";
 
 const usedLanguages = [
   english,
@@ -22,6 +23,7 @@ const usedLanguages = [
   ukrainian,
   simplifiedChinese,
   french,
+  turkish,
 ];
 
 export const languages = usedLanguages.map((language) => ({

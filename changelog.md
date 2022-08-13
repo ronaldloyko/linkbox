@@ -5,6 +5,7 @@
 ### Added
 
 - French translation by [Amine Riad](https://github.com/Amine000Riad)
+- Turkish translation by [Baki Nazik](https://hosted.weblate.org/user/bakinazik)
 - Status bar reflects selected theme
 - Haptic feedback
 
