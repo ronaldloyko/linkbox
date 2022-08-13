@@ -51,6 +51,11 @@ Before contributing, please consult the [contribution guide](contributing.md) to
 [![Translation status](https://hosted.weblate.org/widgets/linkbox/-/open-graph.png)](https://hosted.weblate.org/engage/linkbox/)
 [![Languages](https://hosted.weblate.org/widgets/linkbox/-/horizontal-auto.svg)](https://hosted.weblate.org/engage/linkbox/)
 
+## To Do
+
+- [ ] [Tagging System](https://github.com/ronaldloyko/linkbox/issues/11)
+- [ ] [Import & Export HTML Bookmarks](https://github.com/ronaldloyko/linkbox/issues/7)
+
 ## License
 
 [MIT](license.md)
