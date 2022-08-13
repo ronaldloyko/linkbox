@@ -1,7 +1,7 @@
 {
   "translation": {
     "meta": {
-      "name": "İngilizce",
+      "name": "Türkçe",
       "code": "tr"
     },
     "header": {
@@ -128,7 +128,8 @@
             "export": {
               "label": "Dışa Aktar",
               "alert": {
-                "close": "$t(overlays.modals.settings.data.import.finalAlert.close)"
+                "close": "$t(overlays.modals.settings.data.import.finalAlert.close)",
+                "message": "İndirme klasörüne {{path}} olarak kaydedilen bağlantılar ve ayarlar"
               }
             }
           },
