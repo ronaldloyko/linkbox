@@ -8,6 +8,7 @@
 - Turkish translation by [Baki Nazik](https://hosted.weblate.org/user/bakinazik)
 - Status bar reflects selected theme
 - Haptic feedback
+- Made the buttons for search and settings more accessible by moving them to the toolbar
 
 ### Fixed
 
