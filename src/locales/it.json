@@ -4,13 +4,7 @@
       "code": "it",
       "name": "Italiano"
     },
-    "header": {
-      "title": "Links",
-      "menu": {
-        "search": "Cerca",
-        "settings": "Impostazioni"
-      }
-    },
+    "heading": "Links",
     "overlays": {
       "alerts": {
         "deleteLinkConfirmation": {
