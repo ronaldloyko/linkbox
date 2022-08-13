@@ -73,6 +73,7 @@ If you don't have a GitHub account, you can also submit your contributions by em
 1. Create a new **branch** respecting GitHub Flow rules (e.g. use `increase-rate-limit` as branch name)
 1. Run `npm install` to install the project's **dependencies**
 1. Run `npm run develop` to start the **development server**
+1. Optionally run `npm develop:android` for a **live preview on your Android device**
 1. Do your **changes**
 1. Make sure that the linter in the terminal **does not display any errors**
 1. Run `npm run format` to **format** your code using Prettier
