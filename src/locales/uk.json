@@ -4,6 +4,7 @@
       "code": "uk",
       "name": "Українська"
     },
+    "heading": "Посилання",
     "overlays": {
       "alerts": {
         "deleteLinkConfirmation": {
@@ -178,13 +179,6 @@
           "delete": "$t(overlays.sheets.linkActions.delete)",
           "cancel": "$t(overlays.sheets.linkActions.cancel)"
         }
-      }
-    },
-    "header": {
-      "title": "Посилання",
-      "menu": {
-        "search": "Пошук",
-        "settings": "Налаштування"
       }
     },
     "content": {

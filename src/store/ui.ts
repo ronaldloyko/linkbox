@@ -22,7 +22,6 @@ export enum Theme {
 export default createSlice({
   name: "ui",
   initialState: {
-    menuOpen: false,
     settingsModalOpen: false,
     searchModalOpen: false,
     saveLinkModalOpen: false,
@@ -44,9 +43,6 @@ export default createSlice({
     statusBarHeight: "0px",
   } as State,
   reducers: {
-    toggleMenu(state, { payload }: PayloadAction<OptionalToggleParameter>) {
-      state.menuOpen = payload ?? !state.menuOpen;
-    },
     toggleSettingsModal(
       state,
       { payload }: PayloadAction<OptionalToggleParameter>
@@ -152,7 +148,6 @@ export type AvatarVisibility = boolean;
 export type FirstRunFlag = boolean;
 
 interface State {
-  menuOpen: OverlayVisibility;
   settingsModalOpen: OverlayVisibility;
   searchModalOpen: OverlayVisibility;
   saveLinkModalOpen: OverlayVisibility;

@@ -4,13 +4,7 @@
       "name": "Türkçe",
       "code": "tr"
     },
-    "header": {
-      "title": "Bağlantılar",
-      "menu": {
-        "search": "Ara",
-        "settings": "Ayarlar"
-      }
-    },
+    "heading": "Bağlantılar",
     "overlays": {
       "alerts": {
         "deleteLinkConfirmation": {

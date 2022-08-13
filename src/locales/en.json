@@ -4,13 +4,7 @@
       "code": "en",
       "name": "English"
     },
-    "header": {
-      "title": "Links",
-      "menu": {
-        "search": "Search",
-        "settings": "Settings"
-      }
-    },
+    "heading": "Links",
     "overlays": {
       "alerts": {
         "deleteLinkConfirmation": {

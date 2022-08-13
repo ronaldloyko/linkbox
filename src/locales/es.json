@@ -4,13 +4,7 @@
       "code": "es",
       "name": "Español"
     },
-    "header": {
-      "title": "Enlaces",
-      "menu": {
-        "settings": "Ajustes",
-        "search": "Buscar"
-      }
-    },
+    "heading": "Enlaces",
     "overlays": {
       "alerts": {
         "deleteLinkConfirmation": {

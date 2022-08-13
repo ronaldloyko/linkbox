@@ -4,13 +4,7 @@
       "code": "de",
       "name": "Deutsch"
     },
-    "header": {
-      "title": "Links",
-      "menu": {
-        "search": "Suche",
-        "settings": "Einstellungen"
-      }
-    },
+    "heading": "Links",
     "overlays": {
       "alerts": {
         "deleteLinkConfirmation": {
