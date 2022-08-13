@@ -1,1 +1,201 @@
-{}
+{
+  "translation": {
+    "meta": {
+      "name": "İngilizce",
+      "code": "tr"
+    },
+    "header": {
+      "title": "Bağlantılar",
+      "menu": {
+        "search": "Ara",
+        "settings": "Ayarlar"
+      }
+    },
+    "overlays": {
+      "alerts": {
+        "deleteLinkConfirmation": {
+          "message": "{{name}} bağlantısını gerçekten silmek istiyor musun?",
+          "cancel": "İptal",
+          "delete": "Kaldır",
+          "toast": {
+            "message": "{{name}} bağlantısı silindi"
+          }
+        },
+        "deleteFolderConfirmation": {
+          "message": "{{name}} ve aynı bağlantıya sahip olanları gerçekten silmek istiyor musun?",
+          "cancel": "$t(overlays.alerts.deleteLinkConfirmation.cancel)",
+          "delete": "$t(overlays.alerts.deleteLinkConfirmation.delete)",
+          "toast": {
+            "message": "{{name}} klasörü silindi"
+          }
+        }
+      },
+      "modals": {
+        "saveLink": {
+          "title": {
+            "create": "Bağlantı Oluştur",
+            "edit": "Bağlantıyı Düzenle"
+          },
+          "save": {
+            "create": "Oluştur",
+            "update": "Güncelle"
+          },
+          "name": {
+            "label": "İsim",
+            "placeholder": "Vikipedi"
+          },
+          "url": {
+            "label": "URL",
+            "placeholder": "wikipedia.com"
+          },
+          "folder": {
+            "label": "Klasör"
+          },
+          "toast": {
+            "message": {
+              "created": "{{name}} bağlantısı oluşturuldu",
+              "updated": "{{name}} bağlantısı güncellendi"
+            }
+          },
+          "cancel": "$t(overlays.alerts.deleteFolderConfirmation.cancel)"
+        },
+        "saveFolder": {
+          "title": {
+            "create": "Klasör Oluştur",
+            "edit": "Klasörü Düzenle"
+          },
+          "cancel": "$t(overlays.modals.saveLink.cancel)",
+          "save": {
+            "create": "$t(overlays.modals.saveLink.save.create)",
+            "update": "$t(overlays.modals.saveLink.save.update)"
+          },
+          "name": {
+            "label": "$t(overlays.modals.saveLink.name.label)",
+            "placeholder": "Haber Kaynakları"
+          },
+          "toast": {
+            "message": {
+              "created": "{{name}} klasörü oluşturuldu",
+              "updated": "{{name}} klasörü güncellendi"
+            }
+          }
+        },
+        "search": {
+          "title": "Ara",
+          "cancel": "$t(overlays.modals.saveFolder.cancel)",
+          "placeholder": "Bağlantıları Ara…",
+          "heading": "Sonuç yok"
+        },
+        "settings": {
+          "title": "Ayarlar",
+          "close": "Kapat",
+          "interface": {
+            "label": "Arayüz",
+            "language": "Dil",
+            "theme": {
+              "label": "Tema",
+              "system": "Otomatik",
+              "light": "Aydınlık",
+              "dark": "Karanlık"
+            },
+            "linkSorting": {
+              "default": "İlk Önce Eskiler",
+              "reversed": "İlk Önce Yeniler",
+              "label": "Bağlantı Sıralaması",
+              "alphabetically": "Alfabetik Olarak"
+            },
+            "showAvatar": "Simgeleri Göster"
+          },
+          "data": {
+            "label": "Veri",
+            "import": {
+              "label": "İçe Aktar",
+              "confirmationAlert": {
+                "message": "Tüm ayarların ve bağlantıların üzerine yazılacak. Devam edilsin mi?",
+                "abort": "İptal",
+                "proceed": "Devam Et"
+              },
+              "finalAlert": {
+                "message": {
+                  "successful": "İçe aktarma başarılı",
+                  "invalidFile": "Geçersiz dosya",
+                  "invalidContent": "Geçersiz dosya içeriği",
+                  "unknownError": "Bilinmeyen hata"
+                },
+                "close": "Tamam"
+              }
+            },
+            "export": {
+              "label": "Dışa Aktar",
+              "alert": {
+                "close": "$t(overlays.modals.settings.data.import.finalAlert.close)"
+              }
+            }
+          },
+          "miscellaneous": {
+            "label": "Çeşitli",
+            "sourceCode": "Kaynak Kodu",
+            "donate": "Bağışta Bulun"
+          }
+        },
+        "introduction": {
+          "skip": "Atla",
+          "continue": "Devam Et",
+          "start": "Hadi gidelim",
+          "first": {
+            "paragraph": "Tüm bağlantılarınızı kolayca yönetin. Çevrimdışı ve güvenli.",
+            "imageDescription": "Uygulama ve logo",
+            "heading": "Linkbox'a hoş geldiniz."
+          },
+          "second": {
+            "imageDescription": "Kayan eylem düğmesi",
+            "heading": "Bağlantılarını ekle.",
+            "paragraph": "Bir klasör veya bağlantı eklemek için kayan artı düğmesine dokun."
+          },
+          "third": {
+            "imageDescription": "Sekmeler",
+            "heading": "Bağlantılarını klasörler halinde düzenle.",
+            "paragraph": "Klasörler sekmeler olarak gösterilir."
+          },
+          "fourth": {
+            "imageDescription": "Eylem menüsü",
+            "heading": "Bağlantılarını düzenle ve paylaş.",
+            "paragraph": "Seçenekleri göstermek için sekmeye veya bağlantıya uzun bas."
+          },
+          "fifth": {
+            "imageDescription": "Onay işareti",
+            "heading": "Hazırsın.",
+            "paragraph": "Linkbox ile iyi eğlenceler."
+          }
+        }
+      },
+      "sheets": {
+        "linkActions": {
+          "share": {
+            "label": "Paylaş",
+            "title": "Bağlantıyı Paylaş"
+          },
+          "edit": "Düzenle",
+          "delete": "$t(overlays.alerts.deleteFolderConfirmation.delete)",
+          "cancel": "$t(overlays.modals.search.cancel)"
+        },
+        "folderActions": {
+          "edit": "$t(overlays.sheets.linkActions.edit)",
+          "delete": "$t(overlays.sheets.linkActions.delete)",
+          "cancel": "$t(overlays.sheets.linkActions.cancel)"
+        }
+      }
+    },
+    "content": {
+      "links": {
+        "emptyState": {
+          "heading": "Bağlantı yok"
+        }
+      }
+    },
+    "validation": {
+      "emptyError": "Boş olamaz",
+      "invalidUrlError": "Geçerli bir URL olmalıdır"
+    }
+  }
+}
