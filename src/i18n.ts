@@ -26,11 +26,13 @@ const usedLanguages = [
   turkish,
 ];
 
-export const languages = usedLanguages.map((language) => ({
-  code: language.translation.meta.code,
-  name: language.translation.meta.name,
-  translation: language,
-}));
+export const languages = usedLanguages
+  .map((language) => ({
+    code: language.translation.meta.code,
+    name: language.translation.meta.name,
+    translation: language,
+  }))
+  .sort(({ code: previous }, { code: next }) => previous.localeCompare(next));
 
 i18n.use(initReactI18next).init({
   lng: DEFAULT_LANGUAGE,
