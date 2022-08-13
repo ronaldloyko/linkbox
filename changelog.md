@@ -5,7 +5,7 @@
 ### Added
 
 - French translation by [Amine Riad](https://github.com/Amine000Riad)
-- Turkish translation by [Baki Nazik](https://hosted.weblate.org/user/bakinazik)
+- Turkish translation by [Baki Nazik](https://github.com/bakinazik)
 - Status bar reflects selected theme
 - Haptic feedback
 - Made the buttons for search and settings more accessible by moving them to the toolbar
