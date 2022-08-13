@@ -53,6 +53,13 @@ For translations, we use the hosted **Weblate** service.
 
 ## Contributing
 
+### Without GitHub Account
+
+If you don't have a GitHub account, you can also submit your contributions by email to the following address: `linkbox@ronald.ooo`
+
+- When filing an issue, **use the issue templates**
+- When submitting changes, **attach a `.patch` file**
+
 ### Reporting Bugs
 
 1. Open a [**new issue**](https://github.com/ronaldloyko/linkbox/issues)
