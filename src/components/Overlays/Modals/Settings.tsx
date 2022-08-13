@@ -29,8 +29,15 @@ import {
   language as languageIcon,
   swapVertical,
 } from "ionicons/icons";
-import { useRef, useState, type ChangeEvent, type FC } from "react";
+import {
+  useRef,
+  useState,
+  type ChangeEvent,
+  type FC,
+  type MouseEvent,
+} from "react";
 import { useTranslation } from "react-i18next";
+import { Haptics, NotificationType } from "@capacitor/haptics";
 import {
   APPLICATION_NAME,
   BACKUP_MIME_TYPE,
@@ -100,6 +107,8 @@ export default (function Settings() {
   }
 
   function onImportClick() {
+    Haptics.notification({ type: NotificationType.Warning });
+
     presentAlert({
       message: t(`${TRANSLATION_PREFIX}.data.import.confirmationAlert.message`),
       buttons: [
@@ -123,6 +132,8 @@ export default (function Settings() {
   async function onExportClick() {
     const path = (await storage.export()).split("/").at(-1);
 
+    Haptics.notification({ type: NotificationType.Success });
+
     presentAlert({
       message: t(`${TRANSLATION_PREFIX}.data.export.alert.message`, {
         path,
@@ -134,6 +145,7 @@ export default (function Settings() {
   async function onFileSelection(event: ChangeEvent<HTMLInputElement>) {
     const file = event.target.files?.item(0);
     let message: string = EMPTY_TEXT;
+    let hapticFeedbackType: NotificationType = NotificationType.Success;
 
     try {
       if (!file || file.type !== BACKUP_MIME_TYPE) {
@@ -150,6 +162,7 @@ export default (function Settings() {
         throw new Error(StorageError.InvalidContent);
       }
     } catch (error) {
+      hapticFeedbackType = NotificationType.Error;
       message = t(
         `${TRANSLATION_PREFIX}.data.import.finalAlert.message.unknownError`
       );
@@ -161,6 +174,7 @@ export default (function Settings() {
       switch (error.message) {
         case StorageError.InvalidFile:
         case StorageError.InvalidContent:
+          hapticFeedbackType = NotificationType.Error;
           message = t(
             `${TRANSLATION_PREFIX}.data.import.finalAlert.message.${error.message}`
           );
@@ -169,6 +183,8 @@ export default (function Settings() {
     } finally {
       event.target.value = "";
 
+      Haptics.notification({ type: hapticFeedbackType });
+
       presentAlert({
         message,
         buttons: [t(`${TRANSLATION_PREFIX}.data.import.finalAlert.close`)],
@@ -176,6 +192,10 @@ export default (function Settings() {
 
       await dispatch(loadDataFromStorage());
     }
+  }
+
+  function onFileSelectorClick(event: MouseEvent) {
+    event.stopPropagation();
   }
 
   function onSourceCodeClick() {
@@ -288,6 +308,7 @@ export default (function Settings() {
               ref={fileSelector}
               style={{ display: "none" }}
               onChange={onFileSelection}
+              onClick={onFileSelectorClick}
               accept={BACKUP_MIME_TYPE}
             />
           </IonItem>

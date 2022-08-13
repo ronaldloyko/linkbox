@@ -6,6 +6,7 @@
 
 - French translation by [Amine Riad](https://github.com/Amine000Riad)
 - Status bar reflects selected theme
+- Haptic feedback
 
 ### Fixed
 

@@ -9,6 +9,7 @@ import {
   type FC,
   type SetStateAction,
 } from "react";
+import { Haptics, NotificationType } from "@capacitor/haptics";
 import { useTranslation } from "react-i18next";
 import { UNSELECTED_ITEM } from "../../../data/constants";
 import useSanitizedUrl from "../../../hooks/useSanitizedUrl";
@@ -71,6 +72,7 @@ export default (function LinkActions() {
           role: "destructive",
           icon: trash,
           handler() {
+            Haptics.notification({ type: NotificationType.Warning });
             dispatch(toggleDeleteLinkConfirmationAlert(true));
           },
         },

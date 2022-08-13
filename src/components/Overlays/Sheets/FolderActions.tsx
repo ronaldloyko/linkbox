@@ -2,6 +2,7 @@ import { IonActionSheet, type ActionSheetButton } from "@ionic/react";
 import { close, pencil, trash } from "ionicons/icons";
 import type { FC } from "react";
 import { useTranslation } from "react-i18next";
+import { Haptics, NotificationType } from "@capacitor/haptics";
 import { DEFAULT_FOLDER_ID, UNSELECTED_ITEM } from "../../../data/constants";
 import { useAction, useDispatch, useSelector } from "../../../store";
 
@@ -33,6 +34,7 @@ export default (function FolderActions() {
             role: "destructive",
             icon: trash,
             handler() {
+              Haptics.notification({ type: NotificationType.Warning });
               dispatch(toggleDeleteFolderConfirmationAlert(true));
             },
           },

@@ -1,5 +1,6 @@
 import { IonLabel, IonSegmentButton } from "@ionic/react";
 import { useRef, type FC } from "react";
+import { Haptics, ImpactStyle } from "@capacitor/haptics";
 import useOnPress from "../../../hooks/useOnPress";
 import { useAction, useDispatch } from "../../../store";
 
@@ -9,6 +10,7 @@ export default (function Tab({ id, value }: Properties) {
   const { toggleFolderActionSheet, setSelectedFolder } = useAction();
 
   useOnPress(element, () => {
+    Haptics.impact({ style: ImpactStyle.Medium });
     dispatch(setSelectedFolder(id));
     dispatch(toggleFolderActionSheet(true));
   });

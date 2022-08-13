@@ -1,5 +1,6 @@
 import { IonItem, IonLabel } from "@ionic/react";
 import { useRef, type FC } from "react";
+import { Haptics, ImpactStyle } from "@capacitor/haptics";
 import { URL_TARGET } from "../../../data/constants";
 import useOnPress from "../../../hooks/useOnPress";
 import useSanitizedUrl from "../../../hooks/useSanitizedUrl";
@@ -19,6 +20,7 @@ export default (function Link({ id, url, name }: Properties) {
   }
 
   useOnPress(element, () => {
+    Haptics.impact({ style: ImpactStyle.Medium });
     dispatch(setSelectedLink(id));
     dispatch(toggleLinkActionSheet(true));
   });
