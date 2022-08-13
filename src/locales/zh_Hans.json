@@ -187,13 +187,7 @@
       "emptyError": "不能为空",
       "invalidUrlError": "必须为有效 URL"
     },
-    "header": {
-      "title": "链接",
-      "menu": {
-        "settings": "设置",
-        "search": "搜索"
-      }
-    },
+    "heading": "链接",
     "meta": {
       "code": "zh-Hans",
       "name": "中文 (简体)"

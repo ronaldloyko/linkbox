@@ -4,6 +4,7 @@
       "code": "nb-NO",
       "name": "Norsk bokmål"
     },
+    "heading": "Lenker",
     "overlays": {
       "modals": {
         "search": {
@@ -178,13 +179,6 @@
             "message": "Slettet mappen «{{name}}»"
           }
         }
-      }
-    },
-    "header": {
-      "title": "Lenker",
-      "menu": {
-        "search": "Søk",
-        "settings": "Innstillinger"
       }
     },
     "content": {

@@ -1,5 +1,10 @@
 {
   "translation": {
+    "meta": {
+      "name": "Português (Brasil)",
+      "code": "pt-BR"
+    },
+    "heading": "Links",
     "overlays": {
       "modals": {
         "saveLink": {
@@ -174,17 +179,6 @@
           "cancel": "$t(overlays.sheets.linkActions.cancel)",
           "edit": "$t(overlays.sheets.linkActions.edit)"
         }
-      }
-    },
-    "meta": {
-      "name": "Português (Brasil)",
-      "code": "pt-BR"
-    },
-    "header": {
-      "title": "Links",
-      "menu": {
-        "settings": "Configurações",
-        "search": "Busca"
       }
     },
     "content": {

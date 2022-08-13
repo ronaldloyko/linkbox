@@ -5,32 +5,28 @@ import {
   IonTitle,
   IonToolbar,
 } from "@ionic/react";
-import { ellipsisVertical } from "ionicons/icons";
-import { useState, type FC, type MouseEvent } from "react";
+import { search, settings } from "ionicons/icons";
+import type { FC } from "react";
 import { useTranslation } from "react-i18next";
 import { useAction, useDispatch, useSelector } from "../../store";
-import Menu from "./Title/Menu";
 
 export default (function Title() {
   const dispatch = useDispatch();
   const { t } = useTranslation();
-  const { toggleMenu } = useAction();
+  const { toggleSearchModal, toggleSettingsModal } = useAction();
   const statusBarHeight = useSelector((state) => state.ui.statusBarHeight);
-  const [menuTriggerEvent, setMenuTriggerEvent] = useState<MouseEvent>();
 
-  function onMenuClick(event: MouseEvent) {
-    setMenuTriggerEvent(event);
-    dispatch(toggleMenu(true));
-  }
   return (
     <IonToolbar style={{ paddingTop: statusBarHeight }}>
-      <IonTitle>{t("header.title")}</IonTitle>
+      <IonTitle>{t("heading")}</IonTitle>
       <IonButtons slot="primary">
-        <IonButton onClick={onMenuClick}>
-          <IonIcon slot="icon-only" icon={ellipsisVertical}></IonIcon>
+        <IonButton onClick={() => dispatch(toggleSearchModal(true))}>
+          <IonIcon slot="icon-only" icon={search}></IonIcon>
+        </IonButton>
+        <IonButton onClick={() => dispatch(toggleSettingsModal(true))}>
+          <IonIcon slot="icon-only" icon={settings}></IonIcon>
         </IonButton>
       </IonButtons>
-      <Menu triggerEvent={menuTriggerEvent} />
     </IonToolbar>
   );
 } as FC);

@@ -4,13 +4,7 @@
       "code": "fr",
       "name": "Français"
     },
-    "header": {
-      "title": "Liens",
-      "menu": {
-        "search": "Recherche",
-        "settings": "Réglages"
-      }
-    },
+    "heading": "Liens",
     "overlays": {
       "alerts": {
         "deleteLinkConfirmation": {
