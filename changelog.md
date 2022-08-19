@@ -18,6 +18,7 @@
 ### Changed
 
 - Languages are now sorted by their codes
+- Brighten backdrop of modals and alerts on the dark theme for better distinction
 
 ## [1.1.0] - 2022-08-09
 

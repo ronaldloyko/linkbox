@@ -177,3 +177,8 @@ body.dark {
   --ion-tab-bar-background: #1f1f1f;
   --ion-card-background: #1e1e1e;
 }
+
+.md body.dark ion-modal::part(backdrop),
+.md body.dark ion-alert ion-backdrop {
+  background: var(--ion-color-step-250);
+}
