@@ -55,6 +55,7 @@ export interface Link {
   name: Name;
   url: Url;
   folder: Id;
+  tags?: Tag[];
 }
 
 export type Id = string;
@@ -62,3 +63,5 @@ export type Id = string;
 export type Name = string;
 
 export type Url = string;
+
+export type Tag = string;
