@@ -12,10 +12,185 @@
           "cancel": "Batal",
           "delete": "Hapus",
           "toast": {
-            "message": "Tautan {{name}}"
+            "message": "Tautan {{name}} dihapus"
+          }
+        },
+        "deleteFolderConfirmation": {
+          "message": "Anda yakin ingin menghapus {{name}} dan tautannya?",
+          "cancel": "$t(overlays.alerts.deleteLinkConfirmation.cancel)",
+          "delete": "$t(overlays.alerts.deleteLinkConfirmation.delete)",
+          "toast": {
+            "message": "Folder {{name}} dihapus"
           }
         }
+      },
+      "modals": {
+        "settings": {
+          "interface": {
+            "theme": {
+              "system": "Otomatis",
+              "light": "Terang",
+              "label": "Tema",
+              "dark": "Gelap"
+            },
+            "linkSorting": {
+              "reversed": "Terbaru",
+              "label": "Urutan Tautan",
+              "default": "Terlama",
+              "alphabetically": "Abjad"
+            },
+            "label": "Antarmuka",
+            "language": "Bahasa",
+            "showAvatar": "Tampilkan Avatar"
+          },
+          "close": "Tutup",
+          "title": "Pengaturan",
+          "data": {
+            "label": "Data",
+            "import": {
+              "label": "Impor",
+              "confirmationAlert": {
+                "message": "Semua pengaturan dan tautan akan ditimpa. Tetap lanjutkan?",
+                "abort": "Batal",
+                "proceed": "Lanjut"
+              },
+              "finalAlert": {
+                "message": {
+                  "invalidFile": "Berkas tidak valid",
+                  "successful": "Impor berhasil",
+                  "invalidContent": "Konten berkas tidak valid",
+                  "unknownError": "Galat tidak diketahui"
+                },
+                "close": "OKE"
+              }
+            },
+            "export": {
+              "label": "Ekspor",
+              "alert": {
+                "message": "Tautan dan pengaturan disimpan ke folder unduhan sebagai {{path}}",
+                "close": "$t(overlays.modals.settings.data.import.finalAlert.close)"
+              }
+            }
+          },
+          "miscellaneous": {
+            "label": "Lainnya",
+            "sourceCode": "Kode Sumber",
+            "donate": "Donasi"
+          }
+        },
+        "introduction": {
+          "fourth": {
+            "paragraph": "Tekan lama pada tab atau tautan untuk menampilkan opsi.",
+            "imageDescription": "Menu tindakan",
+            "heading": "Sunting dan bagikan tautan Anda."
+          },
+          "fifth": {
+            "imageDescription": "Centang",
+            "heading": "Anda sudah siap.",
+            "paragraph": "Simpan tautan dengan Linkbox."
+          },
+          "skip": "Lewati",
+          "start": "Ayo",
+          "continue": "Lanjutkan",
+          "first": {
+            "imageDescription": "Aplikasi dan logo",
+            "heading": "Selamat datang di Linkbox.",
+            "paragraph": "Kelola semua tautan Anda dengan mudah. Luring dan aman."
+          },
+          "second": {
+            "imageDescription": "Tombol tindakan mengambang",
+            "heading": "Tambahkan tautan Anda.",
+            "paragraph": "Ketuk tombol mengambang untuk menambahkan folder atau tautan."
+          },
+          "third": {
+            "imageDescription": "Tab",
+            "heading": "Kelola tautan Anda dalam folder.",
+            "paragraph": "Folder ditampilkan sebagai tab."
+          }
+        },
+        "saveLink": {
+          "title": {
+            "create": "Buat tautan",
+            "edit": "Sunting Tautan"
+          },
+          "cancel": "$t(overlays.alerts.deleteFolderConfirmation.cancel)",
+          "save": {
+            "create": "Buat",
+            "update": "Perbarui"
+          },
+          "name": {
+            "label": "Nama",
+            "placeholder": "Wikipedia"
+          },
+          "folder": {
+            "label": "Folder"
+          },
+          "url": {
+            "label": "URL",
+            "placeholder": "wikipedia.com"
+          },
+          "toast": {
+            "message": {
+              "created": "Tautan {{name}} dibuat",
+              "updated": "Tautan {{name}} diperbarui"
+            }
+          }
+        },
+        "saveFolder": {
+          "toast": {
+            "message": {
+              "updated": "Folder {{name}} diperbarui",
+              "created": "Folder {{name}} dibuat"
+            }
+          },
+          "title": {
+            "create": "Buat Folder",
+            "edit": "Sunting Folder"
+          },
+          "save": {
+            "create": "$t(overlays.modals.saveLink.save.create)",
+            "update": "$t(overlays.modals.saveLink.save.update)"
+          },
+          "cancel": "$t(overlays.modals.saveLink.cancel)",
+          "name": {
+            "label": "$t(overlays.modals.saveLink.name.label)",
+            "placeholder": "Sumber Berita"
+          }
+        },
+        "search": {
+          "title": "Cari",
+          "placeholder": "Cari Tautan…",
+          "cancel": "$t(overlays.modals.saveFolder.cancel)",
+          "heading": "Tidak ditemukan"
+        }
+      },
+      "sheets": {
+        "linkActions": {
+          "cancel": "$t(overlays.modals.search.cancel)",
+          "share": {
+            "label": "Bagikan",
+            "title": "Bagikan Tautan"
+          },
+          "delete": "$t(overlays.alerts.deleteFolderConfirmation.delete)",
+          "edit": "Sunting"
+        },
+        "folderActions": {
+          "edit": "$t(overlays.sheets.linkActions.edit)",
+          "delete": "$t(overlays.sheets.linkActions.delete)",
+          "cancel": "$t(overlays.sheets.linkActions.cancel)"
+        }
       }
+    },
+    "content": {
+      "links": {
+        "emptyState": {
+          "heading": "Tidak ada tautan"
+        }
+      }
+    },
+    "validation": {
+      "emptyError": "Tidak boleh kosong",
+      "invalidUrlError": "URL harus valid"
     }
   }
 }
