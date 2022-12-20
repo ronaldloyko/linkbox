@@ -1,1 +1,21 @@
-{}
+{
+  "translation": {
+    "meta": {
+      "code": "id",
+      "name": "Indonesian"
+    },
+    "heading": "Tautan",
+    "overlays": {
+      "alerts": {
+        "deleteLinkConfirmation": {
+          "message": "Anda yakin ingin menghapus {{name}}?",
+          "cancel": "Batal",
+          "delete": "Hapus",
+          "toast": {
+            "message": "Tautan {{name}}"
+          }
+        }
+      }
+    }
+  }
+}
