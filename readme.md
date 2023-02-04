@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <a href="https://ronald.ooo/linkbox-fdroid">
+  <a href="https://f-droid.org/en/packages/me.loyko.ronald.linkbox">
     <img alt="F-Droid button" src="https://fdroid.gitlab.io/artwork/badge/get-it-on.png" width="250">
   </a>
 </p>
