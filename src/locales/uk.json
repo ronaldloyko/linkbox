@@ -34,6 +34,10 @@
             "label": "URL-адреса",
             "placeholder": "uk.wikipedia.org"
           },
+          "description": {
+            "label": "опис",
+            "placeholder": "Енциклопедія"
+          },
           "folder": {
             "label": "Тека"
           },

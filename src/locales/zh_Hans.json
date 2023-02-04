@@ -99,6 +99,10 @@
             "label": "URL",
             "placeholder": "wikipedia.com"
           },
+          "description": {
+            "label": "描述",
+            "placeholder": "百科全书"
+          },
           "folder": {
             "label": "文件夹"
           },

@@ -115,6 +115,10 @@
             "label": "Nettadresse",
             "placeholder": "wikipedia.com"
           },
+          "description": {
+            "label": "Beskrivelse",
+            "placeholder": "Encyclopedia"
+          },
           "folder": {
             "label": "Mappe"
           },

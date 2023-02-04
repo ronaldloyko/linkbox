@@ -43,6 +43,10 @@
             "placeholder": "wikipedia.com",
             "label": "الرابط"
           },
+          "description": {
+            "label": "وصف",
+            "placeholder": "موسوعة"
+          },
           "folder": {
             "label": "المجلد"
           },

@@ -130,6 +130,10 @@
             "label": "URL",
             "placeholder": "wikipedia.com"
           },
+          "description": {
+            "label": "Keterangan",
+            "placeholder": "Ensiklopedi"
+          },
           "toast": {
             "message": {
               "created": "Tautan {{name}} dibuat",

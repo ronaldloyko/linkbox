@@ -38,6 +38,10 @@
             "label": "URL",
             "placeholder": "wikipedia.com"
           },
+          "description": {
+            "label": "Descripción",
+            "placeholder": "Enciclopedia"
+          },
           "title": {
             "create": "Crear enlace",
             "edit": "Editar enlace"

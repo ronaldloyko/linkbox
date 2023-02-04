@@ -24,6 +24,10 @@
             "label": "Endereço",
             "placeholder": "wikipedia.com"
           },
+          "description": {
+            "label": "Descrição",
+            "placeholder": "Enciclopédia"
+          },
           "cancel": "$t(overlays.alerts.deleteFolderConfirmation.cancel)",
           "folder": {
             "label": "Pasta"

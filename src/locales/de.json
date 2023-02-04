@@ -43,6 +43,10 @@
             "label": "URL",
             "placeholder": "wikipedia.com"
           },
+          "description": {
+            "label": "Beschreibung",
+            "placeholder": "Enzyklopädie"
+          },
           "folder": {
             "label": "Ordner"
           },
