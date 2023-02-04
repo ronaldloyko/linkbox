@@ -20,6 +20,7 @@ listeners.startListening({
     ui.actions.setLinkSorting,
     ui.actions.setTheme,
     ui.actions.toggleShowAvatar,
+    ui.actions.toggleShowDescription,
     ui.actions.toggleFirstRun
   ),
   effect(_, api) {
@@ -32,6 +33,7 @@ listeners.startListening({
       language: state.ui.language,
       theme: state.ui.theme,
       showAvatar: state.ui.showAvatar,
+      showDescription: state.ui.showDescription,
       firstRun: state.ui.firstRun,
     });
   },

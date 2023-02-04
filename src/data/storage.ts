@@ -4,6 +4,7 @@ import { nanoid } from "nanoid";
 import { Folder, Link } from "../store/items";
 import {
   AvatarVisibility,
+  DescriptionVisibility,
   FirstRunFlag,
   Language,
   LinkSorting,
@@ -37,6 +38,7 @@ class ApplicationStorage {
     linkSorting: LinkSorting.Default,
     theme: Theme.System,
     showAvatar: true,
+    showDescription: false,
     firstRun: true,
   };
 
@@ -78,6 +80,7 @@ class ApplicationStorage {
       typeof content?.data?.language !== "string" ||
       typeof content?.data?.linkSorting !== "string" ||
       typeof content?.data?.showAvatar !== "boolean" ||
+      typeof content?.data?.showDescription !== "boolean" ||
       typeof content?.data?.theme !== "string"
     ) {
       throw new Error(StorageError.InvalidContent);
@@ -106,11 +109,13 @@ class ApplicationStorage {
   }
 }
 
-export default new ApplicationStorage(
+const storage = new ApplicationStorage(
   Storage,
   STORAGE_DATABASE_KEY,
   STORAGE_DATA_KEY
 );
+
+export default storage;
 
 interface Data {
   links: Link[];
@@ -119,6 +124,7 @@ interface Data {
   language: Language;
   theme: Theme;
   showAvatar: AvatarVisibility;
+  showDescription: DescriptionVisibility;
   firstRun: FirstRunFlag;
 }
 

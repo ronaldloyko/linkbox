@@ -41,7 +41,8 @@
             },
             "label": "Antarmuka",
             "language": "Bahasa",
-            "showAvatar": "Tampilkan Avatar"
+            "showAvatar": "Tampilkan Avatar",
+            "showDescription": "Tampilkan deskripsi"
           },
           "close": "Tutup",
           "title": "Pengaturan",
@@ -128,6 +129,10 @@
           "url": {
             "label": "URL",
             "placeholder": "wikipedia.com"
+          },
+          "description": {
+            "label": "Keterangan",
+            "placeholder": "Ensiklopedi"
           },
           "toast": {
             "message": {

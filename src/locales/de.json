@@ -43,6 +43,10 @@
             "label": "URL",
             "placeholder": "wikipedia.com"
           },
+          "description": {
+            "label": "Beschreibung",
+            "placeholder": "Enzyklopädie"
+          },
           "folder": {
             "label": "Ordner"
           },
@@ -98,7 +102,8 @@
               "reversed": "Neuste zuerst",
               "alphabetically": "Alphabetisch"
             },
-            "showAvatar": "Avatare anzeigen"
+            "showAvatar": "Avatare anzeigen",
+            "showDescription": "Beschreibungen anzeigen"
           },
           "data": {
             "label": "Daten",

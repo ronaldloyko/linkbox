@@ -42,6 +42,10 @@
             "label": "URL",
             "placeholder": "wikipedia.com"
           },
+          "description": {
+            "label": "Tanım",
+            "placeholder": "Ansiklopedi"
+          },
           "folder": {
             "label": "Klasör"
           },
@@ -98,7 +102,8 @@
               "label": "Bağlantı Sıralaması",
               "alphabetically": "Alfabetik Olarak"
             },
-            "showAvatar": "Simgeleri Göster"
+            "showAvatar": "Simgeleri Göster",
+            "showDescription": "Açıklamaları göster"
           },
           "data": {
             "label": "Veri",

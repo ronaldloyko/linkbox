@@ -24,6 +24,10 @@
             "label": "Endereço",
             "placeholder": "wikipedia.com"
           },
+          "description": {
+            "label": "Descrição",
+            "placeholder": "Enciclopédia"
+          },
           "cancel": "$t(overlays.alerts.deleteFolderConfirmation.cancel)",
           "folder": {
             "label": "Pasta"
@@ -80,6 +84,7 @@
               "alphabetically": "Ordem alfabética"
             },
             "showAvatar": "Exibir Avatares",
+            "showDescription": "Mostrar descrições",
             "language": "Idioma"
           },
           "data": {

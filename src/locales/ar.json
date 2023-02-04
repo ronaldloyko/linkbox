@@ -43,6 +43,10 @@
             "placeholder": "wikipedia.com",
             "label": "الرابط"
           },
+          "description": {
+            "label": "وصف",
+            "placeholder": "موسوعة"
+          },
           "folder": {
             "label": "المجلد"
           },
@@ -97,6 +101,7 @@
               "reversed": "الأحدث أولا"
             },
             "showAvatar": "عرض صورة المستخدم",
+            "showDescription": "عرض الأوصاف",
             "language": "اللغة"
           },
           "data": {
