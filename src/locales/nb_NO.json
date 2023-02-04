@@ -31,7 +31,8 @@
               "default": "Eldste først",
               "reversed": "Nyeste først"
             },
-            "showAvatar": "Vis avatarer"
+            "showAvatar": "Vis avatarer",
+            "showDescription": "Vis beskrivelser"
           },
           "data": {
             "label": "Data",
@@ -113,6 +114,10 @@
           "url": {
             "label": "Nettadresse",
             "placeholder": "wikipedia.com"
+          },
+          "description": {
+            "label": "Beskrivelse",
+            "placeholder": "Encyclopedia"
           },
           "folder": {
             "label": "Mappe"

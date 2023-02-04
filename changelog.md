@@ -4,12 +4,14 @@
 
 ### Added
 
+- Haptic feedback
+- Made the buttons for search and settings more accessible by moving them to the toolbar
+- Status bar reflects selected theme
+- Indonesian translation by [zmni](https://github.com/zmni)
+- Ability to add link descriptions
 - French translation by [Amine Riad](https://github.com/Amine000Riad)
 - Turkish translation by [Baki Nazik](https://github.com/bakinazik)
 - Italian translation by [Enrico Dell'Oste](https://www.smartpixel.it)
-- Status bar reflects selected theme
-- Haptic feedback
-- Made the buttons for search and settings more accessible by moving them to the toolbar
 
 ### Fixed
 
@@ -29,7 +31,7 @@
 - Norwegian Bokmål translation by [Allan Nordhøy](https://github.com/comradekingu)
 - Brazilian Portugese translation by [Alexandre Ataides](https://github.com/aleataides)
 - Ukrainian translation by [Andrij Mizyk](https://andmizyks.bearblog.dev)
-- Spanish translation by [Ronald Loyko](https://ronald.ooo)
+- Spanish translation by [Ronald Loyko](https://ronald.loyko.me)
 - Simplified Chinese translation by [Eric](https://hosted.weblate.org/user/alchemillatruth)
 - Ability to create links by sharing to Linkbox
 

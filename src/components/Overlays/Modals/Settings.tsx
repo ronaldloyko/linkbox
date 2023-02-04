@@ -26,6 +26,7 @@ import {
   contrast,
   heart,
   image,
+  text,
   language as languageIcon,
   swapVertical,
 } from "ionicons/icons";
@@ -53,6 +54,7 @@ import { useAction, useDispatch, useSelector } from "../../../store";
 import { loadDataFromStorage } from "../../../store/thunks";
 import {
   AvatarVisibility,
+  DescriptionVisibility,
   LinkSorting,
   Theme,
   type Language,
@@ -67,11 +69,13 @@ export default (function Settings() {
   const language = useSelector((state) => state.ui.language);
   const theme = useSelector((state) => state.ui.theme);
   const showAvatar = useSelector((state) => state.ui.showAvatar);
+  const showDescription = useSelector((state) => state.ui.showDescription);
   const statusBarHeight = useSelector((state) => state.ui.statusBarHeight);
   const { t } = useTranslation();
   const {
     toggleSettingsModal,
     toggleShowAvatar,
+    toggleShowDescription,
     setLinkSorting,
     setLanguage,
     setTheme,
@@ -104,6 +108,14 @@ export default (function Settings() {
 
   function onShowAvatarChange(event: CustomEvent<CheckboxChangeEventDetail>) {
     dispatch(toggleShowAvatar(event.detail.checked as AvatarVisibility));
+  }
+
+  function onShowDescriptionChange(
+    event: CustomEvent<CheckboxChangeEventDetail>
+  ) {
+    dispatch(
+      toggleShowDescription(event.detail.checked as DescriptionVisibility)
+    );
   }
 
   function onImportClick() {
@@ -291,6 +303,17 @@ export default (function Settings() {
               slot="end"
               checked={showAvatar}
               onIonChange={onShowAvatarChange}
+            />
+          </IonItem>
+          <IonItem>
+            <IonIcon slot="start" icon={text} />
+            <IonLabel>
+              {t(`${TRANSLATION_PREFIX}.interface.showDescription`)}
+            </IonLabel>
+            <IonCheckbox
+              slot="end"
+              checked={showDescription}
+              onIonChange={onShowDescriptionChange}
             />
           </IonItem>
         </IonList>

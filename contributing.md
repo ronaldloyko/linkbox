@@ -55,7 +55,7 @@ For translations, we use the hosted **Weblate** service.
 
 ### Without GitHub Account
 
-If you don't have a GitHub account, you can also submit your contributions by email to the following address: `linkbox@ronald.ooo`
+If you don't have a GitHub account, you can also submit your contributions by email to the following address: `linkbox@ronald.loyko.me`
 
 - When filing an issue, **use the issue templates**
 - When submitting changes, **attach a `.patch` file**
