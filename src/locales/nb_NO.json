@@ -31,7 +31,8 @@
               "default": "Eldste først",
               "reversed": "Nyeste først"
             },
-            "showAvatar": "Vis avatarer"
+            "showAvatar": "Vis avatarer",
+            "showDescription": "Vis beskrivelser"
           },
           "data": {
             "label": "Data",

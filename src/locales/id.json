@@ -41,7 +41,8 @@
             },
             "label": "Antarmuka",
             "language": "Bahasa",
-            "showAvatar": "Tampilkan Avatar"
+            "showAvatar": "Tampilkan Avatar",
+            "showDescription": "Tampilkan deskripsi"
           },
           "close": "Tutup",
           "title": "Pengaturan",

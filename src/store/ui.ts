@@ -37,6 +37,7 @@ export default createSlice({
     language: DEFAULT_LANGUAGE,
     theme: Theme.System,
     showAvatar: true,
+    showDescription: false,
     firstRun: false,
     prefilledName: EMPTY_TEXT,
     prefilledUrl: EMPTY_TEXT,
@@ -117,6 +118,12 @@ export default createSlice({
     ) {
       state.showAvatar = payload ?? !state.showAvatar;
     },
+    toggleShowDescription(
+      state,
+      { payload }: PayloadAction<OptionalToggleParameter>
+    ) {
+      state.showDescription = payload ?? !state.showDescription;
+    },
     toggleFirstRun(state, { payload }: PayloadAction<OptionalToggleParameter>) {
       state.firstRun = payload ?? !state.firstRun;
     },
@@ -136,6 +143,7 @@ export default createSlice({
       state.linkSorting = payload.linkSorting;
       state.theme = payload.theme;
       state.showAvatar = payload.showAvatar;
+      state.showDescription = payload.showDescription;
       state.firstRun = payload.firstRun;
     });
   },
@@ -144,6 +152,8 @@ export default createSlice({
 export type Language = string;
 
 export type AvatarVisibility = boolean;
+
+export type DescriptionVisibility = boolean;
 
 export type FirstRunFlag = boolean;
 
@@ -163,6 +173,7 @@ interface State {
   language: Language;
   theme: Theme;
   showAvatar: AvatarVisibility;
+  showDescription: DescriptionVisibility;
   firstRun: FirstRunFlag;
   prefilledName: Name;
   prefilledUrl: Url;

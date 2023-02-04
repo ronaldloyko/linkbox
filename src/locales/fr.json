@@ -97,6 +97,7 @@
               "reversed": "Le plus récent d'abord"
             },
             "showAvatar": "Afficher les avatars",
+            "showDescription": "Afficher les descriptions",
             "language": "Langue"
           },
           "data": {

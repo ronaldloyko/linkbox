@@ -89,6 +89,7 @@
               "dark": "Oscuro"
             },
             "showAvatar": "Mostrar avatares",
+            "showDescription": "Mostrar descripciones",
             "label": "Interfaz",
             "language": "Idioma",
             "linkSorting": {

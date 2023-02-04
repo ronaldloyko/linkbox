@@ -30,7 +30,7 @@ import useSanitizedUrl from "../../../hooks/useSanitizedUrl";
 import useValidation, { Type } from "../../../hooks/useValidation";
 import useValidationErrors from "../../../hooks/useValidationErrorMessage";
 import { useAction, useDispatch, useSelector } from "../../../store";
-import type { Id, Name, Url } from "../../../store/items";
+import type { Description, Id, Name, Url } from "../../../store/items";
 import ErrorLine from "./ErrorLine";
 
 export default (function SaveLink() {
@@ -62,6 +62,7 @@ export default (function SaveLink() {
   } = useAction();
   const [name, setName] = useState(EMPTY_TEXT);
   const [url, setUrl] = useState(EMPTY_TEXT);
+  const [description, setDescription] = useState(EMPTY_TEXT);
   const [folder, setFolder] = useState(DEFAULT_FOLDER_ID);
   const [nameErrorMessage, setNameErrorMessage, clearNameErrorMessage] =
     useValidationErrors();
@@ -76,6 +77,12 @@ export default (function SaveLink() {
 
   function onUrlChange({ detail }: CustomEvent<InputChangeEventDetail>) {
     setUrl(detail.value as Url);
+  }
+
+  function onDescriptionChange({
+    detail,
+  }: CustomEvent<InputChangeEventDetail>) {
+    setDescription(detail.value as Description);
   }
 
   function onFolderChange(event: CustomEvent<SelectChangeEventDetail>) {
@@ -113,6 +120,7 @@ export default (function SaveLink() {
         id,
         name,
         url,
+        description,
         folder,
       })
     );
@@ -134,6 +142,7 @@ export default (function SaveLink() {
   function onBeforeShow() {
     setName(isEditing ? linkBeingEdited.name : prefilledName);
     setUrl(isEditing ? linkBeingEdited.url : prefilledUrl);
+    setDescription(isEditing ? linkBeingEdited.description : EMPTY_TEXT);
     setFolder(isEditing ? linkBeingEdited.folder! : currentFolder);
     clearErrorMessages();
   }
@@ -212,6 +221,19 @@ export default (function SaveLink() {
             required
           />
           <ErrorLine message={urlErrorMessage} />
+        </IonItem>
+        <IonItem>
+          <IonLabel position="stacked">
+            {t("overlays.modals.saveLink.description.label")}
+          </IonLabel>
+          <IonInput
+            type="text"
+            placeholder={t("overlays.modals.saveLink.description.placeholder")}
+            inputMode="text"
+            value={description}
+            onIonChange={onDescriptionChange}
+            required
+          />
         </IonItem>
         {showInput && (
           <IonItem>

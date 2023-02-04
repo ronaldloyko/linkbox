@@ -98,7 +98,8 @@
               "reversed": "Prima i più recenti",
               "alphabetically": "In ordine alfabetico"
             },
-            "showAvatar": "Mostra Segnaposto"
+            "showAvatar": "Mostra Segnaposto",
+            "showDescription": "Mostra descrizioni"
           },
           "data": {
             "label": "Dati",

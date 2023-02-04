@@ -98,7 +98,8 @@
               "label": "Bağlantı Sıralaması",
               "alphabetically": "Alfabetik Olarak"
             },
-            "showAvatar": "Simgeleri Göster"
+            "showAvatar": "Simgeleri Göster",
+            "showDescription": "Açıklamaları göster"
           },
           "data": {
             "label": "Veri",
