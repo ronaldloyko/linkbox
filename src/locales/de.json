@@ -134,8 +134,7 @@
           },
           "miscellaneous": {
             "label": "Sonstiges",
-            "sourceCode": "Quellcode",
-            "donate": "Spenden"
+            "sourceCode": "Quellcode"
           }
         },
         "introduction": {

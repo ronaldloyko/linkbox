@@ -134,8 +134,7 @@
           },
           "miscellaneous": {
             "label": "Altro",
-            "sourceCode": "Codice Sorgente",
-            "donate": "Supporta lo sviluppatore"
+            "sourceCode": "Codice Sorgente"
           }
         },
         "introduction": {

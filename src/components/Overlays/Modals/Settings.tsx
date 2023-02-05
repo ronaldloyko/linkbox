@@ -43,7 +43,6 @@ import {
   APPLICATION_NAME,
   BACKUP_MIME_TYPE,
   EMPTY_TEXT,
-  URL_DONATION,
   URL_SOURCE_CODE,
   URL_TARGET,
   VERSION,
@@ -214,10 +213,6 @@ export default (function Settings() {
     window.open(URL_SOURCE_CODE, URL_TARGET);
   }
 
-  function onDonateClick() {
-    window.open(URL_DONATION, URL_TARGET);
-  }
-
   return (
     <IonModal isOpen={open} onIonModalDidDismiss={onCancel}>
       <IonHeader style={{ paddingTop: statusBarHeight }}>
@@ -350,12 +345,6 @@ export default (function Settings() {
             <IonIcon icon={code} slot="start" />
             <IonLabel>
               {t(`${TRANSLATION_PREFIX}.miscellaneous.sourceCode`)}
-            </IonLabel>
-          </IonItem>
-          <IonItem button onClick={onDonateClick}>
-            <IonIcon icon={heart} slot="start" />
-            <IonLabel>
-              {t(`${TRANSLATION_PREFIX}.miscellaneous.donate`)}
             </IonLabel>
           </IonItem>
           <IonItem>

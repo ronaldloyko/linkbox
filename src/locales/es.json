@@ -132,8 +132,7 @@
           },
           "miscellaneous": {
             "label": "Otros",
-            "sourceCode": "Código fuente",
-            "donate": "Donar"
+            "sourceCode": "Código fuente"
           },
           "title": "Ajustes",
           "close": "Cerrar"
