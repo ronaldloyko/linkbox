@@ -49,6 +49,7 @@ export default (function SaveLink() {
   );
   const sanitizedUrl = useSanitizedUrl();
   const isEditing = selectedLink !== null && linkBeingEdited;
+  const modalElement = useRef<HTMLIonModalElement>(null);
   const nameInputElement = useRef<HTMLIonInputElement>(null);
   const isValidationPassed = useValidation();
   const { t } = useTranslation();
@@ -94,6 +95,10 @@ export default (function SaveLink() {
     dispatch(setSelectedLink(UNSELECTED_ITEM));
     dispatch(prefillName(EMPTY_TEXT));
     dispatch(prefillUrl(EMPTY_TEXT));
+  }
+
+  function onClose() {
+    modalElement.current?.dismiss();
   }
 
   function clearErrorMessages() {
@@ -169,11 +174,12 @@ export default (function SaveLink() {
       onIonModalDidDismiss={onCancel}
       onIonModalWillPresent={onBeforeShow}
       onIonModalDidPresent={onShow}
+      ref={modalElement}
     >
       <IonHeader style={{ paddingTop: statusBarHeight }}>
         <IonToolbar>
           <IonButtons slot="start">
-            <IonButton onClick={onCancel}>
+            <IonButton onClick={onClose}>
               {t("overlays.modals.saveLink.cancel")}
             </IonButton>
           </IonButtons>

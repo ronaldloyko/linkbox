@@ -16,6 +16,7 @@
 ### Fixed
 
 - Wrong theme applied when set to automatic
+- Unexpected text changes when closing modals
 
 ### Changed
 

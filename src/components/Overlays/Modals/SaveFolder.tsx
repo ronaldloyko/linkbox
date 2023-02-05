@@ -38,6 +38,7 @@ export default (function SaveFolder() {
     [selectedFolder, folders]
   );
   const isEditingFolder = selectedFolder !== null && folderBeingEdited;
+  const modalElement = useRef<HTMLIonModalElement>(null);
   const nameInputElement = useRef<HTMLIonInputElement>(null);
   const isValidationPassed = useValidation();
   const { t } = useTranslation();
@@ -55,6 +56,10 @@ export default (function SaveFolder() {
   function onCancel() {
     dispatch(toggleSaveFolderModal(false));
     dispatch(setSelectedFolder(UNSELECTED_ITEM));
+  }
+
+  function onClose() {
+    modalElement.current?.dismiss();
   }
 
   function onSave() {
@@ -96,11 +101,12 @@ export default (function SaveFolder() {
       onIonModalDidDismiss={onCancel}
       onIonModalWillPresent={onBeforeShow}
       onIonModalDidPresent={onShow}
+      ref={modalElement}
     >
       <IonHeader style={{ paddingTop: statusBarHeight }}>
         <IonToolbar>
           <IonButtons slot="start">
-            <IonButton onClick={onCancel}>
+            <IonButton onClick={onClose}>
               {t("overlays.modals.saveFolder.cancel")}
             </IonButton>
           </IonButtons>
