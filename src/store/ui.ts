@@ -23,6 +23,7 @@ export default createSlice({
   name: "ui",
   initialState: {
     settingsModalOpen: false,
+    tagManagerModalOpen: false,
     searchModalOpen: false,
     saveLinkModalOpen: false,
     saveFolderModalOpen: false,
@@ -49,6 +50,12 @@ export default createSlice({
       { payload }: PayloadAction<OptionalToggleParameter>
     ) {
       state.settingsModalOpen = payload ?? !state.settingsModalOpen;
+    },
+    toggleTagManagerModal(
+      state,
+      { payload }: PayloadAction<OptionalToggleParameter>
+    ) {
+      state.tagManagerModalOpen = payload ?? !state.tagManagerModalOpen;
     },
     toggleSearchModal(
       state,
@@ -159,6 +166,7 @@ export type FirstRunFlag = boolean;
 
 interface State {
   settingsModalOpen: OverlayVisibility;
+  tagManagerModalOpen: OverlayVisibility;
   searchModalOpen: OverlayVisibility;
   saveLinkModalOpen: OverlayVisibility;
   saveFolderModalOpen: OverlayVisibility;
