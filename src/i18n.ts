@@ -13,6 +13,7 @@ import simplifiedChinese from "./locales/zh_Hans.json";
 import french from "./locales/fr.json";
 import turkish from "./locales/tr.json";
 import italian from "./locales/it.json";
+import indonesian from "./locales/id.json";
 
 const usedLanguages = [
   english,
@@ -26,6 +27,7 @@ const usedLanguages = [
   french,
   turkish,
   italian,
+  indonesian,
 ];
 
 export const languages = usedLanguages
