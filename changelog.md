@@ -7,8 +7,8 @@
 - Haptic feedback
 - Made the buttons for search and settings more accessible by moving them to the toolbar
 - Status bar reflects selected theme
-- Indonesian translation by [zmni](https://github.com/zmni)
 - Ability to add link descriptions
+- Indonesian translation by [zmni](https://github.com/zmni)
 - French translation by [Amine Riad](https://github.com/Amine000Riad)
 - Turkish translation by [Baki Nazik](https://github.com/bakinazik)
 - Italian translation by [Enrico Dell'Oste](https://www.smartpixel.it)
@@ -19,8 +19,9 @@
 
 ### Changed
 
-- Languages are now sorted by their codes
 - Brighten backdrop of modals and alerts on the dark theme for better distinction
+- Languages are now sorted by their codes
+- Removed donate button
 
 ## [1.1.0] - 2022-08-09
 
