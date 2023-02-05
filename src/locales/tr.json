@@ -78,6 +78,9 @@
             }
           }
         },
+        "tagManager": {
+          "title": "Etiketler"
+        },
         "search": {
           "title": "Ara",
           "cancel": "$t(overlays.modals.saveFolder.cancel)",

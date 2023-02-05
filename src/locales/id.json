@@ -161,6 +161,9 @@
             "placeholder": "Sumber Berita"
           }
         },
+        "tagManager": {
+          "title": "Tags"
+        },
         "search": {
           "title": "Cari",
           "placeholder": "Cari Tautan…",

@@ -78,6 +78,9 @@
             }
           }
         },
+        "tagManager": {
+          "title": "Tags"
+        },
         "search": {
           "title": "Suche",
           "cancel": "$t(overlays.modals.saveFolder.cancel)",

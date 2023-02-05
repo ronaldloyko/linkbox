@@ -60,6 +60,9 @@
           },
           "cancel": "$t(overlays.modals.saveLink.cancel)"
         },
+        "tagManager": {
+          "title": "Etiquetas"
+        },
         "search": {
           "title": "Busca",
           "heading": "Sem resultado",

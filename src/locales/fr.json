@@ -78,6 +78,9 @@
             "edit": "Modifier le dossier"
           }
         },
+        "tagManager": {
+          "title": "Mots clés"
+        },
         "search": {
           "title": "Chercher",
           "placeholder": "Trouver des liens…",

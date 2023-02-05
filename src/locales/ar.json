@@ -78,6 +78,9 @@
             "edit": "تعديل مجلد"
           }
         },
+        "tagManager": {
+          "title": "العلامات"
+        },
         "search": {
           "title": "بحث",
           "placeholder": "البحث عن روابط…",

@@ -78,6 +78,9 @@
             }
           }
         },
+        "tagManager": {
+          "title": "Etichette"
+        },
         "search": {
           "title": "Cerca",
           "cancel": "$t(overlays.modals.saveFolder.cancel)",

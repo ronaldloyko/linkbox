@@ -78,6 +78,9 @@
             }
           }
         },
+        "tagManager": {
+          "title": "Теги"
+        },
         "search": {
           "title": "Пошук",
           "cancel": "$t(overlays.modals.saveFolder.cancel)",

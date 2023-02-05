@@ -148,6 +148,9 @@
               "updated": "Oppdaterte mappen «{{name}}»"
             }
           }
+        },
+        "tagManager": {
+          "title": "Tagger"
         }
       },
       "sheets": {

@@ -138,6 +138,9 @@
             }
           }
         },
+        "tagManager": {
+          "title": "标签"
+        },
         "search": {
           "title": "搜索",
           "cancel": "$t(overlays.modals.saveFolder.cancel)",

@@ -78,6 +78,9 @@
             }
           }
         },
+        "tagManager": {
+          "title": "Etiquetas"
+        },
         "search": {
           "heading": "No hay resultado",
           "title": "Buscar",
