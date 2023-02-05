@@ -29,8 +29,10 @@ export default (function Search() {
   const processedTerm = term.trim().toLowerCase();
   const filteredLinks = useMemo(
     () =>
-      links.filter(({ name }) =>
-        name.trim().toLowerCase().includes(processedTerm)
+      links.filter(
+        ({ name, description }) =>
+          name.trim().toLowerCase().includes(processedTerm) ||
+          description.trim().toLowerCase().includes(processedTerm)
       ),
     [links, processedTerm]
   );
