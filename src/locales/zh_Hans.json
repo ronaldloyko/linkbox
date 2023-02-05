@@ -50,8 +50,7 @@
           },
           "miscellaneous": {
             "label": "杂项",
-            "sourceCode": "源代码",
-            "donate": "捐赠"
+            "sourceCode": "源代码"
           },
           "title": "设置",
           "close": "关闭"

@@ -12,7 +12,6 @@ export const VALIDATION_ERROR_EMPTY = "emptyError";
 export const VALIDATION_ERROR_INVALID_URL = "invalidUrlError";
 export const DEFAULT_LANGUAGE = "en";
 export const URL_SOURCE_CODE = `${URL_SCHEME}ronald.ooo/linkbox-github`;
-export const URL_DONATION = `${URL_SCHEME}ronald.ooo/donate`;
 export const URL_TARGET = "_system";
 export const STORAGE_DATABASE_KEY = "linkbox";
 export const STORAGE_DATA_KEY = "data";
