@@ -4,6 +4,7 @@ import SaveFolder from "./Modals/SaveFolder";
 import Search from "./Modals/Search";
 import Settings from "./Modals/Settings";
 import Introduction from "./Modals/Introduction";
+import Tags from "./Modals/Tags";
 
 export default (function Modals() {
   return (
@@ -11,6 +12,7 @@ export default (function Modals() {
       <SaveFolder />
       <SaveLink />
       <Search />
+      <Tags />
       <Settings />
       <Introduction />
     </>

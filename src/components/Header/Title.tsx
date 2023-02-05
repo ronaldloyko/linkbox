@@ -13,7 +13,7 @@ import { useAction, useDispatch, useSelector } from "../../store";
 export default (function Title() {
   const dispatch = useDispatch();
   const { t } = useTranslation();
-  const { toggleSearchModal, toggleSettingsModal, toggleTagManagerModal } =
+  const { toggleSearchModal, toggleSettingsModal, toggleTagsModal } =
     useAction();
   const statusBarHeight = useSelector((state) => state.ui.statusBarHeight);
 
@@ -24,7 +24,7 @@ export default (function Title() {
         <IonButton onClick={() => dispatch(toggleSearchModal(true))}>
           <IonIcon slot="icon-only" icon={search}></IonIcon>
         </IonButton>
-        <IonButton onClick={() => dispatch(toggleTagManagerModal(true))}>
+        <IonButton onClick={() => dispatch(toggleTagsModal(true))}>
           <IonIcon slot="icon-only" icon={pricetag}></IonIcon>
         </IonButton>
         <IonButton onClick={() => dispatch(toggleSettingsModal(true))}>
