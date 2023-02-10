@@ -105,7 +105,7 @@ export default (function LinkActions() {
   return (
     <IonActionSheet
       isOpen={open}
-      buttons={buttons as any}
+      buttons={buttons}
       onDidDismiss={onCancel}
     />
   );
