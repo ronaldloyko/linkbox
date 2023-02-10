@@ -57,7 +57,9 @@
           },
           "tags": {
             "label": "Etichette",
-            "placeholder": "Lessico, Wiki"
+            "placeholder": "Lessico, Wiki",
+            "cancel": "Annulla",
+            "choose": "Scegliere"
           },
           "folder": {
             "label": "Cartella"

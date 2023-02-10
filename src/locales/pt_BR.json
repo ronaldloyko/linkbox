@@ -30,7 +30,9 @@
           },
           "tags": {
             "label": "Etiquetas",
-            "placeholder": "Léxico, wiki"
+            "placeholder": "Léxico, wiki",
+            "cancel": "Cancelar",
+            "choose": "Escolher"
           },
           "cancel": "$t(overlays.alerts.deleteFolderConfirmation.cancel)",
           "folder": {

@@ -121,7 +121,9 @@
           },
           "tags": {
             "label": "Tagger",
-            "placeholder": "Leksikon, Wiki"
+            "placeholder": "Leksikon, Wiki",
+            "cancel": "Avbryt",
+            "choose": "Velge"
           },
           "folder": {
             "label": "Mappe"

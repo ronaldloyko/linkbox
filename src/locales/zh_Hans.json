@@ -105,7 +105,9 @@
           },
           "tags": {
             "label": "标签",
-            "placeholder": "词典，维基"
+            "placeholder": "词典，维基",
+            "cancel": "取消",
+            "choose": "选择"
           },
           "folder": {
             "label": "文件夹"

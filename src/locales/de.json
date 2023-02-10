@@ -57,7 +57,9 @@
           },
           "tags": {
             "label": "Schlagwörter",
-            "placeholder": "Lexikon, Wiki"
+            "placeholder": "Lexikon, Wiki",
+            "cancel": "Abbrechen",
+            "choose": "Auswählen"
           },
           "folder": {
             "label": "Ordner"

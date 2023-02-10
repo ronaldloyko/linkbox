@@ -52,7 +52,9 @@
           },
           "tags": {
             "label": "Etiquetas",
-            "placeholder": "Léxico, Wiki"
+            "placeholder": "Léxico, Wiki",
+            "cancel": "Cancelar",
+            "choose": "Escoger"
           },
           "title": {
             "create": "Crear enlace",

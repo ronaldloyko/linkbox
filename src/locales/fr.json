@@ -57,7 +57,9 @@
           },
           "tags": {
             "label": "Balises",
-            "placeholder": "Lexique, Wiki"
+            "placeholder": "Lexique, Wiki",
+            "cancel": "Annuler",
+            "choose": "Choisir"
           },
           "folder": {
             "label": "Dossier"

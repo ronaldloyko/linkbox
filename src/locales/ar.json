@@ -57,7 +57,9 @@
           },
           "tags": {
             "label": "العلامات",
-            "placeholder": "المعجم ، ويكي"
+            "placeholder": "المعجم ، ويكي",
+            "cancel": "يقطع",
+            "choose": "يختار"
           },
           "folder": {
             "label": "المجلد"

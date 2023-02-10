@@ -140,7 +140,9 @@
           },
           "tags": {
             "label": "Tags",
-            "placeholder": "Leksikon, Wiki"
+            "placeholder": "Leksikon, Wiki",
+            "cancel": "Membatalkan",
+            "choose": "Memilih"
           },
           "description": {
             "label": "Keterangan",

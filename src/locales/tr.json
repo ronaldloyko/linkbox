@@ -56,7 +56,9 @@
           },
           "tags": {
             "label": "Etiketler",
-            "placeholder": "Sözlük, Viki"
+            "placeholder": "Sözlük, Viki",
+            "cancel": "İptal etmek",
+            "choose": "Seçmek"
           },
           "folder": {
             "label": "Klasör"

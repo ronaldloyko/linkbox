@@ -263,6 +263,8 @@ export default (function SaveLink() {
               placeholder={t("overlays.modals.saveLink.tags.placeholder")}
               multiple={true}
               value={tags}
+              cancelText={t("overlays.modals.saveLink.tags.cancel")}
+              okText={t("overlays.modals.saveLink.tags.choose")}
             >
               {availableTags.map(({ id, name }) => (
                 <IonSelectOption key={id} value={id}>

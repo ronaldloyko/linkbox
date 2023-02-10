@@ -48,7 +48,9 @@
           },
           "tags": {
             "label": "Теги",
-            "placeholder": "Лексикон, Вікі"
+            "placeholder": "Лексикон, Вікі",
+            "cancel": "Скасувати",
+            "choose": "Виберіть"
           },
           "folder": {
             "label": "Тека"
