@@ -6,6 +6,7 @@ export default createSlice({
   initialState: {
     folders: [],
     links: [],
+    tags: [],
   } as State,
   reducers: {
     addLink(state, { payload }: PayloadAction<Link>) {
@@ -13,6 +14,9 @@ export default createSlice({
     },
     addFolder(state, { payload }: PayloadAction<Folder>) {
       state.folders.push(payload);
+    },
+    addTag(state, { payload }: PayloadAction<Tag>) {
+      state.tags.push(payload);
     },
     editLink(state, { payload }: PayloadAction<Link>) {
       state.links = state.links.map((link) =>
@@ -24,6 +28,11 @@ export default createSlice({
         folder.id === payload.id ? payload : folder
       );
     },
+    editTag(state, { payload }: PayloadAction<Tag>) {
+      state.tags = state.tags.map((tag) =>
+        tag.id === payload.id ? payload : tag
+      );
+    },
     deleteLink(state, { payload }: PayloadAction<Id>) {
       state.links = state.links.filter(({ id }) => id !== payload);
     },
@@ -31,11 +40,19 @@ export default createSlice({
       state.links = state.links.filter(({ folder }) => folder !== payload);
       state.folders = state.folders.filter(({ id }) => id !== payload);
     },
+    deleteTag(state, { payload }: PayloadAction<Id>) {
+      state.links = state.links.map((link) => {
+        link.tags = link.tags.filter((tag) => tag !== payload);
+        return link;
+      });
+      state.tags = state.tags.filter(({ id }) => id !== payload);
+    },
   },
   extraReducers(builder) {
     builder.addCase(loadDataFromStorage.fulfilled, (state, { payload }) => {
       state.folders = payload.folders;
       state.links = payload.links;
+      state.tags = payload.tags;
     });
   },
 });
@@ -43,9 +60,15 @@ export default createSlice({
 interface State {
   links: Link[];
   folders: Folder[];
+  tags: Tag[];
 }
 
 export interface Folder {
+  id: Id;
+  name: Name;
+}
+
+export interface Tag {
   id: Id;
   name: Name;
 }
@@ -56,6 +79,7 @@ export interface Link {
   url: Url;
   description: Description;
   folder: Id;
+  tags: Id[];
 }
 
 export type Id = string;

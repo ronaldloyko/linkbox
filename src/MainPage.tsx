@@ -1,5 +1,6 @@
 import { WebIntent, type Intent } from "@awesome-cordova-plugins/web-intent";
 import { App } from "@capacitor/app";
+import { Capacitor } from "@capacitor/core";
 import { StatusBar, Style } from "@capacitor/status-bar";
 import { IonApp, IonPage, type BackButtonEvent } from "@ionic/react";
 import { SafeArea } from "capacitor-plugin-safe-area";
@@ -66,10 +67,15 @@ export default (function MainPage() {
     }
 
     function toggle(appliedThemeClass: Theme, active: boolean) {
+      document.body.classList.toggle(appliedThemeClass, active);
+
+      if (!Capacitor.isNativePlatform()) {
+        return;
+      }
+
       StatusBar.setStyle({
         style: appliedTheme!.toUpperCase() as Style,
       });
-      document.body.classList.toggle(appliedThemeClass, active);
     }
 
     for (const availableTheme of Object.values(Theme)) {
@@ -94,6 +100,10 @@ export default (function MainPage() {
   }, []);
 
   useEffect(() => {
+    if (!Capacitor.isNativePlatform()) {
+      return;
+    }
+
     const intentSubscription = WebIntent.onIntent().subscribe(handleIntent);
 
     function handleIntent(intent: Intent) {
@@ -118,6 +128,10 @@ export default (function MainPage() {
   }, [dispatch, prefillName, prefillUrl, toggleSaveLinkModal]);
 
   useEffect(() => {
+    if (!Capacitor.isNativePlatform()) {
+      return;
+    }
+
     StatusBar.setOverlaysWebView({ overlay: true });
 
     (async () => {

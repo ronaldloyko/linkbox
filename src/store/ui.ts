@@ -27,18 +27,23 @@ export default createSlice({
     searchModalOpen: false,
     saveLinkModalOpen: false,
     saveFolderModalOpen: false,
+    saveTagModalOpen: false,
     folderActionSheetOpen: false,
     linkActionSheetOpen: false,
+    tagActionSheetOpen: false,
     deleteFolderConfirmationAlertOpen: false,
     deleteLinkConfirmationAlertOpen: false,
+    deleteTagConfirmationAlertOpen: false,
     currentFolder: DEFAULT_FOLDER_ID,
     selectedLink: null,
     selectedFolder: null,
+    selectedTag: null,
     linkSorting: LinkSorting.Default,
     language: DEFAULT_LANGUAGE,
     theme: Theme.System,
     showAvatar: true,
     showDescription: false,
+    useTags: false,
     firstRun: false,
     prefilledName: EMPTY_TEXT,
     prefilledUrl: EMPTY_TEXT,
@@ -75,6 +80,12 @@ export default createSlice({
     ) {
       state.saveFolderModalOpen = payload ?? !state.saveFolderModalOpen;
     },
+    toggleSaveTagModal(
+      state,
+      { payload }: PayloadAction<OptionalToggleParameter>
+    ) {
+      state.saveTagModalOpen = payload ?? !state.saveTagModalOpen;
+    },
     toggleFolderActionSheet(
       state,
       { payload }: PayloadAction<OptionalToggleParameter>
@@ -86,6 +97,12 @@ export default createSlice({
       { payload }: PayloadAction<OptionalToggleParameter>
     ) {
       state.linkActionSheetOpen = payload ?? !state.linkActionSheetOpen;
+    },
+    toggleTagActionSheet(
+      state,
+      { payload }: PayloadAction<OptionalToggleParameter>
+    ) {
+      state.tagActionSheetOpen = payload ?? !state.tagActionSheetOpen;
     },
     toggleDeleteFolderConfirmationAlert(
       state,
@@ -101,6 +118,13 @@ export default createSlice({
       state.deleteLinkConfirmationAlertOpen =
         payload ?? !state.deleteLinkConfirmationAlertOpen;
     },
+    toggleDeleteTagConfirmationAlert(
+      state,
+      { payload }: PayloadAction<OptionalToggleParameter>
+    ) {
+      state.deleteTagConfirmationAlertOpen =
+        payload ?? !state.deleteTagConfirmationAlertOpen;
+    },
     setCurrentFolder(state, { payload }: PayloadAction<Id>) {
       state.currentFolder = payload;
     },
@@ -109,6 +133,9 @@ export default createSlice({
     },
     setSelectedFolder(state, { payload }: PayloadAction<SelectedItem>) {
       state.selectedFolder = payload;
+    },
+    setSelectedTag(state, { payload }: PayloadAction<SelectedItem>) {
+      state.selectedTag = payload;
     },
     setLinkSorting(state, { payload }: PayloadAction<LinkSorting>) {
       state.linkSorting = payload;
@@ -131,6 +158,9 @@ export default createSlice({
     ) {
       state.showDescription = payload ?? !state.showDescription;
     },
+    toggleUseTags(state, { payload }: PayloadAction<OptionalToggleParameter>) {
+      state.useTags = payload ?? !state.useTags;
+    },
     toggleFirstRun(state, { payload }: PayloadAction<OptionalToggleParameter>) {
       state.firstRun = payload ?? !state.firstRun;
     },
@@ -151,6 +181,7 @@ export default createSlice({
       state.theme = payload.theme;
       state.showAvatar = payload.showAvatar;
       state.showDescription = payload.showDescription;
+      state.useTags = payload.useTags;
       state.firstRun = payload.firstRun;
     });
   },
@@ -162,6 +193,8 @@ export type AvatarVisibility = boolean;
 
 export type DescriptionVisibility = boolean;
 
+export type TagsUsageFlag = boolean;
+
 export type FirstRunFlag = boolean;
 
 interface State {
@@ -170,18 +203,23 @@ interface State {
   searchModalOpen: OverlayVisibility;
   saveLinkModalOpen: OverlayVisibility;
   saveFolderModalOpen: OverlayVisibility;
+  saveTagModalOpen: OverlayVisibility;
   folderActionSheetOpen: OverlayVisibility;
   linkActionSheetOpen: OverlayVisibility;
+  tagActionSheetOpen: OverlayVisibility;
   deleteFolderConfirmationAlertOpen: OverlayVisibility;
   deleteLinkConfirmationAlertOpen: OverlayVisibility;
+  deleteTagConfirmationAlertOpen: OverlayVisibility;
   currentFolder: Id;
   selectedLink: SelectedItem;
   selectedFolder: SelectedItem;
+  selectedTag: SelectedItem;
   linkSorting: LinkSorting;
   language: Language;
   theme: Theme;
   showAvatar: AvatarVisibility;
   showDescription: DescriptionVisibility;
+  useTags: TagsUsageFlag;
   firstRun: FirstRunFlag;
   prefilledName: Name;
   prefilledUrl: Url;

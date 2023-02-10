@@ -12,15 +12,19 @@ listeners.startListening({
   matcher: isAnyOf(
     items.actions.addFolder,
     items.actions.addLink,
+    items.actions.addTag,
     items.actions.deleteFolder,
     items.actions.deleteLink,
+    items.actions.deleteTag,
     items.actions.editFolder,
     items.actions.editLink,
+    items.actions.editTag,
     ui.actions.setLanguage,
     ui.actions.setLinkSorting,
     ui.actions.setTheme,
     ui.actions.toggleShowAvatar,
     ui.actions.toggleShowDescription,
+    ui.actions.toggleUseTags,
     ui.actions.toggleFirstRun
   ),
   effect(_, api) {
@@ -29,11 +33,13 @@ listeners.startListening({
     storage.set({
       folders: state.items.folders,
       links: state.items.links,
+      tags: state.items.tags,
       linkSorting: state.ui.linkSorting,
       language: state.ui.language,
       theme: state.ui.theme,
       showAvatar: state.ui.showAvatar,
       showDescription: state.ui.showDescription,
+      useTags: state.ui.useTags,
       firstRun: state.ui.firstRun,
     });
   },

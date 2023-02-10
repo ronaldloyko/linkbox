@@ -57,7 +57,7 @@ export default (function Links() {
   }
 
   useEffect(() => {
-    swiper?.slideTo(folders.findIndex(({ id }) => id === currentFolder));
+    swiper?.slideTo(folders.findIndex(({ id }) => id === currentFolder), 100);
   }, [currentFolder, swiper, folders]);
 
   useEffect(() => {

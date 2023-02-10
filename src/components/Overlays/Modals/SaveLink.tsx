@@ -21,6 +21,7 @@ import { useEffect, useMemo, useRef, useState, type FC } from "react";
 import { useTranslation } from "react-i18next";
 import {
   DEFAULT_FOLDER_ID,
+  EMPTY_TAGS,
   EMPTY_TEXT,
   RERENDER_TIMEOUT,
   TOAST_DURATION,
@@ -38,17 +39,19 @@ export default (function SaveLink() {
   const open = useSelector((state) => state.ui.saveLinkModalOpen);
   const folders = useSelector((state) => state.items.folders);
   const links = useSelector((state) => state.items.links);
+  const availableTags = useSelector((state) => state.items.tags);
   const currentFolder = useSelector((state) => state.ui.currentFolder);
   const selectedLink = useSelector((state) => state.ui.selectedLink);
   const prefilledName = useSelector((state) => state.ui.prefilledName);
   const prefilledUrl = useSelector((state) => state.ui.prefilledUrl);
   const statusBarHeight = useSelector((state) => state.ui.statusBarHeight);
+  const useTags = useSelector((state) => state.ui.useTags);
   const linkBeingEdited = useMemo(
     () => links.find(({ id }) => id === selectedLink),
     [selectedLink, links]
   );
   const sanitizedUrl = useSanitizedUrl();
-  const isEditing = selectedLink !== null && linkBeingEdited;
+  const isEditing = selectedLink !== UNSELECTED_ITEM && linkBeingEdited;
   const modalElement = useRef<HTMLIonModalElement>(null);
   const nameInputElement = useRef<HTMLIonInputElement>(null);
   const isValidationPassed = useValidation();
@@ -64,6 +67,7 @@ export default (function SaveLink() {
   const [name, setName] = useState(EMPTY_TEXT);
   const [url, setUrl] = useState(EMPTY_TEXT);
   const [description, setDescription] = useState(EMPTY_TEXT);
+  const [tags, setTags] = useState(EMPTY_TAGS as Id[]);
   const [folder, setFolder] = useState(DEFAULT_FOLDER_ID);
   const [nameErrorMessage, setNameErrorMessage, clearNameErrorMessage] =
     useValidationErrors();
@@ -86,8 +90,14 @@ export default (function SaveLink() {
     setDescription(detail.value as Description);
   }
 
-  function onFolderChange(event: CustomEvent<SelectChangeEventDetail>) {
-    setFolder(event.detail.value as Id);
+  function onTagsChange({
+    detail,
+  }: CustomEvent<SelectChangeEventDetail<Id[]>>) {
+    setTags(detail.value as Id[]);
+  }
+
+  function onFolderChange({ detail }: CustomEvent<SelectChangeEventDetail>) {
+    setFolder(detail.value as Id);
   }
 
   function onCancel() {
@@ -126,6 +136,7 @@ export default (function SaveLink() {
         name,
         url,
         description,
+        tags,
         folder,
       })
     );
@@ -148,6 +159,7 @@ export default (function SaveLink() {
     setName(isEditing ? linkBeingEdited.name : prefilledName);
     setUrl(isEditing ? linkBeingEdited.url : prefilledUrl);
     setDescription(isEditing ? linkBeingEdited.description : EMPTY_TEXT);
+    setTags(isEditing ? linkBeingEdited.tags : EMPTY_TAGS);
     setFolder(isEditing ? linkBeingEdited.folder! : currentFolder);
     clearErrorMessages();
   }
@@ -241,6 +253,25 @@ export default (function SaveLink() {
             required
           />
         </IonItem>
+        {useTags && (
+          <IonItem>
+            <IonLabel position="stacked">
+              {t("overlays.modals.saveLink.tags.label")}
+            </IonLabel>
+            <IonSelect
+              onIonChange={onTagsChange}
+              placeholder={t("overlays.modals.saveLink.tags.placeholder")}
+              multiple={true}
+              value={tags}
+            >
+              {availableTags.map(({ id, name }) => (
+                <IonSelectOption key={id} value={id}>
+                  {name}
+                </IonSelectOption>
+              ))}
+            </IonSelect>
+          </IonItem>
+        )}
         {showInput && (
           <IonItem>
             <IonLabel position="stacked">

@@ -24,7 +24,7 @@ import {
   cloudUpload,
   code,
   contrast,
-  heart,
+  pricetag,
   image,
   text,
   language as languageIcon,
@@ -55,6 +55,7 @@ import {
   AvatarVisibility,
   DescriptionVisibility,
   LinkSorting,
+  TagsUsageFlag,
   Theme,
   type Language,
 } from "../../../store/ui";
@@ -69,12 +70,14 @@ export default (function Settings() {
   const theme = useSelector((state) => state.ui.theme);
   const showAvatar = useSelector((state) => state.ui.showAvatar);
   const showDescription = useSelector((state) => state.ui.showDescription);
+  const useTags = useSelector((state) => state.ui.useTags);
   const statusBarHeight = useSelector((state) => state.ui.statusBarHeight);
   const { t } = useTranslation();
   const {
     toggleSettingsModal,
     toggleShowAvatar,
     toggleShowDescription,
+    toggleUseTags,
     setLinkSorting,
     setLanguage,
     setTheme,
@@ -114,6 +117,14 @@ export default (function Settings() {
   ) {
     dispatch(
       toggleShowDescription(event.detail.checked as DescriptionVisibility)
+    );
+  }
+
+  function onUseTagsChange(
+    event: CustomEvent<CheckboxChangeEventDetail>
+  ) {
+    dispatch(
+      toggleUseTags(event.detail.checked as TagsUsageFlag)
     );
   }
 
@@ -309,6 +320,17 @@ export default (function Settings() {
               slot="end"
               checked={showDescription}
               onIonChange={onShowDescriptionChange}
+            />
+          </IonItem>
+          <IonItem>
+            <IonIcon slot="start" icon={pricetag} />
+            <IonLabel>
+              {t(`${TRANSLATION_PREFIX}.interface.useTags`)}
+            </IonLabel>
+            <IonCheckbox
+              slot="end"
+              checked={useTags}
+              onIonChange={onUseTagsChange}
             />
           </IonItem>
         </IonList>
