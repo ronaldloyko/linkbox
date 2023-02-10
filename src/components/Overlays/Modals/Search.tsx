@@ -76,6 +76,9 @@ export default (function Search() {
             placeholder={t("overlays.modals.search.placeholder")}
             onIonChange={onTermChange}
             debounce={250}
+            style={{
+              "--box-shadow": 0,
+            }}
           />
         </IonToolbar>
       </IonHeader>
