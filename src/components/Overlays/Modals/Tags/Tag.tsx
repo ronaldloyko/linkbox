@@ -38,10 +38,10 @@ export default (function Tag({ id, name, count }) {
   }
 
   return (
-    <IonItem button onClick={onClick} ref={element}>
+    <IonItem button onClick={onClick} ref={element} detail>
       <IonIcon slot="start" icon={pricetag} />
-      <IonLabel>{name}</IonLabel>
-      <IonLabel slot="end">
+      <IonLabel>
+        {name}
         <p>{t("overlays.modals.tags.link", { count })}</p>
       </IonLabel>
     </IonItem>
