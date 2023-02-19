@@ -53,7 +53,6 @@ Before contributing, please consult the [contribution guide](contributing.md) to
 
 ## To Do
 
-- [ ] [Tagging System](https://github.com/ronaldloyko/linkbox/issues/11)
 - [ ] [Import & Export HTML Bookmarks](https://github.com/ronaldloyko/linkbox/issues/7)
 - [ ] [Progressive Web Application](https://github.com/ronaldloyko/linkbox/issues/16)
 - [ ] [Publish To Play Store](https://github.com/ronaldloyko/linkbox/issues/17)
