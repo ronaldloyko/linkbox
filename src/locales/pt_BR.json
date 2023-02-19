@@ -99,7 +99,13 @@
           "title": "Busca",
           "heading": "Sem resultado",
           "cancel": "$t(overlays.modals.saveFolder.cancel)",
-          "placeholder": "Busca por Links…"
+          "placeholder": "Busca por Links…",
+          "tags": {
+            "placeholder": "Filtrar por tags",
+            "cancel": "$t(overlays.modals.saveLink.tags.cancel)",
+            "choose": "$t(overlays.modals.saveLink.tags.choose)",
+            "header": "Filtrar"
+          }
         },
         "settings": {
           "title": "Configurações",

@@ -125,7 +125,13 @@
           "heading": "No hay resultado",
           "title": "Buscar",
           "cancel": "$t(overlays.modals.saveFolder.cancel)",
-          "placeholder": "Buscar enlaces…"
+          "placeholder": "Buscar enlaces…",
+          "tags": {
+            "placeholder": "Filtrar por etiquetas",
+            "cancel": "$t(overlays.modals.saveLink.tags.cancel)",
+            "choose": "$t(overlays.modals.saveLink.tags.choose)",
+            "header": "Filtrar"
+          }
         },
         "settings": {
           "interface": {

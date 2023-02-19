@@ -125,7 +125,13 @@
           "title": "Suche",
           "cancel": "$t(overlays.modals.saveFolder.cancel)",
           "placeholder": "Links suchen…",
-          "heading": "Kein Ergebnis"
+          "heading": "Kein Ergebnis",
+          "tags": {
+            "placeholder": "Nach Schlagwörtern filtern",
+            "cancel": "$t(overlays.modals.saveLink.tags.cancel)",
+            "choose": "$t(overlays.modals.saveLink.tags.choose)",
+            "header": "Filtern"
+          }
         },
         "settings": {
           "title": "Einstellungen",

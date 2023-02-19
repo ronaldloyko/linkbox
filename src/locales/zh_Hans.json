@@ -178,7 +178,13 @@
           "title": "搜索",
           "cancel": "$t(overlays.modals.saveFolder.cancel)",
           "placeholder": "搜索链接…",
-          "heading": "无结果"
+          "heading": "无结果",
+          "tags": {
+            "placeholder": "按标签过滤",
+            "cancel": "$t(overlays.modals.saveLink.tags.cancel)",
+            "choose": "$t(overlays.modals.saveLink.tags.choose)",
+            "header": "筛选"
+          }
         }
       },
       "sheets": {

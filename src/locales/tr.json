@@ -125,7 +125,13 @@
           "title": "Ara",
           "cancel": "$t(overlays.modals.saveFolder.cancel)",
           "placeholder": "Bağlantıları Ara…",
-          "heading": "Sonuç yok"
+          "heading": "Sonuç yok",
+          "tags": {
+            "placeholder": "Etiketlere göre filtrele",
+            "cancel": "$t(overlays.modals.saveLink.tags.cancel)",
+            "choose": "$t(overlays.modals.saveLink.tags.choose)",
+            "header": "Filtre"
+          }
         },
         "settings": {
           "title": "Ayarlar",

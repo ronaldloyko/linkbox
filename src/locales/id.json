@@ -209,7 +209,13 @@
           "title": "Cari",
           "placeholder": "Cari Tautan…",
           "cancel": "$t(overlays.modals.saveFolder.cancel)",
-          "heading": "Tidak ditemukan"
+          "heading": "Tidak ditemukan",
+          "tags": {
+            "placeholder": "Saring berdasarkan tag",
+            "cancel": "$t(overlays.modals.saveLink.tags.cancel)",
+            "choose": "$t(overlays.modals.saveLink.tags.choose)",
+            "header": "Saring"
+          }
         }
       },
       "sheets": {

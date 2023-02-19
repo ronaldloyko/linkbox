@@ -125,7 +125,13 @@
           "title": "بحث",
           "placeholder": "البحث عن روابط…",
           "cancel": "$t(overlays.modals.saveFolder.cancel)",
-          "heading": "لا نتائج"
+          "heading": "لا نتائج",
+          "tags": {
+            "placeholder": "تصفية حسب العلامات",
+            "cancel": "$t(overlays.modals.saveLink.tags.cancel)",
+            "choose": "$t(overlays.modals.saveLink.tags.choose)",
+            "header": "منقي"
+          }
         },
         "settings": {
           "close": "إغلاق",

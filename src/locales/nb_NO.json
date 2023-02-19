@@ -11,7 +11,13 @@
           "title": "Søk",
           "cancel": "$t(overlays.modals.saveFolder.cancel)",
           "placeholder": "Søk etter lenker …",
-          "heading": "Resultatløst"
+          "heading": "Resultatløst",
+          "tags": {
+            "placeholder": "Filtrer etter tagger",
+            "cancel": "$t(overlays.modals.saveLink.tags.cancel)",
+            "choose": "$t(overlays.modals.saveLink.tags.choose)",
+            "header": "Filter"
+          }
         },
         "settings": {
           "close": "Lukk",

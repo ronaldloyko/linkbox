@@ -125,7 +125,13 @@
           "title": "Cerca",
           "cancel": "$t(overlays.modals.saveFolder.cancel)",
           "placeholder": "Ricerca Links…",
-          "heading": "Nessun risultato"
+          "heading": "Nessun risultato",
+          "tags": {
+            "placeholder": "Filtra per etichette",
+            "cancel": "$t(overlays.modals.saveLink.tags.cancel)",
+            "choose": "$t(overlays.modals.saveLink.tags.choose)",
+            "header": "Filtro"
+          }
         },
         "settings": {
           "title": "Impostazioni",

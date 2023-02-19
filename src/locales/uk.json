@@ -125,7 +125,13 @@
           "title": "Пошук",
           "cancel": "$t(overlays.modals.saveFolder.cancel)",
           "heading": "Без результатів",
-          "placeholder": "Пошук посилань…"
+          "placeholder": "Пошук посилань…",
+          "tags": {
+            "placeholder": "Фільтрувати за тегами",
+            "cancel": "$t(overlays.modals.saveLink.tags.cancel)",
+            "choose": "$t(overlays.modals.saveLink.tags.choose)",
+            "header": "Фільтр"
+          }
         },
         "settings": {
           "interface": {
