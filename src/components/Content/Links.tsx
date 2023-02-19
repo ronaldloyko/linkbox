@@ -83,13 +83,14 @@ export default (function Links() {
           {!!links.length ? (
             <IonContent slot="content">
               <IonList lines="none">
-                {links.map(({ id, name, url, description }) => (
+                {links.map(({ id, name, url, description, tags }) => (
                   <Link
                     key={id}
                     id={id}
                     name={name}
                     url={url}
                     description={description}
+                    tags={tags}
                   />
                 ))}
               </IonList>
