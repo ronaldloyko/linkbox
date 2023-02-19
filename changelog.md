@@ -4,6 +4,7 @@
 
 ### Added
 
+- Tag management
 - Haptic feedback
 - Made the buttons for search and settings more accessible by moving them to the toolbar
 - Status bar reflects selected theme
@@ -16,12 +17,14 @@
 ### Fixed
 
 - Wrong theme applied when set to automatic
+- Unexpected text changes when closing modals
 
 ### Changed
 
 - Brighten backdrop of modals and alerts on the dark theme for better distinction
 - Languages are now sorted by their codes
 - Removed donate button
+- Updated dependencies
 
 ## [1.1.0] - 2022-08-09
 

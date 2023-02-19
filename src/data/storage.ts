@@ -1,13 +1,14 @@
 import { Directory, Encoding, Filesystem } from "@capacitor/filesystem";
 import { Storage } from "@ionic/storage";
 import { nanoid } from "nanoid";
-import { Folder, Link } from "../store/items";
+import { Folder, Link, Tag } from "../store/items";
 import {
   AvatarVisibility,
   DescriptionVisibility,
   FirstRunFlag,
   Language,
   LinkSorting,
+  TagsUsageFlag,
   Theme,
 } from "../store/ui";
 import {
@@ -34,11 +35,13 @@ class ApplicationStorage {
         name: DEFAULT_FOLDER_NAME,
       },
     ],
+    tags: [],
     language: DEFAULT_LANGUAGE,
     linkSorting: LinkSorting.Default,
     theme: Theme.System,
     showAvatar: true,
     showDescription: false,
+    useTags: false,
     firstRun: true,
   };
 
@@ -77,10 +80,12 @@ class ApplicationStorage {
       !content?.meta?.version ||
       !Array.isArray(content?.data?.folders) ||
       !Array.isArray(content?.data?.links) ||
+      !Array.isArray(content?.data?.tags) ||
       typeof content?.data?.language !== "string" ||
       typeof content?.data?.linkSorting !== "string" ||
       typeof content?.data?.showAvatar !== "boolean" ||
       typeof content?.data?.showDescription !== "boolean" ||
+      typeof content?.data?.useTags !== "boolean" ||
       typeof content?.data?.theme !== "string"
     ) {
       throw new Error(StorageError.InvalidContent);
@@ -120,11 +125,13 @@ export default storage;
 interface Data {
   links: Link[];
   folders: Folder[];
+  tags: Tag[];
   linkSorting: LinkSorting;
   language: Language;
   theme: Theme;
   showAvatar: AvatarVisibility;
   showDescription: DescriptionVisibility;
+  useTags: TagsUsageFlag;
   firstRun: FirstRunFlag;
 }
 

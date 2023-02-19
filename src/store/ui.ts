@@ -3,6 +3,7 @@ import {
   DEFAULT_FOLDER_ID,
   DEFAULT_LANGUAGE,
   EMPTY_TEXT,
+  UNSELECTED_ITEM,
 } from "../data/constants";
 import type { Id, Name, Url } from "./items";
 import { loadDataFromStorage } from "./thunks";
@@ -23,24 +24,31 @@ export default createSlice({
   name: "ui",
   initialState: {
     settingsModalOpen: false,
+    tagsModalOpen: false,
     searchModalOpen: false,
     saveLinkModalOpen: false,
     saveFolderModalOpen: false,
+    saveTagModalOpen: false,
     folderActionSheetOpen: false,
     linkActionSheetOpen: false,
+    tagActionSheetOpen: false,
     deleteFolderConfirmationAlertOpen: false,
     deleteLinkConfirmationAlertOpen: false,
+    deleteTagConfirmationAlertOpen: false,
     currentFolder: DEFAULT_FOLDER_ID,
-    selectedLink: null,
-    selectedFolder: null,
+    selectedLink: UNSELECTED_ITEM,
+    selectedFolder: UNSELECTED_ITEM,
+    selectedTag: UNSELECTED_ITEM,
     linkSorting: LinkSorting.Default,
     language: DEFAULT_LANGUAGE,
     theme: Theme.System,
     showAvatar: true,
     showDescription: false,
+    useTags: false,
     firstRun: false,
     prefilledName: EMPTY_TEXT,
     prefilledUrl: EMPTY_TEXT,
+    prefilledSearchFilters: UNSELECTED_ITEM,
     statusBarHeight: "0px",
   } as State,
   reducers: {
@@ -49,6 +57,12 @@ export default createSlice({
       { payload }: PayloadAction<OptionalToggleParameter>
     ) {
       state.settingsModalOpen = payload ?? !state.settingsModalOpen;
+    },
+    toggleTagsModal(
+      state,
+      { payload }: PayloadAction<OptionalToggleParameter>
+    ) {
+      state.tagsModalOpen = payload ?? !state.tagsModalOpen;
     },
     toggleSearchModal(
       state,
@@ -68,6 +82,12 @@ export default createSlice({
     ) {
       state.saveFolderModalOpen = payload ?? !state.saveFolderModalOpen;
     },
+    toggleSaveTagModal(
+      state,
+      { payload }: PayloadAction<OptionalToggleParameter>
+    ) {
+      state.saveTagModalOpen = payload ?? !state.saveTagModalOpen;
+    },
     toggleFolderActionSheet(
       state,
       { payload }: PayloadAction<OptionalToggleParameter>
@@ -79,6 +99,12 @@ export default createSlice({
       { payload }: PayloadAction<OptionalToggleParameter>
     ) {
       state.linkActionSheetOpen = payload ?? !state.linkActionSheetOpen;
+    },
+    toggleTagActionSheet(
+      state,
+      { payload }: PayloadAction<OptionalToggleParameter>
+    ) {
+      state.tagActionSheetOpen = payload ?? !state.tagActionSheetOpen;
     },
     toggleDeleteFolderConfirmationAlert(
       state,
@@ -94,6 +120,13 @@ export default createSlice({
       state.deleteLinkConfirmationAlertOpen =
         payload ?? !state.deleteLinkConfirmationAlertOpen;
     },
+    toggleDeleteTagConfirmationAlert(
+      state,
+      { payload }: PayloadAction<OptionalToggleParameter>
+    ) {
+      state.deleteTagConfirmationAlertOpen =
+        payload ?? !state.deleteTagConfirmationAlertOpen;
+    },
     setCurrentFolder(state, { payload }: PayloadAction<Id>) {
       state.currentFolder = payload;
     },
@@ -102,6 +135,9 @@ export default createSlice({
     },
     setSelectedFolder(state, { payload }: PayloadAction<SelectedItem>) {
       state.selectedFolder = payload;
+    },
+    setSelectedTag(state, { payload }: PayloadAction<SelectedItem>) {
+      state.selectedTag = payload;
     },
     setLinkSorting(state, { payload }: PayloadAction<LinkSorting>) {
       state.linkSorting = payload;
@@ -124,6 +160,9 @@ export default createSlice({
     ) {
       state.showDescription = payload ?? !state.showDescription;
     },
+    toggleUseTags(state, { payload }: PayloadAction<OptionalToggleParameter>) {
+      state.useTags = payload ?? !state.useTags;
+    },
     toggleFirstRun(state, { payload }: PayloadAction<OptionalToggleParameter>) {
       state.firstRun = payload ?? !state.firstRun;
     },
@@ -132,6 +171,12 @@ export default createSlice({
     },
     prefillUrl(state, { payload }: PayloadAction<Url>) {
       state.prefilledUrl = payload;
+    },
+    prefillSearchFilters(
+      state,
+      { payload }: PayloadAction<PrefilledSearchFilters>
+    ) {
+      state.prefilledSearchFilters = payload;
     },
     setStatusBarHeight(state, { payload }: PayloadAction<StatusBarHeight>) {
       state.statusBarHeight = payload;
@@ -144,6 +189,7 @@ export default createSlice({
       state.theme = payload.theme;
       state.showAvatar = payload.showAvatar;
       state.showDescription = payload.showDescription;
+      state.useTags = payload.useTags;
       state.firstRun = payload.firstRun;
     });
   },
@@ -155,28 +201,37 @@ export type AvatarVisibility = boolean;
 
 export type DescriptionVisibility = boolean;
 
+export type TagsUsageFlag = boolean;
+
 export type FirstRunFlag = boolean;
 
 interface State {
   settingsModalOpen: OverlayVisibility;
+  tagsModalOpen: OverlayVisibility;
   searchModalOpen: OverlayVisibility;
   saveLinkModalOpen: OverlayVisibility;
   saveFolderModalOpen: OverlayVisibility;
+  saveTagModalOpen: OverlayVisibility;
   folderActionSheetOpen: OverlayVisibility;
   linkActionSheetOpen: OverlayVisibility;
+  tagActionSheetOpen: OverlayVisibility;
   deleteFolderConfirmationAlertOpen: OverlayVisibility;
   deleteLinkConfirmationAlertOpen: OverlayVisibility;
+  deleteTagConfirmationAlertOpen: OverlayVisibility;
   currentFolder: Id;
   selectedLink: SelectedItem;
   selectedFolder: SelectedItem;
+  selectedTag: SelectedItem;
   linkSorting: LinkSorting;
   language: Language;
   theme: Theme;
   showAvatar: AvatarVisibility;
   showDescription: DescriptionVisibility;
+  useTags: TagsUsageFlag;
   firstRun: FirstRunFlag;
   prefilledName: Name;
   prefilledUrl: Url;
+  prefilledSearchFilters: PrefilledSearchFilters;
   statusBarHeight: StatusBarHeight;
 }
 
@@ -187,3 +242,8 @@ type OptionalToggleParameter = boolean | undefined;
 type SelectedItem = Id | null;
 
 type StatusBarHeight = string;
+
+type PrefilledSearchFilters = null | {
+  tags: Id[];
+  term: string;
+};

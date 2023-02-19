@@ -22,6 +22,14 @@
           "toast": {
             "message": "Folder {{name}} deleted"
           }
+        },
+        "deleteTagConfirmation": {
+          "message": "$t(overlays.alerts.deleteLinkConfirmation.message)",
+          "cancel": "$t(overlays.alerts.deleteFolderConfirmation.cancel)",
+          "delete": "$t(overlays.alerts.deleteFolderConfirmation.delete)",
+          "toast": {
+            "message": "Tag {{name}} deleted"
+          }
         }
       },
       "modals": {
@@ -46,6 +54,12 @@
           "description": {
             "label": "Description",
             "placeholder": "Encyclopedia"
+          },
+          "tags": {
+            "label": "Tags",
+            "placeholder": "Lexicon, Wiki",
+            "cancel": "Cancel",
+            "choose": "Choose"
           },
           "folder": {
             "label": "Folder"
@@ -78,11 +92,46 @@
             }
           }
         },
+        "tags": {
+          "title": "Tags",
+          "close": "$t(overlays.modals.settings.close)",
+          "heading": "No tags",
+          "link": "Without links",
+          "link_one": "{{count}} link",
+          "link_other": "{{count}} links"
+        },
+        "saveTag": {
+          "title": {
+            "create": "Create Tag",
+            "edit": "Edit Tag"
+          },
+          "cancel": "$t(overlays.modals.saveFolder.cancel)",
+          "save": {
+            "create": "$t(overlays.modals.saveFolder.save.create)",
+            "update": "$t(overlays.modals.saveFolder.save.update)"
+          },
+          "name": {
+            "label": "$t(overlays.modals.saveFolder.name.label)",
+            "placeholder": "Business"
+          },
+          "toast": {
+            "message": {
+              "created": "Tag {{name}} created",
+              "updated": "Tag {{name}} edited"
+            }
+          }
+        },
         "search": {
           "title": "Search",
           "cancel": "$t(overlays.modals.saveFolder.cancel)",
           "placeholder": "Search For Links…",
-          "heading": "No result"
+          "heading": "No result",
+          "tags": {
+            "placeholder": "Filter by tags",
+            "cancel": "$t(overlays.modals.saveLink.tags.cancel)",
+            "choose": "$t(overlays.modals.saveLink.tags.choose)",
+            "header": "Filter"
+          }
         },
         "settings": {
           "title": "Settings",
@@ -103,7 +152,8 @@
               "alphabetically": "Alphabetically"
             },
             "showAvatar": "Show Avatars",
-            "showDescription": "Show Descriptions"
+            "showDescription": "Show Descriptions",
+            "useTags": "Use Tags"
           },
           "data": {
             "label": "Data",
@@ -182,6 +232,11 @@
           "edit": "$t(overlays.sheets.linkActions.edit)",
           "delete": "$t(overlays.sheets.linkActions.delete)",
           "cancel": "$t(overlays.sheets.linkActions.cancel)"
+        },
+        "tagActions": {
+          "edit": "$t(overlays.sheets.folderActions.edit)",
+          "delete": "$t(overlays.sheets.folderActions.delete)",
+          "cancel": "$t(overlays.sheets.folderActions.cancel)"
         }
       }
     },

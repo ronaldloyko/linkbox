@@ -22,6 +22,14 @@
             "message": "Carpeta {{name}} ha sido borrada"
           },
           "message": "Estás seguro de que quieres borrar {{name}} con todos sus enlaces?"
+        },
+        "deleteTagConfirmation": {
+          "message": "$t(overlays.alerts.deleteLinkConfirmation.message)",
+          "cancel": "$t(overlays.alerts.deleteFolderConfirmation.cancel)",
+          "delete": "$t(overlays.alerts.deleteFolderConfirmation.delete)",
+          "toast": {
+            "message": "Etiqueta {{name}} ha sido borrada"
+          }
         }
       },
       "modals": {
@@ -41,6 +49,12 @@
           "description": {
             "label": "Descripción",
             "placeholder": "Enciclopedia"
+          },
+          "tags": {
+            "label": "Etiquetas",
+            "placeholder": "Léxico, Wiki",
+            "cancel": "Cancelar",
+            "choose": "Escoger"
           },
           "title": {
             "create": "Crear enlace",
@@ -78,11 +92,46 @@
             }
           }
         },
+        "tags": {
+          "title": "Etiquetas",
+          "close": "$t(overlays.modals.settings.close)",
+          "heading": "No hay etiquetas",
+          "link": "Sin enlaces",
+          "link_one": "{{count}} enlace",
+          "link_other": "{{count}} enlaces"
+        },
+        "saveTag": {
+          "title": {
+            "create": "Crear etiqueta",
+            "edit": "Editar etiqueta"
+          },
+          "cancel": "$t(overlays.modals.saveFolder.cancel)",
+          "save": {
+            "create": "$t(overlays.modals.saveFolder.save.create)",
+            "update": "$t(overlays.modals.saveFolder.save.update)"
+          },
+          "name": {
+            "label": "$t(overlays.modals.saveFolder.name.label)",
+            "placeholder": "Profesional"
+          },
+          "toast": {
+            "message": {
+              "created": "Etiqueta {{name}} ha sido creada",
+              "updated": "Etiqueta {{name}} ha sido editada"
+            }
+          }
+        },
         "search": {
           "heading": "No hay resultado",
           "title": "Buscar",
           "cancel": "$t(overlays.modals.saveFolder.cancel)",
-          "placeholder": "Buscar enlaces…"
+          "placeholder": "Buscar enlaces…",
+          "tags": {
+            "placeholder": "Filtrar por etiquetas",
+            "cancel": "$t(overlays.modals.saveLink.tags.cancel)",
+            "choose": "$t(overlays.modals.saveLink.tags.choose)",
+            "header": "Filtrar"
+          }
         },
         "settings": {
           "interface": {
@@ -94,6 +143,7 @@
             },
             "showAvatar": "Mostrar avatares",
             "showDescription": "Mostrar descripciones",
+            "useTags": "Usar etiquetas",
             "label": "Interfaz",
             "language": "Idioma",
             "linkSorting": {
@@ -182,6 +232,11 @@
           "delete": "$t(overlays.alerts.deleteFolderConfirmation.delete)",
           "cancel": "$t(overlays.modals.search.cancel)",
           "edit": "Editar"
+        },
+        "tagActions": {
+          "edit": "$t(overlays.sheets.folderActions.edit)",
+          "delete": "$t(overlays.sheets.folderActions.delete)",
+          "cancel": "$t(overlays.sheets.folderActions.cancel)"
         }
       }
     },

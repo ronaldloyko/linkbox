@@ -1,4 +1,5 @@
 export const EMPTY_TEXT = "";
+export const EMPTY_TAGS = [];
 export const URL_SCHEME = "https://";
 export const URL_SCHEME_INSECURE = "http://";
 export const EVENT_NAME_PRESS = "press";

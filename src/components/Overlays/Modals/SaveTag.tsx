@@ -22,31 +22,30 @@ import {
   UNSELECTED_ITEM,
 } from "../../../data/constants";
 import useValidation from "../../../hooks/useValidation";
-import useValidationErrors from "../../../hooks/useValidationErrorMessage";
+import useValidationErrorMessage from "../../../hooks/useValidationErrorMessage";
 import { useAction, useDispatch, useSelector } from "../../../store";
-import type { Name } from "../../../store/items";
+import { Name } from "../../../store/items";
 import ErrorLine from "./ErrorLine";
 
-export default (function SaveFolder() {
+export default (function SaveTag() {
   const dispatch = useDispatch();
-  const open = useSelector((state) => state.ui.saveFolderModalOpen);
-  const folders = useSelector((state) => state.items.folders);
-  const selectedFolder = useSelector((state) => state.ui.selectedFolder);
+  const open = useSelector((state) => state.ui.saveTagModalOpen);
+  const tags = useSelector((state) => state.items.tags);
+  const selectedTag = useSelector((state) => state.ui.selectedTag);
   const statusBarHeight = useSelector((state) => state.ui.statusBarHeight);
-  const folderBeingEdited = useMemo(
-    () => folders.find(({ id }) => id === selectedFolder),
-    [selectedFolder, folders]
+  const tagBeingEdited = useMemo(
+    () => tags.find(({ id }) => id === selectedTag),
+    [selectedTag, tags]
   );
-  const isEditingFolder = selectedFolder !== null && folderBeingEdited;
+  const isEditing = selectedTag !== UNSELECTED_ITEM && tagBeingEdited;
   const modalElement = useRef<HTMLIonModalElement>(null);
   const nameInputElement = useRef<HTMLIonInputElement>(null);
   const isValidationPassed = useValidation();
   const { t } = useTranslation();
-  const { addFolder, editFolder, toggleSaveFolderModal, setSelectedFolder } =
-    useAction();
+  const { addTag, editTag, setSelectedTag, toggleSaveTagModal } = useAction();
   const [name, setName] = useState(EMPTY_TEXT);
   const [nameErrorMessage, setNameErrorMessage, clearNameErrorMessage] =
-    useValidationErrors();
+    useValidationErrorMessage();
   const [presentToast] = useIonToast();
 
   function onNameChange({ detail }: CustomEvent<InputChangeEventDetail>) {
@@ -54,8 +53,8 @@ export default (function SaveFolder() {
   }
 
   function onCancel() {
-    dispatch(toggleSaveFolderModal(false));
-    dispatch(setSelectedFolder(UNSELECTED_ITEM));
+    dispatch(toggleSaveTagModal(false));
+    dispatch(setSelectedTag(UNSELECTED_ITEM));
   }
 
   function onClose() {
@@ -63,7 +62,7 @@ export default (function SaveFolder() {
   }
 
   function onSave() {
-    const id = isEditingFolder ? folderBeingEdited.id : nanoid();
+    const id = isEditing ? tagBeingEdited.id : nanoid();
 
     clearNameErrorMessage();
 
@@ -71,13 +70,12 @@ export default (function SaveFolder() {
       return;
     }
 
-    dispatch((isEditingFolder ? editFolder : addFolder)({ id, name }));
-    dispatch(toggleSaveFolderModal(false));
-    dispatch(setSelectedFolder(UNSELECTED_ITEM));
+    dispatch((isEditing ? editTag : addTag)({ id, name }));
+    dispatch(toggleSaveTagModal(false));
     presentToast({
       message: t(
-        `overlays.modals.saveFolder.toast.message.${
-          isEditingFolder ? "updated" : "created"
+        `overlays.modals.saveTag.toast.message.${
+          isEditing ? "updated" : "created"
         }`,
         { name }
       ),
@@ -87,7 +85,7 @@ export default (function SaveFolder() {
   }
 
   function onBeforeShow() {
-    setName(isEditingFolder ? folderBeingEdited.name : EMPTY_TEXT);
+    setName(isEditing ? tagBeingEdited.name : EMPTY_TEXT);
     clearNameErrorMessage();
   }
 
@@ -107,21 +105,19 @@ export default (function SaveFolder() {
         <IonToolbar>
           <IonButtons slot="start">
             <IonButton onClick={onClose}>
-              {t("overlays.modals.saveFolder.cancel")}
+              {t("overlays.modals.saveTag.cancel")}
             </IonButton>
           </IonButtons>
           <IonTitle>
             {t(
-              `overlays.modals.saveFolder.title.${
-                isEditingFolder ? "edit" : "create"
-              }`
+              `overlays.modals.saveTag.title.${isEditing ? "edit" : "create"}`
             )}
           </IonTitle>
           <IonButtons slot="end">
             <IonButton onClick={onSave} color="primary">
               {t(
-                `overlays.modals.saveFolder.save.${
-                  isEditingFolder ? "update" : "create"
+                `overlays.modals.saveTag.save.${
+                  isEditing ? "update" : "create"
                 }`
               )}
             </IonButton>
@@ -131,14 +127,15 @@ export default (function SaveFolder() {
       <IonContent className="ion-padding">
         <IonItem>
           <IonLabel position="stacked">
-            {t("overlays.modals.saveFolder.name.label")}
+            {t("overlays.modals.saveTag.name.label")}
           </IonLabel>
           <IonInput
             ref={nameInputElement}
             type="text"
-            placeholder={t("overlays.modals.saveFolder.name.placeholder")}
+            placeholder={t("overlays.modals.saveTag.name.placeholder")}
             value={name}
             onIonChange={onNameChange}
+            required
           />
           <ErrorLine message={nameErrorMessage} />
         </IonItem>
