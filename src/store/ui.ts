@@ -3,6 +3,7 @@ import {
   DEFAULT_FOLDER_ID,
   DEFAULT_LANGUAGE,
   EMPTY_TEXT,
+  UNSELECTED_ITEM,
 } from "../data/constants";
 import type { Id, Name, Url } from "./items";
 import { loadDataFromStorage } from "./thunks";
@@ -35,9 +36,9 @@ export default createSlice({
     deleteLinkConfirmationAlertOpen: false,
     deleteTagConfirmationAlertOpen: false,
     currentFolder: DEFAULT_FOLDER_ID,
-    selectedLink: null,
-    selectedFolder: null,
-    selectedTag: null,
+    selectedLink: UNSELECTED_ITEM,
+    selectedFolder: UNSELECTED_ITEM,
+    selectedTag: UNSELECTED_ITEM,
     linkSorting: LinkSorting.Default,
     language: DEFAULT_LANGUAGE,
     theme: Theme.System,
@@ -47,6 +48,7 @@ export default createSlice({
     firstRun: false,
     prefilledName: EMPTY_TEXT,
     prefilledUrl: EMPTY_TEXT,
+    prefilledSearchFilters: UNSELECTED_ITEM,
     statusBarHeight: "0px",
   } as State,
   reducers: {
@@ -170,6 +172,12 @@ export default createSlice({
     prefillUrl(state, { payload }: PayloadAction<Url>) {
       state.prefilledUrl = payload;
     },
+    prefillSearchFilters(
+      state,
+      { payload }: PayloadAction<PrefilledSearchFilters>
+    ) {
+      state.prefilledSearchFilters = payload;
+    },
     setStatusBarHeight(state, { payload }: PayloadAction<StatusBarHeight>) {
       state.statusBarHeight = payload;
     },
@@ -223,6 +231,7 @@ interface State {
   firstRun: FirstRunFlag;
   prefilledName: Name;
   prefilledUrl: Url;
+  prefilledSearchFilters: PrefilledSearchFilters;
   statusBarHeight: StatusBarHeight;
 }
 
@@ -233,3 +242,8 @@ type OptionalToggleParameter = boolean | undefined;
 type SelectedItem = Id | null;
 
 type StatusBarHeight = string;
+
+type PrefilledSearchFilters = null | {
+  tags: Id[];
+  term: string;
+};

@@ -17,7 +17,11 @@ import {
 import { pricetag } from "ionicons/icons";
 import { useMemo, useRef, useState, type FC } from "react";
 import { useTranslation } from "react-i18next";
-import { EMPTY_TAGS, EMPTY_TEXT } from "../../../data/constants";
+import {
+  EMPTY_TAGS,
+  EMPTY_TEXT,
+  UNSELECTED_ITEM,
+} from "../../../data/constants";
 import { useAction, useDispatch, useSelector } from "../../../store";
 import { Id } from "../../../store/items";
 import EmptyState from "./Search/EmptyState";
@@ -30,9 +34,12 @@ export default (function Search() {
   const availableTags = useSelector((state) => state.items.tags);
   const statusBarHeight = useSelector((state) => state.ui.statusBarHeight);
   const useTags = useSelector((state) => state.ui.useTags);
+  const prefilledSearchFilters = useSelector(
+    (state) => state.ui.prefilledSearchFilters
+  );
   const searchBarElement = useRef<HTMLIonSearchbarElement>(null);
   const { t } = useTranslation();
-  const { toggleSearchModal } = useAction();
+  const { toggleSearchModal, prefillSearchFilters } = useAction();
   const [term, setTerm] = useState(EMPTY_TEXT);
   const [tags, setTags] = useState(EMPTY_TAGS as Id[]);
 
@@ -51,7 +58,7 @@ export default (function Search() {
         processTags ? tags.some((tag) => link.tags.includes(tag)) : false,
       ].some((is) => is === true)
     );
-  }, [links, processedTerm, tags]);
+  }, [links, processedTerm, tags, processTags]);
 
   function onTermChange({ detail }: CustomEvent<SearchbarChangeEventDetail>) {
     setTerm(detail.value ?? EMPTY_TEXT);
@@ -62,8 +69,9 @@ export default (function Search() {
   }
 
   function onBeforeShow() {
-    setTerm(EMPTY_TEXT);
-    setTags(EMPTY_TAGS);
+    setTerm(prefilledSearchFilters?.term ?? EMPTY_TEXT);
+    setTags(prefilledSearchFilters?.tags ?? EMPTY_TAGS);
+    dispatch(prefillSearchFilters(UNSELECTED_ITEM));
   }
 
   function onShow() {
