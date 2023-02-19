@@ -103,10 +103,6 @@ export default (function LinkActions() {
   }
 
   return (
-    <IonActionSheet
-      isOpen={open}
-      buttons={buttons}
-      onDidDismiss={onCancel}
-    />
+    <IonActionSheet isOpen={open} buttons={buttons} onDidDismiss={onCancel} />
   );
 } as FC);

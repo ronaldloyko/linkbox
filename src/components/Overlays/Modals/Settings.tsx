@@ -120,12 +120,8 @@ export default (function Settings() {
     );
   }
 
-  function onUseTagsChange(
-    event: CustomEvent<CheckboxChangeEventDetail>
-  ) {
-    dispatch(
-      toggleUseTags(event.detail.checked as TagsUsageFlag)
-    );
+  function onUseTagsChange(event: CustomEvent<CheckboxChangeEventDetail>) {
+    dispatch(toggleUseTags(event.detail.checked as TagsUsageFlag));
   }
 
   function onImportClick() {
@@ -324,9 +320,7 @@ export default (function Settings() {
           </IonItem>
           <IonItem>
             <IonIcon slot="start" icon={pricetag} />
-            <IonLabel>
-              {t(`${TRANSLATION_PREFIX}.interface.useTags`)}
-            </IonLabel>
+            <IonLabel>{t(`${TRANSLATION_PREFIX}.interface.useTags`)}</IonLabel>
             <IonCheckbox
               slot="end"
               checked={useTags}
