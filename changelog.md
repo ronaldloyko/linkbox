@@ -21,6 +21,7 @@
 
 ### Changed
 
+- HTML instead of JSON as data export format to ensure synchronicity with browsers
 - Brighten backdrop of modals and alerts on the dark theme for better distinction
 - Languages are now sorted by their codes
 - Removed donate button
